@@ -13,3 +13,5 @@ C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_Team
 C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CopyComplete
 C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.exe
 C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.pdb
+C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\LG4.dll
+C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\LG4.pdb

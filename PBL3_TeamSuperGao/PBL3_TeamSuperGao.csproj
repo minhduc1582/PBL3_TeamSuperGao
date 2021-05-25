@@ -39,6 +39,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="LG4">
+      <HintPath>..\..\LG4\LG4\bin\Debug\LG4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -58,6 +61,8 @@
     <Compile Include="Ban.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BLL\BLL_MaHoaMatKhau.cs" />
+    <Compile Include="BLL\BLL_QLTaiKhoan.cs" />
     <Compile Include="BLL\BLL_ThongKe.cs" />
     <Compile Include="ChiTietHoaDon.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -65,7 +70,9 @@
     <Compile Include="ChucVu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DAL_QLTaiKhoan.cs" />
     <Compile Include="DAL\DAL_ThongKe.cs" />
+    <Compile Include="DAL\IChangeDataBase.cs" />
     <Compile Include="DanhMucMon.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

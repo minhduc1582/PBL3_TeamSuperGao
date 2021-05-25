@@ -62,5 +62,16 @@ namespace PBL3_TeamSuperGao.GUI
         {
         }
 
+        private void btnAddTK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShowTK_Click(object sender, EventArgs e)
+        {
+            dtgvTaiKhoan.DataSource = BLL_QLTaiKhoan.Instance.BLL_ShowTK();
+            dtgvTaiKhoan.Columns[0].Visible = false;
+            dtgvTaiKhoan.Columns[3].Visible = false;
+        }
     }
 }

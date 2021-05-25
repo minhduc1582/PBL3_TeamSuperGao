@@ -389,7 +389,8 @@
         </Association>
         <Association Name="FK__NhanVien__IDTaiK__59C55456">
           <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" >
+          </End>
           <ReferentialConstraint>
             <Principal Role="TaiKhoan">
               <PropertyRef Name="IDTaiKhoan" />
