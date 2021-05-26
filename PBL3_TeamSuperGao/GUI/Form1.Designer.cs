@@ -39,6 +39,8 @@ namespace PBL3_TeamSuperGao.GUI
             this.Tabcontrol = new System.Windows.Forms.TabControl();
             this.tabThongKe = new System.Windows.Forms.TabPage();
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
+            this.btnResetTK = new System.Windows.Forms.Button();
+            this.lblCheck = new System.Windows.Forms.Label();
             this.txtReFill = new System.Windows.Forms.TextBox();
             this.txtMatKhauTK = new System.Windows.Forms.TextBox();
             this.txtTenTK = new System.Windows.Forms.TextBox();
@@ -146,6 +148,8 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // tabTaiKhoan
             // 
+            this.tabTaiKhoan.Controls.Add(this.btnResetTK);
+            this.tabTaiKhoan.Controls.Add(this.lblCheck);
             this.tabTaiKhoan.Controls.Add(this.txtReFill);
             this.tabTaiKhoan.Controls.Add(this.txtMatKhauTK);
             this.tabTaiKhoan.Controls.Add(this.txtTenTK);
@@ -165,31 +169,52 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabTaiKhoan.Text = "Tai Khoan";
             this.tabTaiKhoan.UseVisualStyleBackColor = true;
             // 
+            // btnResetTK
+            // 
+            this.btnResetTK.Location = new System.Drawing.Point(466, 237);
+            this.btnResetTK.Name = "btnResetTK";
+            this.btnResetTK.Size = new System.Drawing.Size(294, 37);
+            this.btnResetTK.TabIndex = 6;
+            this.btnResetTK.Text = "Reset";
+            this.btnResetTK.UseVisualStyleBackColor = true;
+            this.btnResetTK.Click += new System.EventHandler(this.btnResetTK_Click);
+            // 
+            // lblCheck
+            // 
+            this.lblCheck.AutoSize = true;
+            this.lblCheck.ForeColor = System.Drawing.Color.White;
+            this.lblCheck.Location = new System.Drawing.Point(593, 217);
+            this.lblCheck.Name = "lblCheck";
+            this.lblCheck.Size = new System.Drawing.Size(46, 17);
+            this.lblCheck.TabIndex = 4;
+            this.lblCheck.Text = "label1";
+            // 
             // txtReFill
             // 
             this.txtReFill.Location = new System.Drawing.Point(596, 182);
             this.txtReFill.Name = "txtReFill";
             this.txtReFill.Size = new System.Drawing.Size(148, 22);
-            this.txtReFill.TabIndex = 3;
+            this.txtReFill.TabIndex = 5;
+            this.txtReFill.TextChanged += new System.EventHandler(this.txtReFill_TextChanged);
             // 
             // txtMatKhauTK
             // 
             this.txtMatKhauTK.Location = new System.Drawing.Point(596, 130);
             this.txtMatKhauTK.Name = "txtMatKhauTK";
             this.txtMatKhauTK.Size = new System.Drawing.Size(148, 22);
-            this.txtMatKhauTK.TabIndex = 3;
+            this.txtMatKhauTK.TabIndex = 4;
             // 
             // txtTenTK
             // 
             this.txtTenTK.Location = new System.Drawing.Point(596, 69);
             this.txtTenTK.Name = "txtTenTK";
-            this.txtTenTK.ReadOnly = true;
             this.txtTenTK.Size = new System.Drawing.Size(148, 22);
             this.txtTenTK.TabIndex = 3;
             // 
             // lblReFill
             // 
             this.lblReFill.AutoSize = true;
+            this.lblReFill.ForeColor = System.Drawing.Color.Black;
             this.lblReFill.Location = new System.Drawing.Point(463, 187);
             this.lblReFill.Name = "lblReFill";
             this.lblReFill.Size = new System.Drawing.Size(126, 17);
@@ -232,6 +257,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnEditTK.TabIndex = 1;
             this.btnEditTK.Text = "Sửa";
             this.btnEditTK.UseVisualStyleBackColor = true;
+            this.btnEditTK.Click += new System.EventHandler(this.btnAddTK_Click);
             // 
             // btnDelTK
             // 
@@ -241,6 +267,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnDelTK.TabIndex = 1;
             this.btnDelTK.Text = "Xóa";
             this.btnDelTK.UseVisualStyleBackColor = true;
+            this.btnDelTK.Click += new System.EventHandler(this.BtnDelTK_Click);
             // 
             // btnAddTK
             // 
@@ -262,6 +289,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.dtgvTaiKhoan.RowTemplate.Height = 24;
             this.dtgvTaiKhoan.Size = new System.Drawing.Size(422, 289);
             this.dtgvTaiKhoan.TabIndex = 0;
+            this.dtgvTaiKhoan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvTaiKhoan_MouseClick);
             // 
             // Form1
             // 
@@ -305,6 +333,8 @@ namespace PBL3_TeamSuperGao.GUI
         private System.Windows.Forms.TextBox txtReFill;
         private System.Windows.Forms.TextBox txtMatKhauTK;
         private System.Windows.Forms.Label lblReFill;
+        private System.Windows.Forms.Label lblCheck;
+        private System.Windows.Forms.Button btnResetTK;
     }
 }
 

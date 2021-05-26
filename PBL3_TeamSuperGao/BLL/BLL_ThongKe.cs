@@ -29,7 +29,7 @@ namespace PBL3_TeamSuperGao.BLL
         public List<HoaDonView> ThongKeHoaDon(DateTime org, DateTime des)
         {
             List<HoaDonView> ListThongKeHoaDon = new List<HoaDonView>();
-            foreach(var i in DAL_ThongKe.Instance.GetListHoaDon(org, des))
+            foreach(var i in DAL_ThongKe.Instance.DAL_GetListHoaDon(org, des))
             {
                 ListThongKeHoaDon.Add(new HoaDonView
                 {
@@ -39,15 +39,47 @@ namespace PBL3_TeamSuperGao.BLL
                     TongTien = (double)i.TongTien
                 });
             }
-            ListThongKeHoaDon.Sort(TongTien);
+            ListThongKeHoaDon.Sort();
             return ListThongKeHoaDon;
         }
-
-        private int TongTien(HoaDonView x, HoaDonView y)
+        public List<DoanhThuView> BLL_ThongKeDoanhThu(DateTime org,DateTime des)
         {
-            if (x.NgayThanhToan > y.NgayThanhToan) return 1;
-            return 0;
-            throw new NotImplementedException();
+            List<DoanhThuView> ListDTV = new List<DoanhThuView>();
+            for(DateTime step = org;step <= des; step = step.AddDays(1))
+            {
+                double ToTal = 0;
+                foreach(int i in DAL_ThongKe.Instance.DAL_GetIdbyDate(step, step))
+                {
+                    ToTal += DAL_ThongKe.Instance.DAL_GetTongTienHoaDon(i);
+                }
+                ListDTV.Add(new DoanhThuView
+                {
+                    Ngay = step.Date,
+                    TongTien = ToTal
+                });
+            }
+            return ListDTV;
         }
+        public List<MonView> BLL_ThongKeMon(DateTime org,DateTime des)
+        {
+            List<MonView> ListMV = new List<MonView>();
+            foreach(var i in DAL_ThongKe.Instance.GetAllMon())
+            {
+                int TongLG = 0;
+                foreach(var j in DAL_ThongKe.Instance.GetChiTietHoaDons(org,des))
+                {
+                    if (j.IDMon == i.IDMon) TongLG += (int)j.SoLuong;
+                }
+                ListMV.Add(new MonView
+                {
+                    IDMon = i.IDMon,
+                    TenMon = i.TenMon,
+                    DonGia = (double)i.DonGia,
+                    LuotGoi = TongLG
+                });
+            }
+            ListMV.Sort();
+            return ListMV;
+        } 
     }
 }
