@@ -20,6 +20,7 @@ namespace PBL3_TeamSuperGao.GUI
             InitializeComponent();
             SetCBBThongKe();
         }
+
         // Sett cbb to handle thong ke
         public void SetCBBThongKe()
         {
@@ -129,7 +130,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             foreach(var i in BLL_QLTaiKhoan.Instance.BLL_ShowTK())
             {
-                if (String.Compare(str,i.UserName,true) == 0) return true;
+                if (String.Compare(str.Trim(),i.UserName.Trim(),true) == 0) return true;
             }
             return false;
         }
@@ -194,11 +195,18 @@ namespace PBL3_TeamSuperGao.GUI
         // handle event Delete Tai khoan
         private void BtnDelTK_Click(object sender, EventArgs e)
         {
-            if (dtgvTaiKhoan.CurrentRow.Selected == true)
+            try
             {
-                BLL_QLTaiKhoan.Instance.BLL_DeleteTK(Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value));
-                Show_dtgvTK();
-                reset();
+                if (dtgvTaiKhoan.CurrentRow.Selected == true)
+                {
+                    BLL_QLTaiKhoan.Instance.BLL_DeleteTK(Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value));
+                    Show_dtgvTK();
+                    reset();
+                }
+            }
+            catch(Exception et)
+            {
+                MessageBox.Show(et.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         // handle event button reset

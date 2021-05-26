@@ -27,7 +27,7 @@ namespace PBL3_TeamSuperGao.BLL
             List<TaiKhoan> ListTaiKhoan = DAL_QLTaiKhoan.Instance.Show();
             foreach(var i in ListTaiKhoan)
             {
-                string temp = Dich(i.PassWord);
+                string temp = Dich(i.PassWord.Trim());
                 i.PassWord = temp;
             }
             return ListTaiKhoan;
