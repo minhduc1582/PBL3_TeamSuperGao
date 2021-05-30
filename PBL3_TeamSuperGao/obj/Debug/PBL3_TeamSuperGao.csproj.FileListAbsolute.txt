@@ -1,0 +1,9 @@
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csprojAssemblyReference.cache
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Add_Edit.resources
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Form1.resources
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDangNhap.resources
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDoiMK.resources
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormQLNhanVien.resources
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.Properties.Resources.resources
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.GenerateResource.cache
+C:\Users\WIN-PRO\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CoreCompileInputs.cache

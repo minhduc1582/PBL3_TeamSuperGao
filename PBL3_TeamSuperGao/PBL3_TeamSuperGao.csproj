@@ -55,17 +55,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ban.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="BLL\BLL_QLBan.cs" />
+    <Compile Include="BLL\BLL_QLChiTietHoaDon.cs" />
+    <Compile Include="BLL\BLL_QLCV.cs" />
+    <Compile Include="BLL\BLL_QLDanhMuc.cs" />
+    <Compile Include="BLL\BLL_QLHoaDon.cs" />
+    <Compile Include="BLL\BLL_QLMon.cs" />
+    <Compile Include="BLL\BLL_QLNhanVien.cs" />
+    <Compile Include="BLL\BLL_QLTK.cs" />
+    <Compile Include="DAL\DAL_QLBan.cs" />
+    <Compile Include="DAL\DAL_QLChiTietHoaDon.cs" />
+    <Compile Include="DAL\DAL_QLChucVu.cs" />
+    <Compile Include="DAL\DAL_QLDanhMuc.cs" />
+    <Compile Include="DAL\DAL_QLHoaDon.cs" />
+    <Compile Include="DAL\DAL_QLMon.cs" />
+    <Compile Include="DAL\DAL_QLNhanVien.cs" />
+    <Compile Include="DAL\DAL_QLTaiKhoan.cs" />
+    <Compile Include="DTO\CBBITem.cs" />
+    <Compile Include="DTO\MonSL.cs" />
+    <Compile Include="DTO\NhanVienView.cs" />
+    <Compile Include="GUI\Add_Edit.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChiTietHoaDon.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChucVu.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMucMon.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="GUI\Add_Edit.designer.cs">
+      <DependentUpon>Add_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
@@ -73,38 +86,41 @@
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="GUI\FormDangNhap.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+    <Compile Include="GUI\FormDangNhap.designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="GUI\FormDoiMK.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Compile Include="GUI\FormDoiMK.designer.cs">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mon.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="GUI\FormQLNhanVien.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVien.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="GUI\FormQLNhanVien.designer.cs">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TaiKhoan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="GUI\Add_Edit.resx">
+      <DependentUpon>Add_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDoiMK.resx">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormQLNhanVien.resx">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -114,14 +130,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,22 +141,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="BLL\readme.txt" />
     <Content Include="DAL\readme.txt" />
     <Content Include="DTO\readme.txt" />
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
