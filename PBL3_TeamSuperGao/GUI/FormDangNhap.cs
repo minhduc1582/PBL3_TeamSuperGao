@@ -39,7 +39,7 @@ namespace PBL3_TeamSuperGao.GUI
             if (u == 0) MessageBox.Show("Ban da nhap sai, vui long nhap lai");
             else
             {
-                Form1 st = new Form1();
+                CAFEVIEW st = new CAFEVIEW();
                 this.Visible = false;
                 //lay ma nhan vien 
                 st.t = BLL_QLNhanVien.Instance.GetIDNVForIDTK(BLL_QLTK.Instance.GetIDTK(textBox1.Text, textBox2.Text));

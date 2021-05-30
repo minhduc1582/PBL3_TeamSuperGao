@@ -15,9 +15,9 @@ using System.Windows.Forms;
 
 namespace PBL3_TeamSuperGao.GUI
 {
-    public partial class Form1 : Form
+    public partial class CAFEVIEW : Form
     {
-        public Form1()
+        public CAFEVIEW()
         {
             InitializeComponent();
             GetCBBDM();

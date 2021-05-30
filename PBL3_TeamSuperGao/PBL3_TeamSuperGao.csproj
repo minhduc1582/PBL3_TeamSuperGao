@@ -63,6 +63,7 @@
     <Compile Include="BLL\BLL_QLMon.cs" />
     <Compile Include="BLL\BLL_QLNhanVien.cs" />
     <Compile Include="BLL\BLL_QLTK.cs" />
+    <Compile Include="BLL\ChucVu.cs" />
     <Compile Include="DAL\DAL_QLBan.cs" />
     <Compile Include="DAL\DAL_QLChiTietHoaDon.cs" />
     <Compile Include="DAL\DAL_QLChucVu.cs" />
@@ -80,11 +81,11 @@
     <Compile Include="GUI\Add_Edit.designer.cs">
       <DependentUpon>Add_Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Form1.cs">
+    <Compile Include="GUI\CAFEVIEW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\CAFEVIEW.Designer.cs">
+      <DependentUpon>CAFEVIEW.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormDangNhap.cs">
       <SubType>Form</SubType>
@@ -109,8 +110,8 @@
     <EmbeddedResource Include="GUI\Add_Edit.resx">
       <DependentUpon>Add_Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\CAFEVIEW.resx">
+      <DependentUpon>CAFEVIEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>

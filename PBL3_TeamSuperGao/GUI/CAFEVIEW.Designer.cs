@@ -1,7 +1,7 @@
 ﻿
 namespace PBL3_TeamSuperGao.GUI
 {
-    partial class Form1
+    partial class CAFEVIEW
     {
         /// <summary>
         /// Required designer variable.
