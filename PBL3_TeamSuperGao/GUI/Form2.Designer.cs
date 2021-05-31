@@ -1,7 +1,7 @@
 ﻿
 namespace PBL3_TeamSuperGao
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -21,7 +21,9 @@ namespace PBL3_TeamSuperGao
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows 
+        
+        Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -341,8 +343,8 @@ namespace PBL3_TeamSuperGao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 322);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Form2";
+            this.Text = "Form2";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
