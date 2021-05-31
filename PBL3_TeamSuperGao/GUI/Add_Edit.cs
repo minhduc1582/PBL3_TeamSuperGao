@@ -11,11 +11,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3_TeamSuperGao
+namespace PBL3_TeamSuperGao.GUI
 {
-    public partial class Form1 : Form
+    public partial class Add_Edit : Form
     {
-        public Form1()
+        public Add_Edit(string u)
         {
             InitializeComponent();
             setcbbCV();
