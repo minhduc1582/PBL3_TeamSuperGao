@@ -1,218 +1,221 @@
-﻿using PBL3_TeamSuperGao.BLL;
+﻿using System;
 using PBL3_TeamSuperGao.DTO;
-using System;
+using PBL3_TeamSuperGao.BLL;
+using PBL3_TeamSuperGao.GUI;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3_TeamSuperGao.GUI
+namespace PBL3_TeamSuperGao
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-            SetCBBThongKe();
+            setcbbCV();
+            setcbbSortNV();
+            ShowNV();
+            setcbbDM();
+            setcbbSortMon();
+            ShowMon();
         }
 
-        // Sett cbb to handle thong ke
-        public void SetCBBThongKe()
+        public void setcbbCV()
         {
-            cbbThongKe.Items.AddRange(new CBBItem[] { 
-                new CBBItem{Value = 0,Text = "ThongKeHoaDon"},
-                new CBBItem{Value = 1,Text = "ThongKeDoanhThu"},
-                new CBBItem{Value = 2,Text = "ThongKeMon"},
+            cboChucVu.Items.Add(new CBBItem
+            {
+                Text = "All",
+                Value = 0
             });
-            cbbThongKe.SelectedIndex = 0;
-        }
-                                        //MODULE
-        //THONG KE
-        // Xu Ly su kien thong ke di kem voi CBB
-        public void ThongKe(object sender,EventArgs e)
-        {
-            switch (((CBBItem)cbbThongKe.Items[cbbThongKe.SelectedIndex]).Value)
+            foreach (ChucVu CV in BLL_QLNV.Instance.GetChucVu_BLL())
             {
-                case 0:
-                    HandleThongKeHoaDon();
-                    txtTongDoanhThu.Text = TongDoanhThu().ToString();
-                    break;
-                case 1:
-                    HandleThongKeDoanhThu();
-                    txtTongDoanhThu.Text = TongDoanhThu().ToString();
-                    break;
-                case 2:
-                    HandleThongKeMon();
-                    break;
-                default:
-                    break;
-            }
-        }
-        //
-        public double TongDoanhThu()
-        {
-            double TongDoanhThu = 0;
-            for(int i = 0; i< dtvThongKe.Rows.Count; i++)
-            {
-                TongDoanhThu += Convert.ToDouble(dtvThongKe.Rows[i].Cells["TongTien"].Value);
-            }
-            return TongDoanhThu;
-        }
-        // Xu ly su kien thong ke mon
-        private void HandleThongKeMon()
-        {
-            dtvThongKe.DataSource = BLL_ThongKe.Instance.BLL_ThongKeMon(dtmOrg.Value, dtmDes.Value);
-            dtvThongKe.Columns[0].Visible = false;
-        }
-        
-        private void HandleThongKeHoaDon()
-        {
-            dtvThongKe.DataSource = BLL_ThongKe.Instance.ThongKeHoaDon(dtmOrg.Value, dtmDes.Value);
-        }
-        // Xu ly su kien thong ke Doanh Thu
-        private void HandleThongKeDoanhThu()
-        {
-            dtvThongKe.DataSource = BLL_ThongKe.Instance.BLL_ThongKeDoanhThu(dtmOrg.Value, dtmDes.Value);
-        }
-
-        // MODULE
-        // QUAN LY TAI KHOAN 
-
-        // reset textbox
-        public void reset()
-        {
-            txtReFill.Text = "";
-            txtMatKhauTK.Text = "";
-            txtTenTK.Text = "";
-        }
-        // Xử lý Exception Null
-        static void ProcessString(string s1, string s2, string s3)
-        {
-            if (s1 == "" || s2 == "" || s3 == "")
-            {
-                throw new ArgumentNullException();
-            }
-        }
-        //show list TK on Dtgv TaiKhoan
-        public void Show_dtgvTK()
-        {
-            dtgvTaiKhoan.DataSource = BLL_QLTaiKhoan.Instance.BLL_ShowTK();
-            dtgvTaiKhoan.Columns[0].Visible = false;
-            dtgvTaiKhoan.Columns[3].Visible = false;
-        }
-        // kiem tra mat khau nhap lai co trung voi mat khau khong
-        private void txtReFill_TextChanged(object sender, EventArgs e)
-        {
-            if (txtReFill.Text != txtMatKhauTK.Text && txtReFill.Text != "")
-            {
-                lblCheck.Text = "Mat khau khong khop!";
-                lblCheck.ForeColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                lblCheck.ForeColor = System.Drawing.Color.White;
-            }
-
-        }
-        // handle change selection click on dtgv 
-        private void dtgvTaiKhoan_MouseClick(object sender, MouseEventArgs e)
-        {
-            txtTenTK.Text = dtgvTaiKhoan.CurrentRow.Cells["UserName"].Value.ToString();
-            txtMatKhauTK.Text = dtgvTaiKhoan.CurrentRow.Cells["PassWord"].Value.ToString();
-        }
-        // Kiem tra user ton tai chua
-        public bool Check_isExistUser(string str)
-        {
-            foreach(var i in BLL_QLTaiKhoan.Instance.BLL_ShowTK())
-            {
-                if (String.Compare(str.Trim(),i.UserName.Trim(),true) == 0) return true;
-            }
-            return false;
-        }
-        // handle event add TK and edit tk
-        private void btnAddTK_Click(object sender, EventArgs eva)
-        {
-            try
-            {
-                ProcessString(txtTenTK.Text, txtMatKhauTK.Text,txtTenTK.Text);
-                if ((Button)sender == btnAddTK)
+                cboChucVu.Items.Add(new CBBItem
                 {
-                    if (txtReFill.Text == txtMatKhauTK.Text && Check_isExistUser(txtTenTK.Text) == false)
-                    {
-                        BLL_QLTaiKhoan.Instance.BLL_AddTK(txtTenTK.Text, txtMatKhauTK.Text);
-                        MessageBox.Show("Them tai khoan thanh cong!");
-                        reset();
-                    }
-                    else if (Check_isExistUser(txtTenTK.Text) == true)
-                    {
-                        MessageBox.Show("Da ton tai tai khoan!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Mat khau khong trung khop!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                if((Button)sender == btnEditTK)
-                {
-                    if (txtReFill.Text == txtMatKhauTK.Text && Check_isExistUser(txtTenTK.Text) == true)
-                    {
-                        int ID = Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value);
-                        BLL_QLTaiKhoan.Instance.BLL_EditTK(ID,txtTenTK.Text, txtMatKhauTK.Text);
-                        MessageBox.Show("Dat lai mat Khau thanh cong!");
-                        reset();
-                    }
-                    else if (Check_isExistUser(txtTenTK.Text) == false)
-                    {
-                        MessageBox.Show("Khong ton tai tai khoan!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Mat khau khong trung khop!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                    Text = CV.TenChucVu,
+                    Value = CV.IDChucVu
+                });
             }
-            catch(ArgumentNullException e)
-            {
-                MessageBox.Show(e.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            cboChucVu.SelectedIndex = 0;
+        }
 
-        }
-        // handle Show TK on Dtgv TaiKhoan
-        private void btnShowTK_Click(object sender, EventArgs e)
+        public void setcbbSortNV()
         {
-            Show_dtgvTK();
+            cboSortNV.Items.Add(new CBBItem { Value = 0, Text = "HoTen" });
+            cboSortNV.Items.Add(new CBBItem { Value = 1, Text = "GioiTinh" });
+            cboSortNV.Items.Add(new CBBItem { Value = 2, Text = "ChucVu" });
+            cboSortNV.SelectedIndex = 0;
         }
-        // handle event Delete Tai khoan
-        private void BtnDelTK_Click(object sender, EventArgs e)
+
+        private void btnShowNV_Click(object sender, EventArgs e)
         {
-            try
+            ShowNV();
+        }
+
+        private void ShowNV()
+        {
+            int ID_ChucVu = ((CBBItem)cboChucVu.Items[cboChucVu.SelectedIndex]).Value;
+            BLL_QLNV bll = new BLL_QLNV();
+            dvwNV.DataSource = bll.GetListNV_BLL(ID_ChucVu);
+            dvwNV.Columns[0].Visible = false;
+        }
+
+        private void btnDelNV_Click(object sender, EventArgs e)
+        { 
+            int ID_NhanVien = Convert.ToInt32(dvwNV.CurrentRow.Cells["IDNhanVien"].Value);
+            BLL_QLNV bll = new BLL_QLNV();
+            bll.DelNVByID_BLL(ID_NhanVien);
+            ShowNV();
+        }
+
+        private void AddandEditNV(object sender, EventArgs e)
+        {
+            if ((Button)sender == btnAddNV)
             {
-                if (dtgvTaiKhoan.CurrentRow.Selected == true)
+                int ID_NhanVien = 0;
+                Add_EditNV f = new Add_EditNV(ID_NhanVien);
+                f.function += new Add_EditNV.Mydel(AddNV);
+                f.Show();
+            }
+            else if ((Button)sender == btnEditNV)
+            {
+                int ID_NhanVien = Convert.ToInt32(dvwNV.CurrentRow.Cells["IDNhanVien"].Value);
+                Add_EditNV f = new Add_EditNV(ID_NhanVien);
+                f.function += new Add_EditNV.Mydel(EditNV);
+                f.Show();
+            }
+        }
+
+        private void AddNV(object s)
+        {
+            NhanVien nv = new NhanVien();
+            nv = (NhanVien)s;
+            bool status;
+            status = BLL_QLNV.Instance.AddNV_BLL(nv);
+            if (status == false) MessageBox.Show("Vui long dien du thong tin");
+            ShowNV();
+        }
+
+        private void EditNV(object s)
+        {
+            int ID_NhanVien = Convert.ToInt32(dvwNV.CurrentRow.Cells["IDNhanVien"].Value);
+            BLL_QLNV.Instance.EditNV_BLL((NhanVien)s, ID_NhanVien);
+            ShowNV();
+        }
+
+        private void btnSearchNV_Click(object sender, EventArgs e)
+        {
+            int ID_ChucVu = ((CBBItem)cboChucVu.Items[cboChucVu.SelectedIndex]).Value;
+            string NameNV = txtSearchNV.Text;
+            dvwNV.DataSource = BLL_QLNV.Instance.SearchNVByName_BLL(ID_ChucVu, NameNV);
+        }
+
+        private void btnSortNV_Click(object sender, EventArgs e)
+        {
+            int choice = ((CBBItem)cboSortNV.Items[cboSortNV.SelectedIndex]).Value;
+            dvwNV.DataSource = BLL_QLNV.Instance.SortNV_BLL(choice);
+        }
+
+        /*-------------------------------------------------------------------*/
+
+        public void setcbbDM()
+        {
+            cboDanhMuc.Items.Add(new CBBItem
+            {
+                Text = "All",
+                Value = 0
+            });
+            foreach (DanhMucMon DM in BLL_QLM.Instance.GetDanhMuc_BLL())
+            {
+                cboDanhMuc.Items.Add(new CBBItem
                 {
-                    BLL_QLTaiKhoan.Instance.BLL_DeleteTK(Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value));
-                    Show_dtgvTK();
-                    reset();
-                }
+                    Text = DM.TenDanhMuc,
+                    Value = DM.IDDanhMucMon
+                });
             }
-            catch(Exception et)
+            cboDanhMuc.SelectedIndex = 0;
+        }
+
+        public void setcbbSortMon()
+        {
+            cboSortMon.Items.Add(new CBBItem { Value = 0, Text = "TenMon" });
+            cboSortMon.Items.Add(new CBBItem { Value = 1, Text = "DonGia" });
+            cboSortMon.Items.Add(new CBBItem { Value = 2, Text = "DanhMuc" });
+            cboSortMon.SelectedIndex = 0;
+        }
+
+        private void btnShowMon_Click(object sender, EventArgs e)
+        {
+            ShowMon();
+        }
+
+        private void ShowMon()
+        {
+            int ID_DanhMuc = ((CBBItem)cboDanhMuc.Items[cboDanhMuc.SelectedIndex]).Value;
+            BLL_QLM bll = new BLL_QLM();
+            dvwMon.DataSource = bll.GetListMon_BLL(ID_DanhMuc);
+            dvwMon.Columns[0].Visible = false;
+        }
+
+        private void btnDelMon_Click(object sender, EventArgs e)
+        {
+            int ID_Mon = Convert.ToInt32(dvwMon.CurrentRow.Cells["IDMon"].Value);
+            BLL_QLM bll = new BLL_QLM();
+            bll.DelMonByID_BLL(ID_Mon);
+            ShowMon();
+        }
+
+        private void AddandEditMon(object sender, EventArgs e)
+        {
+            if ((Button)sender == btnAddMon)
             {
-                MessageBox.Show(et.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int ID_Mon = 0;
+                Add_EditMon f = new Add_EditMon(ID_Mon);
+                f.function += new Add_EditMon.Mydel(AddMon);
+                f.Show();
+            }
+            else if ((Button)sender == btnEditMon)
+            {
+                int ID_Mon = Convert.ToInt32(dvwMon.CurrentRow.Cells["IDMon"].Value);
+                Add_EditMon f = new Add_EditMon(ID_Mon);
+                f.function += new Add_EditMon.Mydel(EditMon);
+                f.Show();
             }
         }
-        // handle event button reset
-        private void btnResetTK_Click(object sender, EventArgs e)
+
+        private void AddMon(object s)
         {
-            reset();
+            Mon m = new Mon();
+            m = (Mon)s;
+            bool status;
+            status = BLL_QLM.Instance.AddMon_BLL(m);
+            if (status == false) MessageBox.Show("Vui long dien du thong tin");
+            ShowMon();
+        }
+
+        private void EditMon(object s)
+        {
+            int ID_Mon = Convert.ToInt32(dvwMon.CurrentRow.Cells["IDMon"].Value);
+            BLL_QLM.Instance.EditMon_BLL((Mon)s, ID_Mon);
+            ShowMon();
+        }
+
+        private void btnSearchMon_Click(object sender, EventArgs e)
+        {
+            int ID_DanhMuc = ((CBBItem)cboDanhMuc.Items[cboDanhMuc.SelectedIndex]).Value;
+            string NameMon = txtSearchMon.Text;
+            dvwMon.DataSource = BLL_QLM.Instance.SearchMonByName_BLL(ID_DanhMuc, NameMon);
+        }
+
+        private void btnSortMon_Click(object sender, EventArgs e)
+        {
+            int choice = ((CBBItem)cboSortMon.Items[cboSortMon.SelectedIndex]).Value;
+            dvwMon.DataSource = BLL_QLM.Instance.SortMon_BLL(choice);
         }
     }
 }
