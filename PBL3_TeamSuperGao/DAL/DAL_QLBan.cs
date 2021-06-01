@@ -33,22 +33,22 @@ namespace PBL3_TeamSuperGao.DAL
         public List<Ban> GetAllBan()
         {
             DTDoAn st = new DTDoAn();
-            var l1 = st.Ban;
+            var l1 = st.Bans;
             return l1.ToList();
         }
         //xoa ban
         public void DeleteBan(string ID)
         {
             DTDoAn st = new DTDoAn();
-            Ban s = st.Ban.Find(ID);
-            st.Ban.Remove(s);
+            Ban s = st.Bans.Find(ID);
+            st.Bans.Remove(s);
             st.SaveChanges();
         }
         //cap nhat trang thai ban tu Trong sang Co Nguoi va nguoc lai
         public void UpdateTTB(string u)
         {
             DTDoAn st = new DTDoAn();
-            foreach (Ban i in st.Ban)
+            foreach (Ban i in st.Bans)
             {
                 if (u.CompareTo(i.IDBan.ToString()) == 0 && i.TinhTrangBan == "Trong") i.TinhTrangBan = "Co Nguoi";
                 else if (u.CompareTo(i.IDBan.ToString()) == 0 && i.TinhTrangBan == "Co Nguoi") i.TinhTrangBan = "Trong";
@@ -59,7 +59,7 @@ namespace PBL3_TeamSuperGao.DAL
         public Ban GetBanID(int ID)
         {
             DTDoAn st = new DTDoAn();
-            Ban u = st.Ban.Find(ID);
+            Ban u = st.Bans.Find(ID);
             return u;
         }
 
@@ -67,7 +67,7 @@ namespace PBL3_TeamSuperGao.DAL
         public void UpdateTTBIDB_T(int u)
         {
             DTDoAn st = new DTDoAn();
-            foreach (Ban i in st.Ban)
+            foreach (Ban i in st.Bans)
             {
                 if (u == i.IDBan && i.TinhTrangBan == "Co Nguoi") i.TinhTrangBan = "Trong";
             }
@@ -77,7 +77,7 @@ namespace PBL3_TeamSuperGao.DAL
         public void UpdateTTBIDT_B(int u)
         {
             DTDoAn st = new DTDoAn();
-            foreach (Ban i in st.Ban)
+            foreach (Ban i in st.Bans)
             {
                 if (u == i.IDBan && i.TinhTrangBan == "Trong") i.TinhTrangBan = "Co Nguoi";
 
@@ -88,7 +88,7 @@ namespace PBL3_TeamSuperGao.DAL
         public void AddBan(Ban u)
         {
             DTDoAn st = new DTDoAn();
-            st.Ban.Add(u);
+            st.Bans.Add(u);
             st.SaveChanges();
         }
         //Chuyen Ban 
@@ -96,9 +96,9 @@ namespace PBL3_TeamSuperGao.DAL
         {
             int IDHD = DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(IDCu);
             DTDoAn st = new DTDoAn();
-            HoaDon u = st.HoaDon.Find(IDHD);
-            Ban t1 = st.Ban.Find(IDCu);
-            Ban t2 = st.Ban.Find(IDMoi);
+            HoaDon u = st.HoaDons.Find(IDHD);
+            Ban t1 = st.Bans.Find(IDCu);
+            Ban t2 = st.Bans.Find(IDMoi);
             t1.TinhTrangBan = "Trong";
             t2.TinhTrangBan = "Co Nguoi";
             u.IDBan = IDMoi;
@@ -112,22 +112,22 @@ namespace PBL3_TeamSuperGao.DAL
         public void GopBan(int IDB1, int IDB2)
         {
             DTDoAn st = new DTDoAn();
-            Ban t1 = st.Ban.Find(IDB1);
-            Ban t2 = st.Ban.Find(IDB2);
+            Ban t1 = st.Bans.Find(IDB1);
+            Ban t2 = st.Bans.Find(IDB2);
             t1.TinhTrangBan = "Co Nguoi";
             t2.TinhTrangBan = "Trong";
             int IDHDBan2 = DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(IDB2);
-            HoaDon b2 = st.HoaDon.Find(IDHDBan2);
+            HoaDon b2 = st.HoaDons.Find(IDHDBan2);
             foreach (MonSL i in DAL_QLChiTietHoaDon.Instance.GetBill(IDB2))
             {
                 DAL_QLChiTietHoaDon.Instance.AddMon(DAL_QLMon.Instance.GetMonTheoTen(i.TenMon), Convert.ToInt32(i.SoLuong), IDB1);
             }
-            var ListCTHD = st.ChiTietHoaDon.Where(p => p.IDHoaDon == IDHDBan2);
+            var ListCTHD = st.ChiTietHoaDons.Where(p => p.IDHoaDon == IDHDBan2);
             foreach (ChiTietHoaDon j in ListCTHD)
             {
-                st.ChiTietHoaDon.Remove(j);
+                st.ChiTietHoaDons.Remove(j);
             }
-            st.HoaDon.Remove(b2);
+            st.HoaDons.Remove(b2);
             st.SaveChanges();
         }
     }

@@ -54,7 +54,7 @@ namespace PBL3_TeamSuperGao.DAL
         public List<TaiKhoan> GetAllTaiKhoan()
         {
             DTDoAn st = new DTDoAn();
-            var l1 = st.TaiKhoan;
+            var l1 = st.TaiKhoans;
             return l1.ToList();
         }
         //lay ID tai khoan theo ten dn va mk
@@ -70,7 +70,7 @@ namespace PBL3_TeamSuperGao.DAL
         public bool ChangePassword(string tk, string mkcu, string mkmoi)
         {
             DTDoAn st = new DTDoAn();
-            var t = st.TaiKhoan.Where(p => p.UserName == tk);
+            var t = st.TaiKhoans.Where(p => p.UserName == tk);
             TaiKhoan k = new TaiKhoan();
             foreach (var u in t)
             {

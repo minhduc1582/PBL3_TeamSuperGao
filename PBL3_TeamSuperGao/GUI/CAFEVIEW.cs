@@ -44,7 +44,7 @@ namespace PBL3_TeamSuperGao.GUI
             comboBoxCB.Items.Clear();
             foreach(Ban i in BLL_QLBan.Instance.GetAllBan())
             {
-                comboBoxCB.Items.Add(new CBBITem { Text = "Ban " + i.IDBan.ToString()+ " "+i.TinhTrangBan, Value = i.IDBan });
+                comboBoxCB.Items.Add(new CBBItem { Text = "Ban " + i.IDBan.ToString()+ " "+i.TinhTrangBan, Value = i.IDBan });
             }
         }
         //get CBBDM
@@ -52,16 +52,16 @@ namespace PBL3_TeamSuperGao.GUI
         {
             foreach(DanhMucMon i in BLL_QLDanhMuc.Instance.GetDanhMucMon() )
             {
-                comboBoxDM.Items.Add(new CBBITem { Value = Convert.ToInt32(i.IDDanhMucMon), Text = i.TenDanhMuc});
+                comboBoxDM.Items.Add(new CBBItem { Value = Convert.ToInt32(i.IDDanhMucMon), Text = i.TenDanhMuc});
             }
         }
         //get cb mon 
         public void GetCBBM()
         {
             comboBoxM.Items.Clear();
-            foreach (Mon i in BLL_QLMon.Instance.GetMon_DM(((CBBITem)comboBoxDM.SelectedItem).Value)) //((CBBITem)comboBoxDM.SelectedItem).Text)
+            foreach (Mon i in BLL_QLMon.Instance.GetMon_DM(((CBBItem)comboBoxDM.SelectedItem).Value)) //((CBBITem)comboBoxDM.SelectedItem).Text)
             {
-                comboBoxM.Items.Add(new CBBITem { Value = Convert.ToInt32(i.IDMon), Text = i.TenMon });
+                comboBoxM.Items.Add(new CBBItem { Value = Convert.ToInt32(i.IDMon), Text = i.TenMon });
             }
         }
         // khi nhan cbb danh muc
@@ -80,7 +80,7 @@ namespace PBL3_TeamSuperGao.GUI
             {
                 if (BLL_QLBan.Instance.GetBanID(IDBan).TinhTrangBan == "Co Nguoi")
                 {
-                    Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBITem)comboBoxM.SelectedItem).Value);
+                    Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBItem)comboBoxM.SelectedItem).Value);
                     BLL_QLChiTietHoaDon.Instance.AddMon(i, Convert.ToInt32(comboBoxSL.SelectedItem), IDBan);
                     ShowBill(IDBan);
                     TongTien(IDBan);
@@ -94,7 +94,7 @@ namespace PBL3_TeamSuperGao.GUI
                         if (j >= '0' && j <= '9') u = u + j;
                     }
                     BLL_QLHoaDon.Instance.AddHD_CTHD(IDBan, Convert.ToInt32(u), t);
-                    Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBITem)comboBoxM.SelectedItem).Value);
+                    Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBItem)comboBoxM.SelectedItem).Value);
                     BLL_QLChiTietHoaDon.Instance.AddMon(i, Convert.ToInt32(comboBoxSL.SelectedItem), IDBan);
                     BLL_QLBan.Instance.UpdateTTBIDT_B(IDBan);
                     ShowBill(IDBan);
@@ -125,9 +125,9 @@ namespace PBL3_TeamSuperGao.GUI
         }
 
         //ql nhan vien
-        private void button20_Click(object sender, EventArgs e)
+        private void btnHeThong_Handle(object sender, EventArgs e)
         {
-            FormQLNhanVien t = new FormQLNhanVien();
+            Form1 t = new Form1();
             this.Visible = false;
             t.ShowDialog();
             this.Hide();
@@ -235,7 +235,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             try
             {
-                int IDBanMoi = ((CBBITem)comboBoxCB.SelectedItem).Value;
+                int IDBanMoi = ((CBBItem)comboBoxCB.SelectedItem).Value;
                 if (BLL_QLBan.Instance.GetBanID(IDBanMoi).TinhTrangBan == "Co Nguoi")
                 {
                     MessageBox.Show("Vui long chon ban Trong" + System.Windows.Forms.DialogResult.OK);
@@ -269,7 +269,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             try
             {
-                int IDBanMoi = ((CBBITem)comboBoxCB.SelectedItem).Value;
+                int IDBanMoi = ((CBBItem)comboBoxCB.SelectedItem).Value;
                 if (BLL_QLBan.Instance.GetBanID(IDBanMoi).TinhTrangBan != "Co Nguoi")
                 {
                     MessageBox.Show("Vui long chon ban Co Nguoi"+ MessageBoxButtons.OKCancel);         
@@ -292,5 +292,6 @@ namespace PBL3_TeamSuperGao.GUI
               MessageBox.Show("Vui long chon ban can gop");
             }
         }
+
     }
 }

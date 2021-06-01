@@ -33,7 +33,7 @@ namespace PBL3_TeamSuperGao.DAL
         public List<Mon> GetAllMon()
         {
             DTDoAn st = new DTDoAn();
-            var t1 = st.Mon;
+            var t1 = st.Mons;
             //var t1 = st.Mon;
             return t1.ToList();
         }
@@ -41,7 +41,7 @@ namespace PBL3_TeamSuperGao.DAL
         public List<Mon> GetMon_DM(int IDDanhMuc)
         {
             DTDoAn st = new DTDoAn();
-            var t1 = st.Mon.Where(p => p.IDDanhMucMon == IDDanhMuc);
+            var t1 = st.Mons.Where(p => p.IDDanhMucMon == IDDanhMuc);
             //var t1 = st.Mon;
             return t1.ToList();
         }
@@ -53,7 +53,7 @@ namespace PBL3_TeamSuperGao.DAL
             try
             {
                 int idhd = DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(ID);
-                var l1 = st.ChiTietHoaDon.Where(p => p.IDHoaDon == idhd);//s[0].IDHoaDon
+                var l1 = st.ChiTietHoaDons.Where(p => p.IDHoaDon == idhd);//s[0].IDHoaDon
                 foreach (ChiTietHoaDon i in l1)
                 {
                     foreach (Mon j in DAL_QLMon.Instance.GetAllMon())
@@ -73,22 +73,22 @@ namespace PBL3_TeamSuperGao.DAL
         public void AddMon(Mon t)
         {
             DTDoAn st = new DTDoAn();
-            st.Mon.Add(t);
+            st.Mons.Add(t);
             st.SaveChanges();
         }
         //xoa mon an theo ten
         public void DeleteMonTT(string TenMon)
         {
             DTDoAn st = new DTDoAn();
-            Mon s = st.Mon.Find(TenMon);
-            st.Mon.Remove(s);
+            Mon s = st.Mons.Find(TenMon);
+            st.Mons.Remove(s);
             st.SaveChanges();
         }
         //sua mon an
         public void UpdateMon(Mon d)
         {
             DTDoAn st = new DTDoAn();
-            Mon u = st.Mon.Find(d.TenMon);
+            Mon u = st.Mons.Find(d.TenMon);
             u = d;
             st.SaveChanges();
         }
@@ -96,7 +96,7 @@ namespace PBL3_TeamSuperGao.DAL
         public Mon SerchForMaMon(int MaMonAn)
         {
             DTDoAn st = new DTDoAn();
-            var t1 = st.Mon.Where(p => p.IDMon == MaMonAn);
+            var t1 = st.Mons.Where(p => p.IDMon == MaMonAn);
             List<Mon> s = new List<Mon>();
             foreach (Mon i in t1.ToList())
             {
@@ -123,7 +123,7 @@ namespace PBL3_TeamSuperGao.DAL
         public Mon GetMonTheoTen(string u)
         {
             DTDoAn st = new DTDoAn();
-            var i = st.Mon.Where(p => p.TenMon.CompareTo(u) == 0);
+            var i = st.Mons.Where(p => p.TenMon.CompareTo(u) == 0);
             Mon k = i.ToArray().ElementAt(0);
             return k;
         }

@@ -46,7 +46,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.textBoxTT = new System.Windows.Forms.TextBox();
             this.buttonXoaMon = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
+            this.btnHeThong = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonGopBan = new System.Windows.Forms.Button();
             this.textBoxGG = new System.Windows.Forms.TextBox();
@@ -70,7 +70,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.comboBoxDM.FormattingEnabled = true;
             this.comboBoxDM.Location = new System.Drawing.Point(612, 81);
             this.comboBoxDM.Name = "comboBoxDM";
-            this.comboBoxDM.Size = new System.Drawing.Size(140, 23);
+            this.comboBoxDM.Size = new System.Drawing.Size(140, 27);
             this.comboBoxDM.TabIndex = 2;
             this.comboBoxDM.SelectedIndexChanged += new System.EventHandler(this.comboBoxDM_SelectedIndexChanged);
             // 
@@ -79,7 +79,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.comboBoxM.FormattingEnabled = true;
             this.comboBoxM.Location = new System.Drawing.Point(612, 114);
             this.comboBoxM.Name = "comboBoxM";
-            this.comboBoxM.Size = new System.Drawing.Size(140, 23);
+            this.comboBoxM.Size = new System.Drawing.Size(140, 27);
             this.comboBoxM.TabIndex = 3;
             // 
             // comboBoxSL
@@ -87,7 +87,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.comboBoxSL.FormattingEnabled = true;
             this.comboBoxSL.Location = new System.Drawing.Point(789, 113);
             this.comboBoxSL.Name = "comboBoxSL";
-            this.comboBoxSL.Size = new System.Drawing.Size(82, 23);
+            this.comboBoxSL.Size = new System.Drawing.Size(82, 27);
             this.comboBoxSL.TabIndex = 4;
             // 
             // groupBox1
@@ -105,6 +105,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(14, 22);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(566, 269);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -114,7 +115,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(787, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(84, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Số lượng";
             // 
@@ -124,7 +125,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(526, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 19);
+            this.label2.Size = new System.Drawing.Size(96, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "Danh Mục";
             // 
@@ -134,7 +135,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(526, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 19);
+            this.label3.Size = new System.Drawing.Size(48, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Món";
             // 
@@ -180,7 +181,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.comboBoxCB.FormattingEnabled = true;
             this.comboBoxCB.Location = new System.Drawing.Point(612, 531);
             this.comboBoxCB.Name = "comboBoxCB";
-            this.comboBoxCB.Size = new System.Drawing.Size(90, 23);
+            this.comboBoxCB.Size = new System.Drawing.Size(90, 27);
             this.comboBoxCB.TabIndex = 12;
             // 
             // label4
@@ -189,7 +190,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(757, 474);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 19);
+            this.label4.Size = new System.Drawing.Size(123, 23);
             this.label4.TabIndex = 13;
             this.label4.Text = "Giảm giá (%)";
             // 
@@ -198,7 +199,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.textBoxTT.Location = new System.Drawing.Point(873, 532);
             this.textBoxTT.Name = "textBoxTT";
             this.textBoxTT.ReadOnly = true;
-            this.textBoxTT.Size = new System.Drawing.Size(138, 22);
+            this.textBoxTT.Size = new System.Drawing.Size(138, 26);
             this.textBoxTT.TabIndex = 15;
             // 
             // buttonXoaMon
@@ -219,19 +220,19 @@ namespace PBL3_TeamSuperGao.GUI
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(757, 531);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 19);
+            this.label5.Size = new System.Drawing.Size(90, 23);
             this.label5.TabIndex = 33;
             this.label5.Text = "Tổng tiền";
             // 
-            // button20
+            // btnHeThong
             // 
-            this.button20.Location = new System.Drawing.Point(1008, 14);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(87, 27);
-            this.button20.TabIndex = 35;
-            this.button20.Text = "Hệ thống ";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.btnHeThong.Location = new System.Drawing.Point(1008, 14);
+            this.btnHeThong.Name = "btnHeThong";
+            this.btnHeThong.Size = new System.Drawing.Size(87, 27);
+            this.btnHeThong.TabIndex = 35;
+            this.btnHeThong.Text = "Hệ thống ";
+            this.btnHeThong.UseVisualStyleBackColor = true;
+            this.btnHeThong.Click += new System.EventHandler(this.btnHeThong_Handle);
             // 
             // flowLayoutPanel1
             // 
@@ -257,7 +258,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.textBoxGG.Location = new System.Drawing.Point(873, 473);
             this.textBoxGG.Name = "textBoxGG";
-            this.textBoxGG.Size = new System.Drawing.Size(138, 22);
+            this.textBoxGG.Size = new System.Drawing.Size(138, 26);
             this.textBoxGG.TabIndex = 43;
             // 
             // label6
@@ -266,13 +267,13 @@ namespace PBL3_TeamSuperGao.GUI
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(570, 535);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 19);
+            this.label6.Size = new System.Drawing.Size(43, 23);
             this.label6.TabIndex = 45;
             this.label6.Text = "Bàn";
             // 
-            // Form1
+            // CAFEVIEW
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1146, 571);
@@ -280,7 +281,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.Controls.Add(this.textBoxGG);
             this.Controls.Add(this.buttonGopBan);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button20);
+            this.Controls.Add(this.btnHeThong);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonXoaMon);
             this.Controls.Add(this.textBoxTT);
@@ -298,7 +299,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.Controls.Add(this.comboBoxDM);
             this.Controls.Add(this.labelnamecf);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
+            this.Name = "CAFEVIEW";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -325,7 +326,7 @@ namespace PBL3_TeamSuperGao.GUI
         private System.Windows.Forms.Button buttonXoaMon;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button btnHeThong;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button buttonGopBan;
         private System.Windows.Forms.TextBox textBoxGG;

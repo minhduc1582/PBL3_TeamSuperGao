@@ -32,7 +32,7 @@ namespace PBL3_TeamSuperGao.DAL
         public List<HoaDon> GetAllHoaDon()
         {
             DTDoAn st = new DTDoAn();
-            var l1 = st.HoaDon;
+            var l1 = st.HoaDons;
             return l1.ToList();
         }
 
@@ -57,21 +57,21 @@ namespace PBL3_TeamSuperGao.DAL
             k.TinhTrang = "Chua Thanh Toan";
             k.GiamGia = GG;
             k.IDNhanVien = IDNhanVien;
-            k.TongHoaDon = 0;
-            st.HoaDon.Add(k);
+            k.TongTien = 0;
+            st.HoaDons.Add(k);
             st.SaveChanges();
         }
         //cap nhat khi thanh toan hoa don
         public void ThanhToan(int IDHoaDon)
         {
             DTDoAn st = new DTDoAn();
-            foreach (HoaDon i in st.HoaDon)
+            foreach (HoaDon i in st.HoaDons)
             {
                 if (i.IDHoaDon == IDHoaDon) i.TinhTrang = "Da Thanh Toan";
             }
-            foreach (ChiTietHoaDon j in st.ChiTietHoaDon)
+            foreach (ChiTietHoaDon j in st.ChiTietHoaDons)
             {
-                if (j.IDHoaDon == IDHoaDon) j.NgayGioThanhToan = DateTime.Now;
+                if (j.IDHoaDon == IDHoaDon) j.NgayThanhToan = DateTime.Now;
             }
             st.SaveChanges();
         }
@@ -94,8 +94,8 @@ namespace PBL3_TeamSuperGao.DAL
                 DTDoAn st = new DTDoAn();
                 float TT = TongTien(ID);
                 int IDHD = GetIDHoaDonForIDBan(ID);
-                HoaDon i = st.HoaDon.Find(IDHD);
-                i.TongHoaDon = TT;
+                HoaDon i = st.HoaDons.Find(IDHD);
+                i.TongTien = TT;
                 st.SaveChanges();
             }
         }
@@ -106,7 +106,7 @@ namespace PBL3_TeamSuperGao.DAL
             try
             {
                 DTDoAn st = new DTDoAn();
-                var t1 = st.HoaDon.Where(p => p.IDBan == ID);
+                var t1 = st.HoaDons.Where(p => p.IDBan == ID);
                 foreach (HoaDon i in t1)
                 {
                     if (i.TinhTrang == "Chua Thanh Toan") return i.IDHoaDon;

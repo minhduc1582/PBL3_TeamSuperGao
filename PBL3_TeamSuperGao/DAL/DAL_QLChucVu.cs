@@ -30,7 +30,7 @@ namespace PBL3_TeamSuperGao.DAL
         public List<ChucVu> GetAllChucVu()
         {
             DTDoAn st = new DTDoAn();
-            var l1 = st.ChucVu;
+            var l1 = st.ChucVus;
             return l1.ToList();
         }
     }

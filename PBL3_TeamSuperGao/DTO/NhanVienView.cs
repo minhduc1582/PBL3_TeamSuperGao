@@ -14,7 +14,7 @@ namespace PBL3_TeamSuperGao.DTO
         public bool GioiTinh { get; set; }
         public string SoDienThoai { get; set; }
         public string QueQuan { get; set; }
-        public string NgaySinh { get; set; }
+        public DateTime NgaySinh { get; set; }
         public string TrinhDoHocVan { get; set; }
         public string ChucVu { get; set; }
 

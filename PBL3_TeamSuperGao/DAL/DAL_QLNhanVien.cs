@@ -32,21 +32,21 @@ namespace PBL3_TeamSuperGao.DAL
         public List<NhanVien> GetAllNV()
         {
             DTDoAn st = new DTDoAn();
-            var l1 = st.NhanVien;
+            var l1 = st.NhanViens;
             return l1.ToList();
         }
         //them nhan vien
         public void AddNhanVien(NhanVien t)
         {
             DTDoAn st = new DTDoAn();
-            st.NhanVien.Add(t);
+            st.NhanViens.Add(t);
             st.SaveChanges();
         }
         //sua nhan vien
         public void UpdateNV(NhanVien t)
         {
             DTDoAn st = new DTDoAn();
-            NhanVien u = st.NhanVien.Find(t.IDNhanVien);
+            NhanVien u = st.NhanViens.Find(t.IDNhanVien);
             u = t;
             st.SaveChanges();
         }
@@ -63,14 +63,14 @@ namespace PBL3_TeamSuperGao.DAL
         public NhanVien SearchNVForID(int ID)
         {
             DTDoAn st = new DTDoAn();
-            NhanVien u = st.NhanVien.Find(ID);
+            NhanVien u = st.NhanViens.Find(ID);
             return u;
         }
         //liet ke danh sach nhan vien theo chuc vu
         public List<NhanVien> SearchNVForCV(int IDCV)
         {
             DTDoAn st = new DTDoAn();
-            var l1 = st.NhanVien.Where(p => p.IDChucVu == IDCV);
+            var l1 = st.NhanViens.Where(p => p.IDChucVu == IDCV);
             return l1.ToList();
         }
         //tim nhan  vien theo ten
@@ -129,9 +129,9 @@ namespace PBL3_TeamSuperGao.DAL
             DTDoAn st = new DTDoAn();
             NhanVien u = new NhanVien();
             int j = 0;
-            foreach (NhanVien i in st.NhanVien)
+            foreach (NhanVien i in st.NhanViens)
             {
-                if (j == stt) st.NhanVien.Remove(i);
+                if (j == stt) st.NhanViens.Remove(i);
                 j++;
             }
             st.SaveChanges();

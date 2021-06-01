@@ -31,29 +31,29 @@ namespace PBL3_TeamSuperGao.DAL
         public List<DanhMucMon> GetDanhMucMon()
         {
             DTDoAn st = new DTDoAn();
-            var l1 = st.DanhMucMon;
+            var l1 = st.DanhMucMons;
             return l1.ToList();
         }
         //them danh muc mon
         public void AddDanhMucMon(DanhMucMon u)
         {
             DTDoAn st = new DTDoAn();
-            st.DanhMucMon.Add(u);
+            st.DanhMucMons.Add(u);
             st.SaveChanges();
         }
         //Xoa Danh Muc mon theo id danh muc
         public void DeleteDanhMucMon(string u)
         {
             DTDoAn st = new DTDoAn();
-            DanhMucMon s = st.DanhMucMon.Find(u);
-            st.DanhMucMon.Remove(s);
+            DanhMucMon s = st.DanhMucMons.Find(u);
+            st.DanhMucMons.Remove(s);
             st.SaveChanges();
         }
         //sua danh muc
         public void UpdateDanhMucMon(DanhMucMon u)
         {
             DTDoAn st = new DTDoAn();
-            DanhMucMon s = st.DanhMucMon.Find(u.IDDanhMucMon);
+            DanhMucMon s = st.DanhMucMons.Find(u.IDDanhMucMon);
             s = u;
             st.SaveChanges();
         }

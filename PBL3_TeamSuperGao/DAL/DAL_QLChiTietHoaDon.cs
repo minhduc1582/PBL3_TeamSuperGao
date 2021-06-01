@@ -37,7 +37,7 @@ namespace PBL3_TeamSuperGao.DAL
             //try
             //{
             int idhd = DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(ID);
-            var l1 = st.ChiTietHoaDon.Where(p => p.IDHoaDon == idhd);//s[0].IDHoaDon
+            var l1 = st.ChiTietHoaDons.Where(p => p.IDHoaDon == idhd);//s[0].IDHoaDon
             foreach (ChiTietHoaDon i in l1)
             {
                 foreach (Mon j in DAL_QLMon.Instance.GetAllMon())
@@ -61,7 +61,7 @@ namespace PBL3_TeamSuperGao.DAL
             int IDHoaDon = DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(IDBan);
             bool kt = true;
             //kiem tra da co mon chua
-            foreach (ChiTietHoaDon j in st.ChiTietHoaDon)
+            foreach (ChiTietHoaDon j in st.ChiTietHoaDons)
             {
                 if (i.IDMon == j.IDMon && j.IDHoaDon == IDHoaDon)
                 {
@@ -73,9 +73,9 @@ namespace PBL3_TeamSuperGao.DAL
             {
                 u.IDHoaDon = IDHoaDon;
                 u.IDMon = i.IDMon;
-                u.NgayGioThanhToan = null;
+                u.NgayThanhToan = null;
                 u.SoLuong = Sl;
-                st.ChiTietHoaDon.Add(u);
+                st.ChiTietHoaDons.Add(u);
             }
             st.SaveChanges();
         }
@@ -86,13 +86,13 @@ namespace PBL3_TeamSuperGao.DAL
             DTDoAn st = new DTDoAn();
             int j = 0;
             List<ChiTietHoaDon> ct = new List<ChiTietHoaDon>();
-            foreach (ChiTietHoaDon i in st.ChiTietHoaDon)
+            foreach (ChiTietHoaDon i in st.ChiTietHoaDons)
             {
                 if (idhd == i.IDHoaDon) ct.Add(i);
             }
             foreach (ChiTietHoaDon t in ct)
             {
-                if (j == Index) st.ChiTietHoaDon.Remove(t);
+                if (j == Index) st.ChiTietHoaDons.Remove(t);
                 j++;
             }
             st.SaveChanges();

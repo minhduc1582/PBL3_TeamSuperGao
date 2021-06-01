@@ -50,7 +50,7 @@ namespace PBL3_TeamSuperGao.BLL
                         GioiTinh = i.GioiTinh,
                         SoDienThoai = i.SoDienThoai,
                         QueQuan = i.QueQuan,
-                        NgaySinh = i.NgaySinh.ToString(),
+                        NgaySinh = i.NgaySinh,
                         TrinhDoHocVan = i.TrinhDoHocVan,
                         ChucVu = dal.GetCV_DAL(Convert.ToInt32(i.IDChucVu)).TenChucVu
                     });
@@ -65,7 +65,7 @@ namespace PBL3_TeamSuperGao.BLL
                         GioiTinh = i.GioiTinh,
                         SoDienThoai = i.SoDienThoai,
                         QueQuan = i.QueQuan,
-                        NgaySinh = i.NgaySinh.ToString(),
+                        NgaySinh = i.NgaySinh,
                         TrinhDoHocVan = i.TrinhDoHocVan,
                         ChucVu = dal.GetCV_DAL(Convert.ToInt32(i.IDChucVu)).TenChucVu
                     });
