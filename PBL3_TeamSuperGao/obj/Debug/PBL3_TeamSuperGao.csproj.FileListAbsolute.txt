@@ -15,3 +15,8 @@ C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_Team
 C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.pdb
 C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\LG4.dll
 C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\LG4.pdb
+C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Add_EditMon.resources
+C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Add_EditNV.resources
+C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.CAFEVIEW.resources
+C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDangNhap.resources
+C:\Users\HP\source\repos\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDoiMK.resources

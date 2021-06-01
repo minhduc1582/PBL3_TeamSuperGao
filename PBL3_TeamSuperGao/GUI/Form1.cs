@@ -214,5 +214,35 @@ namespace PBL3_TeamSuperGao.GUI
         {
             reset();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelMon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddandEditMon(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShowMon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchMon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
