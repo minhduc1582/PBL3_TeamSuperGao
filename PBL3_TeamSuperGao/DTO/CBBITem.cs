@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PBL3_TeamSuperGao.DTO
 {
-    class CBBITem
+    class CBBItem
     {
         public int Value { get; set; }
         public string Text { get; set; }
         public override string ToString()
         {
-            return Text;
+            return Text.ToString();
         }
     }
 }

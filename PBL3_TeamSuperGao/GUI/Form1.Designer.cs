@@ -344,7 +344,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabNhanVien.TabIndex = 2;
             this.tabNhanVien.Text = "Nhân VIên";
             this.tabNhanVien.UseVisualStyleBackColor = true;
-            this.tabNhanVien.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btnSortNV
             // 
@@ -355,6 +354,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnSortNV.TabIndex = 24;
             this.btnSortNV.Text = "Sort";
             this.btnSortNV.UseVisualStyleBackColor = true;
+            this.btnSortNV.Click += new System.EventHandler(this.btnSortNV_Click);
             // 
             // btnDelNV
             // 
@@ -365,6 +365,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnDelNV.TabIndex = 25;
             this.btnDelNV.Text = "Del";
             this.btnDelNV.UseVisualStyleBackColor = true;
+            this.btnDelNV.Click += new System.EventHandler(this.btnDelNV_Click);
             // 
             // btnEditNV
             // 
@@ -375,6 +376,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnEditNV.TabIndex = 26;
             this.btnEditNV.Text = "Edit";
             this.btnEditNV.UseVisualStyleBackColor = true;
+            this.btnEditNV.Click += new System.EventHandler(this.AddandEditNV);
             // 
             // btnAddNV
             // 
@@ -385,6 +387,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnAddNV.TabIndex = 27;
             this.btnAddNV.Text = "Add";
             this.btnAddNV.UseVisualStyleBackColor = true;
+            this.btnAddNV.Click += new System.EventHandler(this.AddandEditNV);
             // 
             // btnShowNV
             // 
@@ -395,6 +398,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnShowNV.TabIndex = 28;
             this.btnShowNV.Text = "Show";
             this.btnShowNV.UseVisualStyleBackColor = true;
+            this.btnShowNV.Click += new System.EventHandler(this.btnShowNV_Click);
             // 
             // btnSearchNV
             // 
@@ -405,6 +409,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnSearchNV.TabIndex = 29;
             this.btnSearchNV.Text = "Search";
             this.btnSearchNV.UseVisualStyleBackColor = true;
+            this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
             // 
             // dvwNV
             // 
@@ -483,7 +488,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Món";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
             // btnSortMon
             // 
@@ -494,6 +498,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnSortMon.TabIndex = 36;
             this.btnSortMon.Text = "Sort";
             this.btnSortMon.UseVisualStyleBackColor = true;
+            this.btnSortMon.Click += new System.EventHandler(this.btnSortMon_Click);
             // 
             // btnDelMon
             // 
@@ -504,6 +509,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnDelMon.TabIndex = 37;
             this.btnDelMon.Text = "Del";
             this.btnDelMon.UseVisualStyleBackColor = true;
+            this.btnDelMon.Click += new System.EventHandler(this.btnDelMon_Click);
             // 
             // btnEditMon
             // 
@@ -514,6 +520,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnEditMon.TabIndex = 38;
             this.btnEditMon.Text = "Edit";
             this.btnEditMon.UseVisualStyleBackColor = true;
+            this.btnEditMon.Click += new System.EventHandler(this.AddandEditMon);
             // 
             // btnAddMon
             // 
@@ -524,6 +531,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnAddMon.TabIndex = 39;
             this.btnAddMon.Text = "Add";
             this.btnAddMon.UseVisualStyleBackColor = true;
+            this.btnAddMon.Click += new System.EventHandler(this.AddandEditMon);
             // 
             // btnShowMon
             // 
@@ -534,6 +542,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnShowMon.TabIndex = 40;
             this.btnShowMon.Text = "Show";
             this.btnShowMon.UseVisualStyleBackColor = true;
+            this.btnShowMon.Click += new System.EventHandler(this.btnShowMon_Click);
             // 
             // btnSearchMon
             // 
@@ -544,6 +553,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnSearchMon.TabIndex = 41;
             this.btnSearchMon.Text = "Search";
             this.btnSearchMon.UseVisualStyleBackColor = true;
+            this.btnSearchMon.Click += new System.EventHandler(this.btnSearchMon_Click);
             // 
             // dvwMon
             // 
