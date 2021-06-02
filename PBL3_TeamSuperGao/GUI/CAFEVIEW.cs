@@ -17,6 +17,8 @@ namespace PBL3_TeamSuperGao.GUI
 {
     public partial class CAFEVIEW : Form
     {
+        public delegate void mydel();
+        public mydel SendForm_ { get; set; }
         public CAFEVIEW()
         {
             InitializeComponent();
@@ -123,14 +125,18 @@ namespace PBL3_TeamSuperGao.GUI
                 MessageBox.Show("Danh sach trong");
             }
         }
+        void Show_FormCFV()
+        {
+            this.Show();
+        }
 
         //ql nhan vien
         private void btnHeThong_Handle(object sender, EventArgs e)
         {
             Form1 t = new Form1();
-            this.Visible = false;
-            t.ShowDialog();
+            t.Sent_form_ += new Form1.mydel(Show_FormCFV);
             this.Hide();
+            t.ShowDialog();
         }
         /// <summary>
         /// Hiem thi danh sach ban thanh cac ban 
@@ -272,7 +278,8 @@ namespace PBL3_TeamSuperGao.GUI
                 int IDBanMoi = ((CBBItem)comboBoxCB.SelectedItem).Value;
                 if (BLL_QLBan.Instance.GetBanID(IDBanMoi).TinhTrangBan != "Co Nguoi")
                 {
-                    MessageBox.Show("Vui long chon ban Co Nguoi"+ MessageBoxButtons.OKCancel);         
+                    
+                    MessageBox.Show("Vui long chon ban Co Nguoi"+MessageBoxButtons.OKCancel);         
                 }
                 else if(IDBan == IDBanMoi)
                 {
@@ -287,11 +294,21 @@ namespace PBL3_TeamSuperGao.GUI
                     LoadTable();
                 }
              }
-             catch
+            catch
             {
               MessageBox.Show("Vui long chon ban can gop");
             }
         }
 
+        private void CAFEVIEW_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnTroVe_Click(object sender, EventArgs e)
+        {
+            SendForm_();
+            this.Close();
+        }
     }
 }

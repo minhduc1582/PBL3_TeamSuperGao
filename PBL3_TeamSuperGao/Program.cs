@@ -17,7 +17,7 @@ namespace PBL3_TeamSuperGao
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CAFEVIEW());
+            Application.Run(new FormDangNhap());
         }
     }
 }

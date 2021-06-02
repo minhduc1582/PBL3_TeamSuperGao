@@ -38,6 +38,8 @@ namespace PBL3_TeamSuperGao.GUI
             this.cbbThongKe = new System.Windows.Forms.ComboBox();
             this.tabMon = new System.Windows.Forms.TabControl();
             this.tabThongKe = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
             this.btnResetTK = new System.Windows.Forms.Button();
             this.lblCheck = new System.Windows.Forms.Label();
@@ -91,14 +93,14 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // dtmOrg
             // 
-            this.dtmOrg.Location = new System.Drawing.Point(89, 39);
+            this.dtmOrg.Location = new System.Drawing.Point(154, 34);
             this.dtmOrg.Name = "dtmOrg";
             this.dtmOrg.Size = new System.Drawing.Size(200, 22);
             this.dtmOrg.TabIndex = 0;
             // 
             // dtmDes
             // 
-            this.dtmDes.Location = new System.Drawing.Point(520, 39);
+            this.dtmDes.Location = new System.Drawing.Point(719, 34);
             this.dtmDes.Name = "dtmDes";
             this.dtmDes.Size = new System.Drawing.Size(200, 22);
             this.dtmDes.TabIndex = 1;
@@ -107,16 +109,16 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.dtvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvThongKe.Location = new System.Drawing.Point(33, 88);
+            this.dtvThongKe.Location = new System.Drawing.Point(21, 89);
             this.dtvThongKe.Name = "dtvThongKe";
             this.dtvThongKe.RowHeadersWidth = 51;
             this.dtvThongKe.RowTemplate.Height = 24;
-            this.dtvThongKe.Size = new System.Drawing.Size(705, 205);
+            this.dtvThongKe.Size = new System.Drawing.Size(941, 322);
             this.dtvThongKe.TabIndex = 2;
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(60, 337);
+            this.btnThongKe.Location = new System.Drawing.Point(65, 438);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(96, 31);
             this.btnThongKe.TabIndex = 3;
@@ -126,7 +128,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // txtTongDoanhThu
             // 
-            this.txtTongDoanhThu.Location = new System.Drawing.Point(612, 337);
+            this.txtTongDoanhThu.Location = new System.Drawing.Point(813, 442);
             this.txtTongDoanhThu.Multiline = true;
             this.txtTongDoanhThu.Name = "txtTongDoanhThu";
             this.txtTongDoanhThu.Size = new System.Drawing.Size(126, 29);
@@ -135,7 +137,7 @@ namespace PBL3_TeamSuperGao.GUI
             // lblTongDoanhThu
             // 
             this.lblTongDoanhThu.AutoSize = true;
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(453, 340);
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(663, 449);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
             this.lblTongDoanhThu.Size = new System.Drawing.Size(112, 17);
             this.lblTongDoanhThu.TabIndex = 5;
@@ -144,7 +146,7 @@ namespace PBL3_TeamSuperGao.GUI
             // cbbThongKe
             // 
             this.cbbThongKe.FormattingEnabled = true;
-            this.cbbThongKe.Location = new System.Drawing.Point(202, 337);
+            this.cbbThongKe.Location = new System.Drawing.Point(205, 442);
             this.cbbThongKe.Name = "cbbThongKe";
             this.cbbThongKe.Size = new System.Drawing.Size(132, 24);
             this.cbbThongKe.TabIndex = 6;
@@ -158,11 +160,13 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabMon.Location = new System.Drawing.Point(0, 0);
             this.tabMon.Name = "tabMon";
             this.tabMon.SelectedIndex = 0;
-            this.tabMon.Size = new System.Drawing.Size(788, 438);
+            this.tabMon.Size = new System.Drawing.Size(988, 533);
             this.tabMon.TabIndex = 7;
             // 
             // tabThongKe
             // 
+            this.tabThongKe.Controls.Add(this.label6);
+            this.tabThongKe.Controls.Add(this.label5);
             this.tabThongKe.Controls.Add(this.dtmOrg);
             this.tabThongKe.Controls.Add(this.dtvThongKe);
             this.tabThongKe.Controls.Add(this.txtTongDoanhThu);
@@ -173,10 +177,28 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabThongKe.Location = new System.Drawing.Point(4, 25);
             this.tabThongKe.Name = "tabThongKe";
             this.tabThongKe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabThongKe.Size = new System.Drawing.Size(780, 409);
+            this.tabThongKe.Size = new System.Drawing.Size(980, 504);
             this.tabThongKe.TabIndex = 0;
             this.tabThongKe.Text = "Thống Kê";
             this.tabThongKe.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(602, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 17);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Đến ngày:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Từ ngày:";
             // 
             // tabTaiKhoan
             // 
@@ -196,16 +218,16 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabTaiKhoan.Location = new System.Drawing.Point(4, 25);
             this.tabTaiKhoan.Name = "tabTaiKhoan";
             this.tabTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTaiKhoan.Size = new System.Drawing.Size(780, 409);
+            this.tabTaiKhoan.Size = new System.Drawing.Size(980, 504);
             this.tabTaiKhoan.TabIndex = 1;
             this.tabTaiKhoan.Text = "Tài Khoản";
             this.tabTaiKhoan.UseVisualStyleBackColor = true;
             // 
             // btnResetTK
             // 
-            this.btnResetTK.Location = new System.Drawing.Point(466, 237);
+            this.btnResetTK.Location = new System.Drawing.Point(601, 216);
             this.btnResetTK.Name = "btnResetTK";
-            this.btnResetTK.Size = new System.Drawing.Size(294, 37);
+            this.btnResetTK.Size = new System.Drawing.Size(329, 37);
             this.btnResetTK.TabIndex = 6;
             this.btnResetTK.Text = "Reset";
             this.btnResetTK.UseVisualStyleBackColor = true;
@@ -215,7 +237,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.lblCheck.AutoSize = true;
             this.lblCheck.ForeColor = System.Drawing.Color.White;
-            this.lblCheck.Location = new System.Drawing.Point(593, 217);
+            this.lblCheck.Location = new System.Drawing.Point(763, 196);
             this.lblCheck.Name = "lblCheck";
             this.lblCheck.Size = new System.Drawing.Size(46, 17);
             this.lblCheck.TabIndex = 4;
@@ -223,31 +245,31 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // txtReFill
             // 
-            this.txtReFill.Location = new System.Drawing.Point(596, 182);
+            this.txtReFill.Location = new System.Drawing.Point(766, 161);
             this.txtReFill.Name = "txtReFill";
-            this.txtReFill.Size = new System.Drawing.Size(148, 22);
+            this.txtReFill.Size = new System.Drawing.Size(164, 22);
             this.txtReFill.TabIndex = 5;
             this.txtReFill.TextChanged += new System.EventHandler(this.txtReFill_TextChanged);
             // 
             // txtMatKhauTK
             // 
-            this.txtMatKhauTK.Location = new System.Drawing.Point(596, 130);
+            this.txtMatKhauTK.Location = new System.Drawing.Point(766, 109);
             this.txtMatKhauTK.Name = "txtMatKhauTK";
-            this.txtMatKhauTK.Size = new System.Drawing.Size(148, 22);
+            this.txtMatKhauTK.Size = new System.Drawing.Size(164, 22);
             this.txtMatKhauTK.TabIndex = 4;
             // 
             // txtTenTK
             // 
-            this.txtTenTK.Location = new System.Drawing.Point(596, 69);
+            this.txtTenTK.Location = new System.Drawing.Point(766, 48);
             this.txtTenTK.Name = "txtTenTK";
-            this.txtTenTK.Size = new System.Drawing.Size(148, 22);
+            this.txtTenTK.Size = new System.Drawing.Size(164, 22);
             this.txtTenTK.TabIndex = 3;
             // 
             // lblReFill
             // 
             this.lblReFill.AutoSize = true;
             this.lblReFill.ForeColor = System.Drawing.Color.Black;
-            this.lblReFill.Location = new System.Drawing.Point(463, 187);
+            this.lblReFill.Location = new System.Drawing.Point(598, 161);
             this.lblReFill.Name = "lblReFill";
             this.lblReFill.Size = new System.Drawing.Size(126, 17);
             this.lblReFill.TabIndex = 2;
@@ -256,7 +278,7 @@ namespace PBL3_TeamSuperGao.GUI
             // lblMatKhau
             // 
             this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(463, 135);
+            this.lblMatKhau.Location = new System.Drawing.Point(598, 109);
             this.lblMatKhau.Name = "lblMatKhau";
             this.lblMatKhau.Size = new System.Drawing.Size(72, 17);
             this.lblMatKhau.TabIndex = 2;
@@ -265,7 +287,7 @@ namespace PBL3_TeamSuperGao.GUI
             // lblTenTK
             // 
             this.lblTenTK.AutoSize = true;
-            this.lblTenTK.Location = new System.Drawing.Point(463, 72);
+            this.lblTenTK.Location = new System.Drawing.Point(598, 46);
             this.lblTenTK.Name = "lblTenTK";
             this.lblTenTK.Size = new System.Drawing.Size(106, 17);
             this.lblTenTK.TabIndex = 2;
@@ -273,9 +295,9 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnShowTK
             // 
-            this.btnShowTK.Location = new System.Drawing.Point(691, 280);
+            this.btnShowTK.Location = new System.Drawing.Point(852, 268);
             this.btnShowTK.Name = "btnShowTK";
-            this.btnShowTK.Size = new System.Drawing.Size(69, 36);
+            this.btnShowTK.Size = new System.Drawing.Size(78, 36);
             this.btnShowTK.TabIndex = 1;
             this.btnShowTK.Text = "Xem";
             this.btnShowTK.UseVisualStyleBackColor = true;
@@ -283,9 +305,9 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnEditTK
             // 
-            this.btnEditTK.Location = new System.Drawing.Point(541, 280);
+            this.btnEditTK.Location = new System.Drawing.Point(683, 268);
             this.btnEditTK.Name = "btnEditTK";
-            this.btnEditTK.Size = new System.Drawing.Size(69, 36);
+            this.btnEditTK.Size = new System.Drawing.Size(84, 36);
             this.btnEditTK.TabIndex = 1;
             this.btnEditTK.Text = "Sửa";
             this.btnEditTK.UseVisualStyleBackColor = true;
@@ -293,9 +315,9 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnDelTK
             // 
-            this.btnDelTK.Location = new System.Drawing.Point(616, 280);
+            this.btnDelTK.Location = new System.Drawing.Point(773, 268);
             this.btnDelTK.Name = "btnDelTK";
-            this.btnDelTK.Size = new System.Drawing.Size(69, 36);
+            this.btnDelTK.Size = new System.Drawing.Size(73, 36);
             this.btnDelTK.TabIndex = 1;
             this.btnDelTK.Text = "Xóa";
             this.btnDelTK.UseVisualStyleBackColor = true;
@@ -303,9 +325,9 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnAddTK
             // 
-            this.btnAddTK.Location = new System.Drawing.Point(466, 280);
+            this.btnAddTK.Location = new System.Drawing.Point(601, 268);
             this.btnAddTK.Name = "btnAddTK";
-            this.btnAddTK.Size = new System.Drawing.Size(69, 36);
+            this.btnAddTK.Size = new System.Drawing.Size(76, 36);
             this.btnAddTK.TabIndex = 1;
             this.btnAddTK.Text = "Thêm";
             this.btnAddTK.UseVisualStyleBackColor = true;
@@ -315,11 +337,11 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.dtgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTaiKhoan.Location = new System.Drawing.Point(21, 27);
+            this.dtgvTaiKhoan.Location = new System.Drawing.Point(8, 25);
             this.dtgvTaiKhoan.Name = "dtgvTaiKhoan";
             this.dtgvTaiKhoan.RowHeadersWidth = 51;
             this.dtgvTaiKhoan.RowTemplate.Height = 24;
-            this.dtgvTaiKhoan.Size = new System.Drawing.Size(422, 289);
+            this.dtgvTaiKhoan.Size = new System.Drawing.Size(546, 459);
             this.dtgvTaiKhoan.TabIndex = 0;
             this.dtgvTaiKhoan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvTaiKhoan_MouseClick);
             // 
@@ -340,14 +362,14 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabNhanVien.Location = new System.Drawing.Point(4, 25);
             this.tabNhanVien.Name = "tabNhanVien";
             this.tabNhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhanVien.Size = new System.Drawing.Size(780, 409);
+            this.tabNhanVien.Size = new System.Drawing.Size(980, 504);
             this.tabNhanVien.TabIndex = 2;
             this.tabNhanVien.Text = "Nhân VIên";
             this.tabNhanVien.UseVisualStyleBackColor = true;
             // 
             // btnSortNV
             // 
-            this.btnSortNV.Location = new System.Drawing.Point(539, 330);
+            this.btnSortNV.Location = new System.Drawing.Point(686, 448);
             this.btnSortNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnSortNV.Name = "btnSortNV";
             this.btnSortNV.Size = new System.Drawing.Size(100, 28);
@@ -358,7 +380,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnDelNV
             // 
-            this.btnDelNV.Location = new System.Drawing.Point(400, 330);
+            this.btnDelNV.Location = new System.Drawing.Point(400, 448);
             this.btnDelNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelNV.Name = "btnDelNV";
             this.btnDelNV.Size = new System.Drawing.Size(100, 28);
@@ -369,7 +391,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnEditNV
             // 
-            this.btnEditNV.Location = new System.Drawing.Point(271, 330);
+            this.btnEditNV.Location = new System.Drawing.Point(271, 448);
             this.btnEditNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditNV.Name = "btnEditNV";
             this.btnEditNV.Size = new System.Drawing.Size(100, 28);
@@ -380,7 +402,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnAddNV
             // 
-            this.btnAddNV.Location = new System.Drawing.Point(141, 330);
+            this.btnAddNV.Location = new System.Drawing.Point(141, 448);
             this.btnAddNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNV.Name = "btnAddNV";
             this.btnAddNV.Size = new System.Drawing.Size(100, 28);
@@ -391,7 +413,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnShowNV
             // 
-            this.btnShowNV.Location = new System.Drawing.Point(13, 330);
+            this.btnShowNV.Location = new System.Drawing.Point(13, 448);
             this.btnShowNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowNV.Name = "btnShowNV";
             this.btnShowNV.Size = new System.Drawing.Size(100, 28);
@@ -402,7 +424,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnSearchNV
             // 
-            this.btnSearchNV.Location = new System.Drawing.Point(671, 50);
+            this.btnSearchNV.Location = new System.Drawing.Point(853, 56);
             this.btnSearchNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchNV.Name = "btnSearchNV";
             this.btnSearchNV.Size = new System.Drawing.Size(100, 28);
@@ -414,16 +436,16 @@ namespace PBL3_TeamSuperGao.GUI
             // dvwNV
             // 
             this.dvwNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvwNV.Location = new System.Drawing.Point(13, 105);
+            this.dvwNV.Location = new System.Drawing.Point(12, 88);
             this.dvwNV.Margin = new System.Windows.Forms.Padding(4);
             this.dvwNV.Name = "dvwNV";
             this.dvwNV.RowHeadersWidth = 51;
-            this.dvwNV.Size = new System.Drawing.Size(757, 198);
+            this.dvwNV.Size = new System.Drawing.Size(960, 322);
             this.dvwNV.TabIndex = 23;
             // 
             // txtSearchNV
             // 
-            this.txtSearchNV.Location = new System.Drawing.Point(504, 52);
+            this.txtSearchNV.Location = new System.Drawing.Point(686, 58);
             this.txtSearchNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchNV.Name = "txtSearchNV";
             this.txtSearchNV.Size = new System.Drawing.Size(132, 22);
@@ -432,7 +454,7 @@ namespace PBL3_TeamSuperGao.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(431, 56);
+            this.label2.Location = new System.Drawing.Point(613, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
@@ -442,10 +464,10 @@ namespace PBL3_TeamSuperGao.GUI
             // cboSortNV
             // 
             this.cboSortNV.FormattingEnabled = true;
-            this.cboSortNV.Location = new System.Drawing.Point(671, 333);
+            this.cboSortNV.Location = new System.Drawing.Point(813, 451);
             this.cboSortNV.Margin = new System.Windows.Forms.Padding(4);
             this.cboSortNV.Name = "cboSortNV";
-            this.cboSortNV.Size = new System.Drawing.Size(99, 24);
+            this.cboSortNV.Size = new System.Drawing.Size(136, 24);
             this.cboSortNV.TabIndex = 19;
             // 
             // cboChucVu
@@ -484,14 +506,14 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(780, 409);
+            this.tabPage1.Size = new System.Drawing.Size(980, 504);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Món";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSortMon
             // 
-            this.btnSortMon.Location = new System.Drawing.Point(545, 330);
+            this.btnSortMon.Location = new System.Drawing.Point(553, 450);
             this.btnSortMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnSortMon.Name = "btnSortMon";
             this.btnSortMon.Size = new System.Drawing.Size(100, 28);
@@ -502,7 +524,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnDelMon
             // 
-            this.btnDelMon.Location = new System.Drawing.Point(406, 330);
+            this.btnDelMon.Location = new System.Drawing.Point(414, 450);
             this.btnDelMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelMon.Name = "btnDelMon";
             this.btnDelMon.Size = new System.Drawing.Size(100, 28);
@@ -513,7 +535,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnEditMon
             // 
-            this.btnEditMon.Location = new System.Drawing.Point(277, 330);
+            this.btnEditMon.Location = new System.Drawing.Point(285, 450);
             this.btnEditMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditMon.Name = "btnEditMon";
             this.btnEditMon.Size = new System.Drawing.Size(100, 28);
@@ -524,7 +546,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnAddMon
             // 
-            this.btnAddMon.Location = new System.Drawing.Point(147, 330);
+            this.btnAddMon.Location = new System.Drawing.Point(155, 450);
             this.btnAddMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMon.Name = "btnAddMon";
             this.btnAddMon.Size = new System.Drawing.Size(100, 28);
@@ -535,7 +557,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnShowMon
             // 
-            this.btnShowMon.Location = new System.Drawing.Point(19, 330);
+            this.btnShowMon.Location = new System.Drawing.Point(27, 450);
             this.btnShowMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowMon.Name = "btnShowMon";
             this.btnShowMon.Size = new System.Drawing.Size(100, 28);
@@ -546,7 +568,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnSearchMon
             // 
-            this.btnSearchMon.Location = new System.Drawing.Point(677, 50);
+            this.btnSearchMon.Location = new System.Drawing.Point(830, 52);
             this.btnSearchMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchMon.Name = "btnSearchMon";
             this.btnSearchMon.Size = new System.Drawing.Size(100, 28);
@@ -557,17 +579,18 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // dvwMon
             // 
+            this.dvwMon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvwMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvwMon.Location = new System.Drawing.Point(19, 105);
+            this.dvwMon.Location = new System.Drawing.Point(19, 106);
             this.dvwMon.Margin = new System.Windows.Forms.Padding(4);
             this.dvwMon.Name = "dvwMon";
             this.dvwMon.RowHeadersWidth = 51;
-            this.dvwMon.Size = new System.Drawing.Size(757, 198);
+            this.dvwMon.Size = new System.Drawing.Size(940, 321);
             this.dvwMon.TabIndex = 35;
             // 
             // txtSearchMon
             // 
-            this.txtSearchMon.Location = new System.Drawing.Point(510, 52);
+            this.txtSearchMon.Location = new System.Drawing.Point(663, 54);
             this.txtSearchMon.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchMon.Name = "txtSearchMon";
             this.txtSearchMon.Size = new System.Drawing.Size(132, 22);
@@ -576,7 +599,7 @@ namespace PBL3_TeamSuperGao.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 56);
+            this.label3.Location = new System.Drawing.Point(590, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
@@ -586,7 +609,7 @@ namespace PBL3_TeamSuperGao.GUI
             // cboSortMon
             // 
             this.cboSortMon.FormattingEnabled = true;
-            this.cboSortMon.Location = new System.Drawing.Point(677, 333);
+            this.cboSortMon.Location = new System.Drawing.Point(685, 453);
             this.cboSortMon.Margin = new System.Windows.Forms.Padding(4);
             this.cboSortMon.Name = "cboSortMon";
             this.cboSortMon.Size = new System.Drawing.Size(99, 24);
@@ -615,10 +638,11 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(990, 539);
             this.Controls.Add(this.tabMon);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dtvThongKe)).EndInit();
             this.tabMon.ResumeLayout(false);
             this.tabThongKe.ResumeLayout(false);
@@ -687,6 +711,8 @@ namespace PBL3_TeamSuperGao.GUI
         private System.Windows.Forms.ComboBox cboSortMon;
         private System.Windows.Forms.ComboBox cboDanhMuc;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 

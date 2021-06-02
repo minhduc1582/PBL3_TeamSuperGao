@@ -15,6 +15,8 @@ namespace PBL3_TeamSuperGao.GUI
 {
     public partial class Form1 : Form
     {
+        public delegate void mydel();
+        public mydel Sent_form_ { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -412,6 +414,12 @@ namespace PBL3_TeamSuperGao.GUI
         {
             int choice = ((CBBItem)cboSortMon.Items[cboSortMon.SelectedIndex]).Value;
             dvwMon.DataSource = BLL_QLM.Instance.SortMon_BLL(choice);
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Sent_form_();
+            this.Close();
         }
     }
 }

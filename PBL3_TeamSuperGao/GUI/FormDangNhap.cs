@@ -18,42 +18,6 @@ namespace PBL3_TeamSuperGao.GUI
         {
             InitializeComponent();
         }
-        
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int u = 0;
-            foreach(TaiKhoan i in BLL_QLTK.Instance.GetAllTaiKhoan())
-            {
-                
-                if(i.UserName.Contains(textBox1.Text) && i.PassWord.Contains(textBox2.Text))
-                {
-                    u = 1;
-                }
-            }
-            if (u == 0) MessageBox.Show("Ban da nhap sai, vui long nhap lai");
-            else
-            {
-                CAFEVIEW st = new CAFEVIEW();
-                this.Visible = false;
-                //lay ma nhan vien 
-                st.t = BLL_QLNhanVien.Instance.GetIDNVForIDTK(BLL_QLTK.Instance.GetIDTK(textBox1.Text, textBox2.Text));
-                st.ShowDialog();
-                this.Close();
-            }
-           
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -61,6 +25,35 @@ namespace PBL3_TeamSuperGao.GUI
             this.Visible = false;
             st.ShowDialog();
             this.Close();
+        }
+
+        private void Handle_btnDangNhap(object sender, EventArgs e)
+        {
+            int u = 0;
+            foreach (TaiKhoan i in BLL_QLTaiKhoan.Instance.BLL_ShowTK())
+            {
+
+                if (String.Compare(i.UserName.Trim(), txtUserName.Text, true) == 0 && i.PassWord == txtPassword.Text)
+                {
+                    u = 1;
+                }
+            }
+            if (u == 0) MessageBox.Show("Sai Tài khoản hoặc mật khẩu, vui lòng nhập lại");
+            else
+            {
+                CAFEVIEW st = new CAFEVIEW();
+                st.SendForm_ += new CAFEVIEW.mydel(ShowForm);
+                this.Hide();
+                //lay ma nhan vien 
+                st.t = BLL_QLNhanVien.Instance.GetIDNVForIDTK(BLL_QLTK.Instance.GetIDTK(txtUserName.Text, txtPassword.Text));
+                st.ShowDialog();
+            }
+
+        }
+        void ShowForm()
+        {
+            this.Show();
+            txtPassword.Text = "";
         }
     }
 }
