@@ -44,7 +44,7 @@ namespace PBL3_TeamSuperGao.DAL
         public void Edit(TaiKhoan tk)
         {
             DTDoAn db = new DTDoAn();
-            var tkedit = db.TaiKhoans.Where(p => p.IDTaiKhoan == tk.IDTaiKhoan).FirstOrDefault();
+            var tkedit = db.TaiKhoans.Where(p => p.UserName == tk.UserName).FirstOrDefault();
             tkedit.PassWord = tk.PassWord;
             db.SaveChanges();
         }

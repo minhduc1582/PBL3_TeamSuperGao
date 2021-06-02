@@ -22,30 +22,22 @@ namespace PBL3_TeamSuperGao.GUI
         private void button4_Click(object sender, EventArgs e)
         {
             FormDoiMK st = new FormDoiMK();
-            this.Visible = false;
+            st.Sent_form_ += new FormDoiMK.mydel(ShowForm);
+            this.Hide();
             st.ShowDialog();
-            this.Close();
         }
 
         private void Handle_btnDangNhap(object sender, EventArgs e)
         {
-            int u = 0;
-            foreach (TaiKhoan i in BLL_QLTaiKhoan.Instance.BLL_ShowTK())
-            {
-
-                if (String.Compare(i.UserName.Trim(), txtUserName.Text, true) == 0 && i.PassWord == txtPassword.Text)
-                {
-                    u = 1;
-                }
-            }
-            if (u == 0) MessageBox.Show("Sai Tài khoản hoặc mật khẩu, vui lòng nhập lại");
+            if (BLL_QLTaiKhoan.Instance.BLL_isTrueLogin(txtUserName.Text, txtPassword.Text) == false)
+                MessageBox.Show("Sai Tài khoản hoặc mật khẩu, vui lòng nhập lại");
             else
             {
                 CAFEVIEW st = new CAFEVIEW();
                 st.SendForm_ += new CAFEVIEW.mydel(ShowForm);
                 this.Hide();
                 //lay ma nhan vien 
-                st.t = BLL_QLNhanVien.Instance.GetIDNVForIDTK(BLL_QLTK.Instance.GetIDTK(txtUserName.Text, txtPassword.Text));
+                st.t = BLL_QLNhanVien.Instance.GetIDNVForIDTK(BLL_QLTaiKhoan.Instance.GetIDTK(txtUserName.Text, txtPassword.Text));
                 st.ShowDialog();
             }
 

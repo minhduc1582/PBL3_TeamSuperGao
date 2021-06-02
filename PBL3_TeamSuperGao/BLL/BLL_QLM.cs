@@ -112,26 +112,17 @@ namespace PBL3_TeamSuperGao.BLL
             if (choice == 0)
             {
                 var mSort = m.OrderBy(P => P.TenMon);
-                foreach(MonView mon in mSort)
-                {
-                    n.Add(mon);
-                }
+                n = mSort.ToList();
             }
             else if (choice == 1)
             {
                 var mSort = m.OrderBy(P => P.DonGia);
-                foreach (MonView mon in mSort)
-                {
-                    n.Add(mon);
-                }
+                n = mSort.ToList();
             }
             else if (choice == 2)
             {
                 var mSort = m.OrderBy(P => P.DanhMuc);
-                foreach (MonView mon in mSort)
-                {
-                    n.Add(mon);
-                }
+                n = mSort.ToList();
             }
             return n;
         }

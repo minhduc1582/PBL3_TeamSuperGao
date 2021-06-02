@@ -27,6 +27,8 @@ namespace PBL3_TeamSuperGao.GUI
             setcbbDM();
             setcbbSortMon();
             ShowMon();
+            HandleThongKeHoaDon();
+            Show_dtgvTK();
         }
 
         // Sett cbb to handle thong ke
@@ -40,6 +42,8 @@ namespace PBL3_TeamSuperGao.GUI
             cbbThongKe.SelectedIndex = 0;
         }
                                         //MODULE
+
+        ////////////////////////////////////////////////////////////////////
         //THONG KE
         // Xu Ly su kien thong ke di kem voi CBB
         public void ThongKe(object sender,EventArgs e)
@@ -56,6 +60,7 @@ namespace PBL3_TeamSuperGao.GUI
                     break;
                 case 2:
                     HandleThongKeMon();
+                    txtTongDoanhThu.Text = "";
                     break;
                 default:
                     break;
@@ -76,6 +81,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             dtvThongKe.DataSource = BLL_ThongKe.Instance.BLL_ThongKeMon(dtmOrg.Value, dtmDes.Value);
             dtvThongKe.Columns[0].Visible = false;
+            dtvThongKe.Columns[4].Visible = false;
         }
         
         private void HandleThongKeHoaDon()
@@ -87,7 +93,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             dtvThongKe.DataSource = BLL_ThongKe.Instance.BLL_ThongKeDoanhThu(dtmOrg.Value, dtmDes.Value);
         }
-
+        ////////////////////////////////////////////////////////////////
         // MODULE
         // QUAN LY TAI KHOAN 
 
@@ -171,7 +177,7 @@ namespace PBL3_TeamSuperGao.GUI
                     if (txtReFill.Text == txtMatKhauTK.Text && Check_isExistUser(txtTenTK.Text) == true)
                     {
                         int ID = Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value);
-                        BLL_QLTaiKhoan.Instance.BLL_EditTK(ID,txtTenTK.Text, txtMatKhauTK.Text);
+                        BLL_QLTaiKhoan.Instance.BLL_EditTK(txtTenTK.Text, txtMatKhauTK.Text);
                         MessageBox.Show("Dat lai mat Khau thanh cong!");
                         reset();
                     }

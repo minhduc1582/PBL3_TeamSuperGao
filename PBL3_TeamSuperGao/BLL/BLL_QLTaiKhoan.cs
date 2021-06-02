@@ -22,6 +22,22 @@ namespace PBL3_TeamSuperGao.BLL
             }
             private set { }
         }
+        public bool BLL_isTrueLogin(string TK,String MK)
+        {
+            foreach(var i in BLL_ShowTK())
+            {
+                if (String.Compare(TK, i.UserName.Trim(),true) == 0 && MK == i.PassWord.Trim()) return true;
+            }
+            return false;
+        }
+        public int GetIDTK(string tendn, string pw)
+        {
+            foreach (TaiKhoan i in BLL_ShowTK())
+            {
+                if (BLL_isTrueLogin(tendn,pw)) return i.IDTaiKhoan;
+            }
+            return -1;
+        }
         public List<TaiKhoan> BLL_ShowTK()
         {
             List<TaiKhoan> ListTaiKhoan = DAL_QLTaiKhoan.Instance.Show();
@@ -39,10 +55,9 @@ namespace PBL3_TeamSuperGao.BLL
             TempTaiKhoan.PassWord = MaHoaMatKhau(Password);
             DAL_QLTaiKhoan.Instance.Add(TempTaiKhoan);
         }
-        public void BLL_EditTK(int ID,string User, string Password)
+        public void BLL_EditTK(string User, string Password)
         {
             TaiKhoan TempTaiKhoan = new TaiKhoan();
-            TempTaiKhoan.IDTaiKhoan = ID;
             TempTaiKhoan.UserName = User;
             TempTaiKhoan.PassWord = MaHoaMatKhau(Password);
             DAL_QLTaiKhoan.Instance.Edit(TempTaiKhoan);
