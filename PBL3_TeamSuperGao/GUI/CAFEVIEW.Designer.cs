@@ -34,26 +34,26 @@ namespace PBL3_TeamSuperGao.GUI
             this.comboBoxM = new System.Windows.Forms.ComboBox();
             this.comboBoxSL = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvDanhSach = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonThemMon = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.buttonChuyenBan = new System.Windows.Forms.Button();
-            this.comboBoxCB = new System.Windows.Forms.ComboBox();
+            this.btnThemMon = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnChuyenBan = new System.Windows.Forms.Button();
+            this.cbbChuyenBan = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxTT = new System.Windows.Forms.TextBox();
-            this.buttonXoaMon = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.btnXoaMon = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnHeThong = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonGopBan = new System.Windows.Forms.Button();
-            this.textBoxGG = new System.Windows.Forms.TextBox();
+            this.btnGopBan = new System.Windows.Forms.Button();
+            this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnTroVe = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
             // labelnamecf
@@ -93,7 +93,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dtgvDanhSach);
             this.groupBox1.Location = new System.Drawing.Point(533, 151);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(598, 308);
@@ -101,14 +101,14 @@ namespace PBL3_TeamSuperGao.GUI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách";
             // 
-            // dataGridView1
+            // dtgvDanhSach
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(566, 269);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDanhSach.Location = new System.Drawing.Point(14, 22);
+            this.dtgvDanhSach.Name = "dtgvDanhSach";
+            this.dtgvDanhSach.RowHeadersWidth = 51;
+            this.dtgvDanhSach.Size = new System.Drawing.Size(566, 269);
+            this.dtgvDanhSach.TabIndex = 0;
             // 
             // label1
             // 
@@ -140,50 +140,50 @@ namespace PBL3_TeamSuperGao.GUI
             this.label3.TabIndex = 8;
             this.label3.Text = "Món";
             // 
-            // buttonThemMon
+            // btnThemMon
             // 
-            this.buttonThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonThemMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThemMon.Location = new System.Drawing.Point(932, 83);
-            this.buttonThemMon.Name = "buttonThemMon";
-            this.buttonThemMon.Size = new System.Drawing.Size(79, 62);
-            this.buttonThemMon.TabIndex = 9;
-            this.buttonThemMon.Text = "Thêm món";
-            this.buttonThemMon.UseVisualStyleBackColor = false;
-            this.buttonThemMon.Click += new System.EventHandler(this.button1_Click);
+            this.btnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThemMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMon.Location = new System.Drawing.Point(932, 83);
+            this.btnThemMon.Name = "btnThemMon";
+            this.btnThemMon.Size = new System.Drawing.Size(79, 62);
+            this.btnThemMon.TabIndex = 9;
+            this.btnThemMon.Text = "Thêm món";
+            this.btnThemMon.UseVisualStyleBackColor = false;
+            this.btnThemMon.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnThanhToan
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1017, 473);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 86);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Thanh toán";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.Location = new System.Drawing.Point(1017, 473);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(96, 86);
+            this.btnThanhToan.TabIndex = 10;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.button2_Click);
             // 
-            // buttonChuyenBan
+            // btnChuyenBan
             // 
-            this.buttonChuyenBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonChuyenBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChuyenBan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonChuyenBan.Location = new System.Drawing.Point(547, 466);
-            this.buttonChuyenBan.Name = "buttonChuyenBan";
-            this.buttonChuyenBan.Size = new System.Drawing.Size(94, 60);
-            this.buttonChuyenBan.TabIndex = 11;
-            this.buttonChuyenBan.Text = "Chuyển bàn";
-            this.buttonChuyenBan.UseVisualStyleBackColor = false;
-            this.buttonChuyenBan.Click += new System.EventHandler(this.button3_Click);
+            this.btnChuyenBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnChuyenBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenBan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnChuyenBan.Location = new System.Drawing.Point(547, 466);
+            this.btnChuyenBan.Name = "btnChuyenBan";
+            this.btnChuyenBan.Size = new System.Drawing.Size(94, 60);
+            this.btnChuyenBan.TabIndex = 11;
+            this.btnChuyenBan.Text = "Chuyển bàn";
+            this.btnChuyenBan.UseVisualStyleBackColor = false;
+            this.btnChuyenBan.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBoxCB
+            // cbbChuyenBan
             // 
-            this.comboBoxCB.FormattingEnabled = true;
-            this.comboBoxCB.Location = new System.Drawing.Point(612, 531);
-            this.comboBoxCB.Name = "comboBoxCB";
-            this.comboBoxCB.Size = new System.Drawing.Size(126, 27);
-            this.comboBoxCB.TabIndex = 12;
+            this.cbbChuyenBan.FormattingEnabled = true;
+            this.cbbChuyenBan.Location = new System.Drawing.Point(612, 531);
+            this.cbbChuyenBan.Name = "cbbChuyenBan";
+            this.cbbChuyenBan.Size = new System.Drawing.Size(126, 27);
+            this.cbbChuyenBan.TabIndex = 12;
             // 
             // label4
             // 
@@ -195,25 +195,25 @@ namespace PBL3_TeamSuperGao.GUI
             this.label4.TabIndex = 13;
             this.label4.Text = "Giảm giá (%)";
             // 
-            // textBoxTT
+            // txtTongTien
             // 
-            this.textBoxTT.Location = new System.Drawing.Point(873, 532);
-            this.textBoxTT.Name = "textBoxTT";
-            this.textBoxTT.ReadOnly = true;
-            this.textBoxTT.Size = new System.Drawing.Size(138, 26);
-            this.textBoxTT.TabIndex = 15;
+            this.txtTongTien.Location = new System.Drawing.Point(873, 532);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(138, 26);
+            this.txtTongTien.TabIndex = 15;
             // 
-            // buttonXoaMon
+            // btnXoaMon
             // 
-            this.buttonXoaMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonXoaMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoaMon.Location = new System.Drawing.Point(1034, 83);
-            this.buttonXoaMon.Name = "buttonXoaMon";
-            this.buttonXoaMon.Size = new System.Drawing.Size(79, 62);
-            this.buttonXoaMon.TabIndex = 32;
-            this.buttonXoaMon.Text = "Xóa Món";
-            this.buttonXoaMon.UseVisualStyleBackColor = false;
-            this.buttonXoaMon.Click += new System.EventHandler(this.buttonXoaMon_Click);
+            this.btnXoaMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnXoaMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaMon.Location = new System.Drawing.Point(1034, 83);
+            this.btnXoaMon.Name = "btnXoaMon";
+            this.btnXoaMon.Size = new System.Drawing.Size(79, 62);
+            this.btnXoaMon.TabIndex = 32;
+            this.btnXoaMon.Text = "Xóa Món";
+            this.btnXoaMon.UseVisualStyleBackColor = false;
+            this.btnXoaMon.Click += new System.EventHandler(this.buttonXoaMon_Click);
             // 
             // label5
             // 
@@ -242,25 +242,25 @@ namespace PBL3_TeamSuperGao.GUI
             this.flowLayoutPanel1.Size = new System.Drawing.Size(487, 393);
             this.flowLayoutPanel1.TabIndex = 37;
             // 
-            // buttonGopBan
+            // btnGopBan
             // 
-            this.buttonGopBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonGopBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGopBan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonGopBan.Location = new System.Drawing.Point(655, 465);
-            this.buttonGopBan.Name = "buttonGopBan";
-            this.buttonGopBan.Size = new System.Drawing.Size(83, 60);
-            this.buttonGopBan.TabIndex = 41;
-            this.buttonGopBan.Text = "Gộp bàn";
-            this.buttonGopBan.UseVisualStyleBackColor = false;
-            this.buttonGopBan.Click += new System.EventHandler(this.button4_Click);
+            this.btnGopBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnGopBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGopBan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGopBan.Location = new System.Drawing.Point(655, 465);
+            this.btnGopBan.Name = "btnGopBan";
+            this.btnGopBan.Size = new System.Drawing.Size(83, 60);
+            this.btnGopBan.TabIndex = 41;
+            this.btnGopBan.Text = "Gộp bàn";
+            this.btnGopBan.UseVisualStyleBackColor = false;
+            this.btnGopBan.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBoxGG
+            // txtGiamGia
             // 
-            this.textBoxGG.Location = new System.Drawing.Point(873, 473);
-            this.textBoxGG.Name = "textBoxGG";
-            this.textBoxGG.Size = new System.Drawing.Size(138, 26);
-            this.textBoxGG.TabIndex = 43;
+            this.txtGiamGia.Location = new System.Drawing.Point(873, 473);
+            this.txtGiamGia.Name = "txtGiamGia";
+            this.txtGiamGia.Size = new System.Drawing.Size(138, 26);
+            this.txtGiamGia.TabIndex = 43;
             // 
             // label6
             // 
@@ -290,18 +290,18 @@ namespace PBL3_TeamSuperGao.GUI
             this.ClientSize = new System.Drawing.Size(1146, 571);
             this.Controls.Add(this.btnTroVe);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxGG);
-            this.Controls.Add(this.buttonGopBan);
+            this.Controls.Add(this.txtGiamGia);
+            this.Controls.Add(this.btnGopBan);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnHeThong);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.buttonXoaMon);
-            this.Controls.Add(this.textBoxTT);
+            this.Controls.Add(this.btnXoaMon);
+            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBoxCB);
-            this.Controls.Add(this.buttonChuyenBan);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonThemMon);
+            this.Controls.Add(this.cbbChuyenBan);
+            this.Controls.Add(this.btnChuyenBan);
+            this.Controls.Add(this.btnThanhToan);
+            this.Controls.Add(this.btnThemMon);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -314,7 +314,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.Name = "CAFEVIEW";
             this.Text = "Cafe Anh Em";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,19 +329,19 @@ namespace PBL3_TeamSuperGao.GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonThemMon;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonChuyenBan;
-        private System.Windows.Forms.ComboBox comboBoxCB;
+        private System.Windows.Forms.Button btnThemMon;
+        private System.Windows.Forms.Button btnThanhToan;
+        private System.Windows.Forms.Button btnChuyenBan;
+        private System.Windows.Forms.ComboBox cbbChuyenBan;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxTT;
-        private System.Windows.Forms.Button buttonXoaMon;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Button btnXoaMon;
+        private System.Windows.Forms.DataGridView dtgvDanhSach;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnHeThong;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button buttonGopBan;
-        private System.Windows.Forms.TextBox textBoxGG;
+        private System.Windows.Forms.Button btnGopBan;
+        private System.Windows.Forms.TextBox txtGiamGia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnTroVe;
     }

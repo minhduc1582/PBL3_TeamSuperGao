@@ -43,10 +43,10 @@ namespace PBL3_TeamSuperGao.GUI
         //Get all ban
         public void GetAllBan()
         {
-            comboBoxCB.Items.Clear();
+            cbbChuyenBan.Items.Clear();
             foreach(Ban i in BLL_QLBan.Instance.GetAllBan())
             {
-                comboBoxCB.Items.Add(new CBBItem { Text = "Ban " + i.IDBan.ToString()+ " "+i.TinhTrangBan, Value = i.IDBan });
+                cbbChuyenBan.Items.Add(new CBBItem { Text = "Ban " + i.IDBan.ToString()+ " "+i.TinhTrangBan, Value = i.IDBan });
             }
         }
         //get CBBDM
@@ -91,7 +91,7 @@ namespace PBL3_TeamSuperGao.GUI
                 else
                 {
                     string u = "";
-                    foreach (char j in textBoxGG.Text)
+                    foreach (char j in txtGiamGia.Text)
                     {
                         if (j >= '0' && j <= '9') u = u + j;
                     }
@@ -114,7 +114,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             try 
             {
-                int index = dataGridView1.CurrentCell.RowIndex;
+                int index = dtgvDanhSach.CurrentCell.RowIndex;
                 BLL_QLChiTietHoaDon.Instance.RemoveMon(index, IDBan);
                 ShowBill(IDBan);
                 TongTien(IDBan);
@@ -191,7 +191,7 @@ namespace PBL3_TeamSuperGao.GUI
         public void ShowBill(int ID)
         {
             List<MonSL> st = BLL_QLChiTietHoaDon.Instance.GetBill(ID);
-            dataGridView1.DataSource = st;
+            dtgvDanhSach.DataSource = st;
         }
         /// <summary>
         /// hien thi tong tien theo ID ban
@@ -202,10 +202,10 @@ namespace PBL3_TeamSuperGao.GUI
             //dung de chuyen dinh dang tien sang VND
             CultureInfo culture = new CultureInfo("vi-VN");
             double tt = BLL_QLHoaDon.Instance.TongTien(ID); 
-            textBoxTT.Text = tt.ToString("c", culture);
-            if (1000000 >= tt && tt > 500000) textBoxGG.Text = "10%";
-            else if (1000000 < tt) textBoxGG.Text = "20%";
-            else textBoxGG.Text = "0%";
+            txtTongTien.Text = tt.ToString("c", culture);
+            if (1000000 >= tt && tt > 500000) txtGiamGia.Text = "10%";
+            else if (1000000 < tt) txtGiamGia.Text = "20%";
+            else txtGiamGia.Text = "0%";
             //cap nhat tong tien lai vao sql
         }
         /// <summary>
@@ -241,7 +241,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             try
             {
-                int IDBanMoi = ((CBBItem)comboBoxCB.SelectedItem).Value;
+                int IDBanMoi = ((CBBItem)cbbChuyenBan.SelectedItem).Value;
                 if (BLL_QLBan.Instance.GetBanID(IDBanMoi).TinhTrangBan == "Co Nguoi")
                 {
                     MessageBox.Show("Vui long chon ban Trong" + System.Windows.Forms.DialogResult.OK);
@@ -275,7 +275,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             try
             {
-                int IDBanMoi = ((CBBItem)comboBoxCB.SelectedItem).Value;
+                int IDBanMoi = ((CBBItem)cbbChuyenBan.SelectedItem).Value;
                 if (BLL_QLBan.Instance.GetBanID(IDBanMoi).TinhTrangBan != "Co Nguoi")
                 {
                     
