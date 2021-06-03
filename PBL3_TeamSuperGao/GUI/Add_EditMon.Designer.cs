@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_EditMon));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,57 +42,64 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 21);
+            this.label1.Location = new System.Drawing.Point(32, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ten Mon: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 46);
+            this.label2.Location = new System.Drawing.Point(32, 67);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Don Gia";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 71);
+            this.label3.Location = new System.Drawing.Point(32, 105);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Danh Muc";
             // 
             // txtTenMon
             // 
-            this.txtTenMon.Location = new System.Drawing.Point(97, 18);
+            this.txtTenMon.Location = new System.Drawing.Point(129, 22);
+            this.txtTenMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenMon.Name = "txtTenMon";
-            this.txtTenMon.Size = new System.Drawing.Size(100, 20);
+            this.txtTenMon.Size = new System.Drawing.Size(173, 22);
             this.txtTenMon.TabIndex = 1;
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(97, 43);
+            this.txtDonGia.Location = new System.Drawing.Point(129, 63);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(100, 20);
+            this.txtDonGia.Size = new System.Drawing.Size(173, 22);
             this.txtDonGia.TabIndex = 1;
             // 
             // cboDanhMuc
             // 
             this.cboDanhMuc.FormattingEnabled = true;
-            this.cboDanhMuc.Location = new System.Drawing.Point(97, 68);
+            this.cboDanhMuc.Location = new System.Drawing.Point(129, 102);
+            this.cboDanhMuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboDanhMuc.Name = "cboDanhMuc";
-            this.cboDanhMuc.Size = new System.Drawing.Size(100, 21);
+            this.cboDanhMuc.Size = new System.Drawing.Size(173, 24);
             this.cboDanhMuc.TabIndex = 2;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(12, 113);
+            this.btnOK.Location = new System.Drawing.Point(42, 152);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(100, 28);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -99,9 +107,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(132, 113);
+            this.btnCancel.Location = new System.Drawing.Point(202, 152);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -109,9 +118,9 @@
             // 
             // Add_EditMon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(223, 154);
+            this.ClientSize = new System.Drawing.Size(342, 216);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.cboDanhMuc);
@@ -120,6 +129,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Add_EditMon";
             this.Text = "Add_EditMon";
             this.ResumeLayout(false);
