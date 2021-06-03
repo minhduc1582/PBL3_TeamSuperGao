@@ -70,21 +70,26 @@ namespace PBL3_TeamSuperGao.BLL
             dal.DelMonByID(ID_Mon);
         }
 
+        public bool Check(int ID_Mon)
+        {
+            List<ChiTietHoaDon> list = DAL_QLChiTietHoaDon.Instance.GetAllChiTiet();
+            foreach(ChiTietHoaDon i in list)
+            {
+                if (i.IDMon == ID_Mon) return true;
+            }
+            return false;
+        }
+
         public Mon GetMonByID_BLL(int ID_Mon)
         {
             DAL_QLM dal = new DAL_QLM();
             return dal.GetMonByID_DAL(ID_Mon);
         }
 
-        public bool AddMon_BLL(Mon m)
+        public void AddMon_BLL(Mon m)
         {
-            if (m.TenMon == "" ) return false;
-            else
-            {
-                DAL_QLM dal = new DAL_QLM();
-                dal.AddMon_DAL(m);
-                return true;
-            }
+            DAL_QLM dal = new DAL_QLM();
+            dal.AddMon_DAL(m);
         }
 
         public void EditMon_BLL(Mon m, int ID_Mon)
@@ -105,9 +110,9 @@ namespace PBL3_TeamSuperGao.BLL
             return m;
         }
 
-        public List<MonView> SortMon_BLL(int choice)
+        public List<MonView> SortMon_BLL(int ID_DanhMuc, int choice)
         {
-            List<MonView> m = GetListMon_BLL(0);
+            List<MonView> m = GetListMon_BLL(ID_DanhMuc);
             List<MonView> n = new List<MonView>();
             if (choice == 0)
             {
