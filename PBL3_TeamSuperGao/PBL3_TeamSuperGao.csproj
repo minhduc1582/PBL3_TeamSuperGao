@@ -165,6 +165,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -191,13 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -223,6 +224,19 @@
     <Content Include="BLL\readme.txt" />
     <Content Include="DAL\readme.txt" />
     <Content Include="DTO\readme.txt" />
+    <Content Include="Image\add_icon_32px.ico" />
+    <Content Include="Image\Back_.png" />
+    <Content Include="Image\Cafe_icon.ico" />
+    <Content Include="Image\edit_32px.ico" />
+    <Content Include="Image\Go-back_32px.ico" />
+    <Content Include="Image\pay_per_32px.ico" />
+    <Content Include="Image\reset_32px.ico" />
+    <Content Include="Image\search.png" />
+    <Content Include="Image\show_32px.ico" />
+    <None Include="Image\sort_32px.ico" />
+    <Content Include="Image\statistics_32px.ico" />
+    <Content Include="Image\systemusers_32px.ico" />
+    <Content Include="Image\trash_32px.ico" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

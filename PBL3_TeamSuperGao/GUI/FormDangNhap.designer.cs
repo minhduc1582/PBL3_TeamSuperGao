@@ -29,6 +29,7 @@ namespace PBL3_TeamSuperGao.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -131,6 +132,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDangNhap";
             this.Text = "Đăng Nhập";

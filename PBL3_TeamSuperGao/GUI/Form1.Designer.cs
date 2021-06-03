@@ -29,17 +29,8 @@ namespace PBL3_TeamSuperGao.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtmOrg = new System.Windows.Forms.DateTimePicker();
-            this.dtmDes = new System.Windows.Forms.DateTimePicker();
-            this.dtvThongKe = new System.Windows.Forms.DataGridView();
-            this.btnThongKe = new System.Windows.Forms.Button();
-            this.txtTongDoanhThu = new System.Windows.Forms.TextBox();
-            this.lblTongDoanhThu = new System.Windows.Forms.Label();
-            this.cbbThongKe = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabMon = new System.Windows.Forms.TabControl();
-            this.tabThongKe = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
             this.btnResetTK = new System.Windows.Forms.Button();
             this.lblCheck = new System.Windows.Forms.Label();
@@ -60,7 +51,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnEditNV = new System.Windows.Forms.Button();
             this.btnAddNV = new System.Windows.Forms.Button();
             this.btnShowNV = new System.Windows.Forms.Button();
-            this.btnSearchNV = new System.Windows.Forms.Button();
             this.dvwNV = new System.Windows.Forms.DataGridView();
             this.txtSearchNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,83 +63,34 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnEditMon = new System.Windows.Forms.Button();
             this.btnAddMon = new System.Windows.Forms.Button();
             this.btnShowMon = new System.Windows.Forms.Button();
-            this.btnSearchMon = new System.Windows.Forms.Button();
             this.dvwMon = new System.Windows.Forms.DataGridView();
             this.txtSearchMon = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cboSortMon = new System.Windows.Forms.ComboBox();
             this.cboDanhMuc = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvThongKe)).BeginInit();
+            this.btnSearchNV = new System.Windows.Forms.Button();
+            this.btnSearchMon = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.dtmDes = new System.Windows.Forms.DateTimePicker();
+            this.cbbThongKe = new System.Windows.Forms.ComboBox();
+            this.lblTongDoanhThu = new System.Windows.Forms.Label();
+            this.txtTongDoanhThu = new System.Windows.Forms.TextBox();
+            this.dtvThongKe = new System.Windows.Forms.DataGridView();
+            this.dtmOrg = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabThongKe = new System.Windows.Forms.TabPage();
             this.tabMon.SuspendLayout();
-            this.tabThongKe.SuspendLayout();
             this.tabTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).BeginInit();
             this.tabNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvwNV)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvwMon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvThongKe)).BeginInit();
+            this.tabThongKe.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dtmOrg
-            // 
-            this.dtmOrg.Location = new System.Drawing.Point(154, 34);
-            this.dtmOrg.Name = "dtmOrg";
-            this.dtmOrg.Size = new System.Drawing.Size(200, 22);
-            this.dtmOrg.TabIndex = 0;
-            // 
-            // dtmDes
-            // 
-            this.dtmDes.Location = new System.Drawing.Point(719, 34);
-            this.dtmDes.Name = "dtmDes";
-            this.dtmDes.Size = new System.Drawing.Size(200, 22);
-            this.dtmDes.TabIndex = 1;
-            // 
-            // dtvThongKe
-            // 
-            this.dtvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvThongKe.Location = new System.Drawing.Point(21, 89);
-            this.dtvThongKe.Name = "dtvThongKe";
-            this.dtvThongKe.RowHeadersWidth = 51;
-            this.dtvThongKe.RowTemplate.Height = 24;
-            this.dtvThongKe.Size = new System.Drawing.Size(941, 322);
-            this.dtvThongKe.TabIndex = 2;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Location = new System.Drawing.Point(65, 438);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(96, 31);
-            this.btnThongKe.TabIndex = 3;
-            this.btnThongKe.Text = "Thong ke";
-            this.btnThongKe.UseVisualStyleBackColor = true;
-            this.btnThongKe.Click += new System.EventHandler(this.ThongKe);
-            // 
-            // txtTongDoanhThu
-            // 
-            this.txtTongDoanhThu.Location = new System.Drawing.Point(813, 442);
-            this.txtTongDoanhThu.Multiline = true;
-            this.txtTongDoanhThu.Name = "txtTongDoanhThu";
-            this.txtTongDoanhThu.Size = new System.Drawing.Size(126, 29);
-            this.txtTongDoanhThu.TabIndex = 4;
-            // 
-            // lblTongDoanhThu
-            // 
-            this.lblTongDoanhThu.AutoSize = true;
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(663, 449);
-            this.lblTongDoanhThu.Name = "lblTongDoanhThu";
-            this.lblTongDoanhThu.Size = new System.Drawing.Size(112, 17);
-            this.lblTongDoanhThu.TabIndex = 5;
-            this.lblTongDoanhThu.Text = "TongDoanhThu:";
-            // 
-            // cbbThongKe
-            // 
-            this.cbbThongKe.FormattingEnabled = true;
-            this.cbbThongKe.Location = new System.Drawing.Point(205, 442);
-            this.cbbThongKe.Name = "cbbThongKe";
-            this.cbbThongKe.Size = new System.Drawing.Size(132, 24);
-            this.cbbThongKe.TabIndex = 6;
             // 
             // tabMon
             // 
@@ -160,45 +101,8 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabMon.Location = new System.Drawing.Point(0, 0);
             this.tabMon.Name = "tabMon";
             this.tabMon.SelectedIndex = 0;
-            this.tabMon.Size = new System.Drawing.Size(988, 533);
+            this.tabMon.Size = new System.Drawing.Size(990, 538);
             this.tabMon.TabIndex = 7;
-            // 
-            // tabThongKe
-            // 
-            this.tabThongKe.Controls.Add(this.label6);
-            this.tabThongKe.Controls.Add(this.label5);
-            this.tabThongKe.Controls.Add(this.dtmOrg);
-            this.tabThongKe.Controls.Add(this.dtvThongKe);
-            this.tabThongKe.Controls.Add(this.txtTongDoanhThu);
-            this.tabThongKe.Controls.Add(this.lblTongDoanhThu);
-            this.tabThongKe.Controls.Add(this.cbbThongKe);
-            this.tabThongKe.Controls.Add(this.dtmDes);
-            this.tabThongKe.Controls.Add(this.btnThongKe);
-            this.tabThongKe.Location = new System.Drawing.Point(4, 25);
-            this.tabThongKe.Name = "tabThongKe";
-            this.tabThongKe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabThongKe.Size = new System.Drawing.Size(980, 504);
-            this.tabThongKe.TabIndex = 0;
-            this.tabThongKe.Text = "Thống Kê";
-            this.tabThongKe.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(602, 39);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 17);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Đến ngày:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Từ ngày:";
             // 
             // tabTaiKhoan
             // 
@@ -218,7 +122,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabTaiKhoan.Location = new System.Drawing.Point(4, 25);
             this.tabTaiKhoan.Name = "tabTaiKhoan";
             this.tabTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTaiKhoan.Size = new System.Drawing.Size(980, 504);
+            this.tabTaiKhoan.Size = new System.Drawing.Size(982, 509);
             this.tabTaiKhoan.TabIndex = 1;
             this.tabTaiKhoan.Text = "Tài Khoản";
             this.tabTaiKhoan.UseVisualStyleBackColor = true;
@@ -299,7 +203,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnShowTK.Name = "btnShowTK";
             this.btnShowTK.Size = new System.Drawing.Size(78, 36);
             this.btnShowTK.TabIndex = 1;
-            this.btnShowTK.Text = "Xem";
+            this.btnShowTK.Text = "Show";
             this.btnShowTK.UseVisualStyleBackColor = true;
             this.btnShowTK.Click += new System.EventHandler(this.btnShowTK_Click);
             // 
@@ -309,7 +213,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnEditTK.Name = "btnEditTK";
             this.btnEditTK.Size = new System.Drawing.Size(84, 36);
             this.btnEditTK.TabIndex = 1;
-            this.btnEditTK.Text = "Sửa";
+            this.btnEditTK.Text = "Edit";
             this.btnEditTK.UseVisualStyleBackColor = true;
             this.btnEditTK.Click += new System.EventHandler(this.btnAddTK_Click);
             // 
@@ -319,7 +223,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnDelTK.Name = "btnDelTK";
             this.btnDelTK.Size = new System.Drawing.Size(73, 36);
             this.btnDelTK.TabIndex = 1;
-            this.btnDelTK.Text = "Xóa";
+            this.btnDelTK.Text = "Del";
             this.btnDelTK.UseVisualStyleBackColor = true;
             this.btnDelTK.Click += new System.EventHandler(this.BtnDelTK_Click);
             // 
@@ -329,7 +233,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnAddTK.Name = "btnAddTK";
             this.btnAddTK.Size = new System.Drawing.Size(76, 36);
             this.btnAddTK.TabIndex = 1;
-            this.btnAddTK.Text = "Thêm";
+            this.btnAddTK.Text = "Add";
             this.btnAddTK.UseVisualStyleBackColor = true;
             this.btnAddTK.Click += new System.EventHandler(this.btnAddTK_Click);
             // 
@@ -352,27 +256,28 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabNhanVien.Controls.Add(this.btnEditNV);
             this.tabNhanVien.Controls.Add(this.btnAddNV);
             this.tabNhanVien.Controls.Add(this.btnShowNV);
-            this.tabNhanVien.Controls.Add(this.btnSearchNV);
             this.tabNhanVien.Controls.Add(this.dvwNV);
             this.tabNhanVien.Controls.Add(this.txtSearchNV);
             this.tabNhanVien.Controls.Add(this.label2);
             this.tabNhanVien.Controls.Add(this.cboSortNV);
             this.tabNhanVien.Controls.Add(this.cboChucVu);
             this.tabNhanVien.Controls.Add(this.label1);
+            this.tabNhanVien.Controls.Add(this.btnSearchNV);
+            this.tabNhanVien.ImageKey = "(none)";
             this.tabNhanVien.Location = new System.Drawing.Point(4, 25);
             this.tabNhanVien.Name = "tabNhanVien";
             this.tabNhanVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhanVien.Size = new System.Drawing.Size(980, 504);
+            this.tabNhanVien.Size = new System.Drawing.Size(982, 509);
             this.tabNhanVien.TabIndex = 2;
             this.tabNhanVien.Text = "Nhân VIên";
             this.tabNhanVien.UseVisualStyleBackColor = true;
             // 
             // btnSortNV
             // 
-            this.btnSortNV.Location = new System.Drawing.Point(686, 448);
+            this.btnSortNV.Location = new System.Drawing.Point(676, 448);
             this.btnSortNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnSortNV.Name = "btnSortNV";
-            this.btnSortNV.Size = new System.Drawing.Size(100, 28);
+            this.btnSortNV.Size = new System.Drawing.Size(110, 28);
             this.btnSortNV.TabIndex = 24;
             this.btnSortNV.Text = "Sort";
             this.btnSortNV.UseVisualStyleBackColor = true;
@@ -413,53 +318,43 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnShowNV
             // 
-            this.btnShowNV.Location = new System.Drawing.Point(13, 448);
+            this.btnShowNV.Location = new System.Drawing.Point(12, 448);
             this.btnShowNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowNV.Name = "btnShowNV";
-            this.btnShowNV.Size = new System.Drawing.Size(100, 28);
+            this.btnShowNV.Size = new System.Drawing.Size(101, 28);
             this.btnShowNV.TabIndex = 28;
             this.btnShowNV.Text = "Show";
             this.btnShowNV.UseVisualStyleBackColor = true;
             this.btnShowNV.Click += new System.EventHandler(this.btnShowNV_Click);
             // 
-            // btnSearchNV
-            // 
-            this.btnSearchNV.Location = new System.Drawing.Point(853, 56);
-            this.btnSearchNV.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearchNV.Name = "btnSearchNV";
-            this.btnSearchNV.Size = new System.Drawing.Size(100, 28);
-            this.btnSearchNV.TabIndex = 29;
-            this.btnSearchNV.Text = "Search";
-            this.btnSearchNV.UseVisualStyleBackColor = true;
-            this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
-            // 
             // dvwNV
             // 
             this.dvwNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvwNV.Location = new System.Drawing.Point(12, 88);
+            this.dvwNV.Location = new System.Drawing.Point(12, 65);
             this.dvwNV.Margin = new System.Windows.Forms.Padding(4);
             this.dvwNV.Name = "dvwNV";
             this.dvwNV.RowHeadersWidth = 51;
-            this.dvwNV.Size = new System.Drawing.Size(960, 322);
+            this.dvwNV.Size = new System.Drawing.Size(960, 345);
             this.dvwNV.TabIndex = 23;
             // 
             // txtSearchNV
             // 
-            this.txtSearchNV.Location = new System.Drawing.Point(686, 58);
+            this.txtSearchNV.Location = new System.Drawing.Point(726, 29);
             this.txtSearchNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchNV.Multiline = true;
             this.txtSearchNV.Name = "txtSearchNV";
-            this.txtSearchNV.Size = new System.Drawing.Size(132, 22);
+            this.txtSearchNV.Size = new System.Drawing.Size(144, 28);
             this.txtSearchNV.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(613, 62);
+            this.label2.Location = new System.Drawing.Point(640, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Ho Ten:";
+            this.label2.Text = "Họ Tên:";
             // 
             // cboSortNV
             // 
@@ -473,7 +368,7 @@ namespace PBL3_TeamSuperGao.GUI
             // cboChucVu
             // 
             this.cboChucVu.FormattingEnabled = true;
-            this.cboChucVu.Location = new System.Drawing.Point(80, 52);
+            this.cboChucVu.Location = new System.Drawing.Point(80, 25);
             this.cboChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.cboChucVu.Name = "cboChucVu";
             this.cboChucVu.Size = new System.Drawing.Size(160, 24);
@@ -482,7 +377,7 @@ namespace PBL3_TeamSuperGao.GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 56);
+            this.label1.Location = new System.Drawing.Point(9, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 17);
@@ -496,24 +391,24 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabPage1.Controls.Add(this.btnEditMon);
             this.tabPage1.Controls.Add(this.btnAddMon);
             this.tabPage1.Controls.Add(this.btnShowMon);
-            this.tabPage1.Controls.Add(this.btnSearchMon);
             this.tabPage1.Controls.Add(this.dvwMon);
             this.tabPage1.Controls.Add(this.txtSearchMon);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.cboSortMon);
             this.tabPage1.Controls.Add(this.cboDanhMuc);
             this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.btnSearchMon);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(980, 504);
+            this.tabPage1.Size = new System.Drawing.Size(982, 509);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Món";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnSortMon
             // 
-            this.btnSortMon.Location = new System.Drawing.Point(553, 450);
+            this.btnSortMon.Location = new System.Drawing.Point(667, 454);
             this.btnSortMon.Margin = new System.Windows.Forms.Padding(4);
             this.btnSortMon.Name = "btnSortMon";
             this.btnSortMon.Size = new System.Drawing.Size(100, 28);
@@ -566,40 +461,29 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnShowMon.UseVisualStyleBackColor = true;
             this.btnShowMon.Click += new System.EventHandler(this.btnShowMon_Click);
             // 
-            // btnSearchMon
-            // 
-            this.btnSearchMon.Location = new System.Drawing.Point(830, 52);
-            this.btnSearchMon.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearchMon.Name = "btnSearchMon";
-            this.btnSearchMon.Size = new System.Drawing.Size(100, 28);
-            this.btnSearchMon.TabIndex = 41;
-            this.btnSearchMon.Text = "Search";
-            this.btnSearchMon.UseVisualStyleBackColor = true;
-            this.btnSearchMon.Click += new System.EventHandler(this.btnSearchMon_Click);
-            // 
             // dvwMon
             // 
             this.dvwMon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvwMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvwMon.Location = new System.Drawing.Point(19, 106);
+            this.dvwMon.Location = new System.Drawing.Point(19, 78);
             this.dvwMon.Margin = new System.Windows.Forms.Padding(4);
             this.dvwMon.Name = "dvwMon";
             this.dvwMon.RowHeadersWidth = 51;
-            this.dvwMon.Size = new System.Drawing.Size(940, 321);
+            this.dvwMon.Size = new System.Drawing.Size(940, 349);
             this.dvwMon.TabIndex = 35;
             // 
             // txtSearchMon
             // 
-            this.txtSearchMon.Location = new System.Drawing.Point(663, 54);
+            this.txtSearchMon.Location = new System.Drawing.Point(709, 35);
             this.txtSearchMon.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchMon.Name = "txtSearchMon";
-            this.txtSearchMon.Size = new System.Drawing.Size(132, 22);
+            this.txtSearchMon.Size = new System.Drawing.Size(150, 22);
             this.txtSearchMon.TabIndex = 34;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(590, 58);
+            this.label3.Location = new System.Drawing.Point(611, 38);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
@@ -609,16 +493,16 @@ namespace PBL3_TeamSuperGao.GUI
             // cboSortMon
             // 
             this.cboSortMon.FormattingEnabled = true;
-            this.cboSortMon.Location = new System.Drawing.Point(685, 453);
+            this.cboSortMon.Location = new System.Drawing.Point(786, 454);
             this.cboSortMon.Margin = new System.Windows.Forms.Padding(4);
             this.cboSortMon.Name = "cboSortMon";
-            this.cboSortMon.Size = new System.Drawing.Size(99, 24);
+            this.cboSortMon.Size = new System.Drawing.Size(149, 24);
             this.cboSortMon.TabIndex = 31;
             // 
             // cboDanhMuc
             // 
             this.cboDanhMuc.FormattingEnabled = true;
-            this.cboDanhMuc.Location = new System.Drawing.Point(86, 52);
+            this.cboDanhMuc.Location = new System.Drawing.Point(98, 34);
             this.cboDanhMuc.Margin = new System.Windows.Forms.Padding(4);
             this.cboDanhMuc.Name = "cboDanhMuc";
             this.cboDanhMuc.Size = new System.Drawing.Size(160, 24);
@@ -627,12 +511,134 @@ namespace PBL3_TeamSuperGao.GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 56);
+            this.label4.Location = new System.Drawing.Point(14, 38);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 30;
             this.label4.Text = "Danh Mục";
+            // 
+            // btnSearchNV
+            // 
+            this.btnSearchNV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearchNV.Location = new System.Drawing.Point(878, 29);
+            this.btnSearchNV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchNV.Name = "btnSearchNV";
+            this.btnSearchNV.Size = new System.Drawing.Size(71, 28);
+            this.btnSearchNV.TabIndex = 29;
+            this.btnSearchNV.UseVisualStyleBackColor = true;
+            this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
+            // 
+            // btnSearchMon
+            // 
+            this.btnSearchMon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearchMon.Location = new System.Drawing.Point(867, 32);
+            this.btnSearchMon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchMon.Name = "btnSearchMon";
+            this.btnSearchMon.Size = new System.Drawing.Size(68, 28);
+            this.btnSearchMon.TabIndex = 41;
+            this.btnSearchMon.UseVisualStyleBackColor = true;
+            this.btnSearchMon.Click += new System.EventHandler(this.btnSearchMon_Click);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(36, 429);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(127, 49);
+            this.btnThongKe.TabIndex = 3;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.ThongKe);
+            // 
+            // dtmDes
+            // 
+            this.dtmDes.Location = new System.Drawing.Point(702, 39);
+            this.dtmDes.Name = "dtmDes";
+            this.dtmDes.Size = new System.Drawing.Size(200, 22);
+            this.dtmDes.TabIndex = 1;
+            // 
+            // cbbThongKe
+            // 
+            this.cbbThongKe.FormattingEnabled = true;
+            this.cbbThongKe.Location = new System.Drawing.Point(190, 442);
+            this.cbbThongKe.Name = "cbbThongKe";
+            this.cbbThongKe.Size = new System.Drawing.Size(132, 24);
+            this.cbbThongKe.TabIndex = 6;
+            // 
+            // lblTongDoanhThu
+            // 
+            this.lblTongDoanhThu.AutoSize = true;
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(663, 449);
+            this.lblTongDoanhThu.Name = "lblTongDoanhThu";
+            this.lblTongDoanhThu.Size = new System.Drawing.Size(120, 17);
+            this.lblTongDoanhThu.TabIndex = 5;
+            this.lblTongDoanhThu.Text = "Tổng Doanh Thu:";
+            // 
+            // txtTongDoanhThu
+            // 
+            this.txtTongDoanhThu.Location = new System.Drawing.Point(813, 442);
+            this.txtTongDoanhThu.Multiline = true;
+            this.txtTongDoanhThu.Name = "txtTongDoanhThu";
+            this.txtTongDoanhThu.Size = new System.Drawing.Size(126, 29);
+            this.txtTongDoanhThu.TabIndex = 4;
+            // 
+            // dtvThongKe
+            // 
+            this.dtvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvThongKe.Location = new System.Drawing.Point(21, 89);
+            this.dtvThongKe.Name = "dtvThongKe";
+            this.dtvThongKe.RowHeadersWidth = 51;
+            this.dtvThongKe.RowTemplate.Height = 24;
+            this.dtvThongKe.Size = new System.Drawing.Size(941, 322);
+            this.dtvThongKe.TabIndex = 2;
+            // 
+            // dtmOrg
+            // 
+            this.dtmOrg.Location = new System.Drawing.Point(122, 39);
+            this.dtmOrg.Name = "dtmOrg";
+            this.dtmOrg.Size = new System.Drawing.Size(200, 22);
+            this.dtmOrg.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Từ ngày:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(602, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 17);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Đến ngày:";
+            // 
+            // tabThongKe
+            // 
+            this.tabThongKe.Controls.Add(this.label6);
+            this.tabThongKe.Controls.Add(this.label5);
+            this.tabThongKe.Controls.Add(this.dtmOrg);
+            this.tabThongKe.Controls.Add(this.dtvThongKe);
+            this.tabThongKe.Controls.Add(this.txtTongDoanhThu);
+            this.tabThongKe.Controls.Add(this.lblTongDoanhThu);
+            this.tabThongKe.Controls.Add(this.cbbThongKe);
+            this.tabThongKe.Controls.Add(this.dtmDes);
+            this.tabThongKe.Controls.Add(this.btnThongKe);
+            this.tabThongKe.Location = new System.Drawing.Point(4, 25);
+            this.tabThongKe.Name = "tabThongKe";
+            this.tabThongKe.Padding = new System.Windows.Forms.Padding(3);
+            this.tabThongKe.Size = new System.Drawing.Size(982, 509);
+            this.tabThongKe.TabIndex = 0;
+            this.tabThongKe.Text = "Thống Kê";
+            this.tabThongKe.UseVisualStyleBackColor = true;
+            this.tabThongKe.Click += new System.EventHandler(this.tabThongKe_Click);
             // 
             // Form1
             // 
@@ -640,13 +646,11 @@ namespace PBL3_TeamSuperGao.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 539);
             this.Controls.Add(this.tabMon);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Cafe Anh Em";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dtvThongKe)).EndInit();
             this.tabMon.ResumeLayout(false);
-            this.tabThongKe.ResumeLayout(false);
-            this.tabThongKe.PerformLayout();
             this.tabTaiKhoan.ResumeLayout(false);
             this.tabTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).EndInit();
@@ -656,21 +660,15 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvwMon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvThongKe)).EndInit();
+            this.tabThongKe.ResumeLayout(false);
+            this.tabThongKe.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dtmOrg;
-        private System.Windows.Forms.DateTimePicker dtmDes;
-        private System.Windows.Forms.DataGridView dtvThongKe;
-        private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.TextBox txtTongDoanhThu;
-        private System.Windows.Forms.Label lblTongDoanhThu;
-        private System.Windows.Forms.ComboBox cbbThongKe;
         private System.Windows.Forms.TabControl tabMon;
-        private System.Windows.Forms.TabPage tabThongKe;
         private System.Windows.Forms.TabPage tabTaiKhoan;
         private System.Windows.Forms.DataGridView dtgvTaiKhoan;
         private System.Windows.Forms.Button btnAddTK;
@@ -711,8 +709,16 @@ namespace PBL3_TeamSuperGao.GUI
         private System.Windows.Forms.ComboBox cboSortMon;
         private System.Windows.Forms.ComboBox cboDanhMuc;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage tabThongKe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtmOrg;
+        private System.Windows.Forms.DataGridView dtvThongKe;
+        private System.Windows.Forms.TextBox txtTongDoanhThu;
+        private System.Windows.Forms.Label lblTongDoanhThu;
+        private System.Windows.Forms.ComboBox cbbThongKe;
+        private System.Windows.Forms.DateTimePicker dtmDes;
+        private System.Windows.Forms.Button btnThongKe;
     }
 }
 

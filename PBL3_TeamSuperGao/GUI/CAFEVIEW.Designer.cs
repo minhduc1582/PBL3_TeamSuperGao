@@ -29,6 +29,7 @@ namespace PBL3_TeamSuperGao.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CAFEVIEW));
             this.labelnamecf = new System.Windows.Forms.Label();
             this.comboBoxDM = new System.Windows.Forms.ComboBox();
             this.comboBoxM = new System.Windows.Forms.ComboBox();
@@ -38,31 +39,31 @@ namespace PBL3_TeamSuperGao.GUI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnThemMon = new System.Windows.Forms.Button();
-            this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.cbbChuyenBan = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.btnXoaMon = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnHeThong = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGopBan = new System.Windows.Forms.Button();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnTroVe = new System.Windows.Forms.Button();
+            this.btnHeThong = new System.Windows.Forms.Button();
+            this.btnXoaMon = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
+            this.btnThemMon = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
             // labelnamecf
             // 
-            this.labelnamecf.Font = new System.Drawing.Font("Ravie", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnamecf.Font = new System.Drawing.Font("Ravie", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelnamecf.ForeColor = System.Drawing.Color.Red;
-            this.labelnamecf.Location = new System.Drawing.Point(399, 10);
+            this.labelnamecf.Location = new System.Drawing.Point(424, 7);
             this.labelnamecf.Name = "labelnamecf";
-            this.labelnamecf.Size = new System.Drawing.Size(377, 52);
+            this.labelnamecf.Size = new System.Drawing.Size(410, 52);
             this.labelnamecf.TabIndex = 1;
             this.labelnamecf.Text = "Cà Phê Anh Em";
             // 
@@ -140,30 +141,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.label3.TabIndex = 8;
             this.label3.Text = "Món";
             // 
-            // btnThemMon
-            // 
-            this.btnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnThemMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMon.Location = new System.Drawing.Point(932, 83);
-            this.btnThemMon.Name = "btnThemMon";
-            this.btnThemMon.Size = new System.Drawing.Size(79, 62);
-            this.btnThemMon.TabIndex = 9;
-            this.btnThemMon.Text = "Thêm món";
-            this.btnThemMon.UseVisualStyleBackColor = false;
-            this.btnThemMon.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.Location = new System.Drawing.Point(1017, 473);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(96, 86);
-            this.btnThanhToan.TabIndex = 10;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btnChuyenBan
             // 
             this.btnChuyenBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -203,18 +180,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.txtTongTien.Size = new System.Drawing.Size(138, 26);
             this.txtTongTien.TabIndex = 15;
             // 
-            // btnXoaMon
-            // 
-            this.btnXoaMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXoaMon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaMon.Location = new System.Drawing.Point(1034, 83);
-            this.btnXoaMon.Name = "btnXoaMon";
-            this.btnXoaMon.Size = new System.Drawing.Size(79, 62);
-            this.btnXoaMon.TabIndex = 32;
-            this.btnXoaMon.Text = "Xóa Món";
-            this.btnXoaMon.UseVisualStyleBackColor = false;
-            this.btnXoaMon.Click += new System.EventHandler(this.buttonXoaMon_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -224,16 +189,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.label5.Size = new System.Drawing.Size(90, 23);
             this.label5.TabIndex = 33;
             this.label5.Text = "Tổng tiền";
-            // 
-            // btnHeThong
-            // 
-            this.btnHeThong.Location = new System.Drawing.Point(1008, 14);
-            this.btnHeThong.Name = "btnHeThong";
-            this.btnHeThong.Size = new System.Drawing.Size(87, 27);
-            this.btnHeThong.TabIndex = 35;
-            this.btnHeThong.Text = "Hệ thống ";
-            this.btnHeThong.UseVisualStyleBackColor = true;
-            this.btnHeThong.Click += new System.EventHandler(this.btnHeThong_Handle);
             // 
             // flowLayoutPanel1
             // 
@@ -274,13 +229,73 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // btnTroVe
             // 
+            this.btnTroVe.BackColor = System.Drawing.Color.Aqua;
+            this.btnTroVe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTroVe.Image = global::PBL3_TeamSuperGao.Properties.Resources.Go_back_32px;
             this.btnTroVe.Location = new System.Drawing.Point(33, 25);
             this.btnTroVe.Name = "btnTroVe";
-            this.btnTroVe.Size = new System.Drawing.Size(98, 34);
+            this.btnTroVe.Size = new System.Drawing.Size(80, 34);
             this.btnTroVe.TabIndex = 46;
-            this.btnTroVe.Text = "Trở Về";
-            this.btnTroVe.UseVisualStyleBackColor = true;
+            this.btnTroVe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTroVe.UseVisualStyleBackColor = false;
             this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
+            // 
+            // btnHeThong
+            // 
+            this.btnHeThong.Image = global::PBL3_TeamSuperGao.Properties.Resources.systemusers_32px;
+            this.btnHeThong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnHeThong.Location = new System.Drawing.Point(1008, 10);
+            this.btnHeThong.Name = "btnHeThong";
+            this.btnHeThong.Size = new System.Drawing.Size(105, 52);
+            this.btnHeThong.TabIndex = 35;
+            this.btnHeThong.Text = "Hệ thống ";
+            this.btnHeThong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHeThong.UseVisualStyleBackColor = true;
+            this.btnHeThong.Click += new System.EventHandler(this.btnHeThong_Handle);
+            // 
+            // btnXoaMon
+            // 
+            this.btnXoaMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnXoaMon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaMon.Image = global::PBL3_TeamSuperGao.Properties.Resources.trash_32px;
+            this.btnXoaMon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnXoaMon.Location = new System.Drawing.Point(1017, 83);
+            this.btnXoaMon.Name = "btnXoaMon";
+            this.btnXoaMon.Size = new System.Drawing.Size(96, 62);
+            this.btnXoaMon.TabIndex = 32;
+            this.btnXoaMon.Text = "Xóa Món";
+            this.btnXoaMon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnXoaMon.UseVisualStyleBackColor = false;
+            this.btnXoaMon.Click += new System.EventHandler(this.buttonXoaMon_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.Image = global::PBL3_TeamSuperGao.Properties.Resources.pay_per_32px1;
+            this.btnThanhToan.Location = new System.Drawing.Point(1017, 473);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(96, 86);
+            this.btnThanhToan.TabIndex = 10;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnThemMon
+            // 
+            this.btnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThemMon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMon.Image = global::PBL3_TeamSuperGao.Properties.Resources.add_icon_32px;
+            this.btnThemMon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThemMon.Location = new System.Drawing.Point(912, 83);
+            this.btnThemMon.Name = "btnThemMon";
+            this.btnThemMon.Size = new System.Drawing.Size(99, 62);
+            this.btnThemMon.TabIndex = 9;
+            this.btnThemMon.Text = "Thêm món";
+            this.btnThemMon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThemMon.UseVisualStyleBackColor = false;
+            this.btnThemMon.Click += new System.EventHandler(this.button1_Click);
             // 
             // CAFEVIEW
             // 
@@ -311,6 +326,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.Controls.Add(this.comboBoxDM);
             this.Controls.Add(this.labelnamecf);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CAFEVIEW";
             this.Text = "Cafe Anh Em";
             this.groupBox1.ResumeLayout(false);

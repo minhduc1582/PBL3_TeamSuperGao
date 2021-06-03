@@ -427,5 +427,10 @@ namespace PBL3_TeamSuperGao.GUI
             Sent_form_();
             this.Close();
         }
+
+        private void tabThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
