@@ -227,8 +227,10 @@
     <Content Include="Image\add_icon_32px.ico" />
     <Content Include="Image\Back_.png" />
     <Content Include="Image\Cafe_icon.ico" />
+    <Content Include="Image\Cancel_32px.ico" />
     <Content Include="Image\edit_32px.ico" />
     <Content Include="Image\Go-back_32px.ico" />
+    <Content Include="Image\ok_32px.ico" />
     <Content Include="Image\pay_per_32px.ico" />
     <Content Include="Image\reset_32px.ico" />
     <Content Include="Image\search.png" />

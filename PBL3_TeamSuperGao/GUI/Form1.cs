@@ -432,5 +432,10 @@ namespace PBL3_TeamSuperGao.GUI
         {
 
         }
+
+        private void tabTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

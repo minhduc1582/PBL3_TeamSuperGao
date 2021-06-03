@@ -55,7 +55,7 @@
             // 
             this.cboChucVu.FormattingEnabled = true;
             this.cboChucVu.Location = new System.Drawing.Point(499, 178);
-            this.cboChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.cboChucVu.Name = "cboChucVu";
             this.cboChucVu.Size = new System.Drawing.Size(132, 24);
             this.cboChucVu.TabIndex = 2;
@@ -83,7 +83,7 @@
             // txtHoTen
             // 
             this.txtHoTen.Location = new System.Drawing.Point(180, 20);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(132, 22);
             this.txtHoTen.TabIndex = 5;
@@ -101,7 +101,7 @@
             // txtDanToc
             // 
             this.txtDanToc.Location = new System.Drawing.Point(180, 63);
-            this.txtDanToc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDanToc.Margin = new System.Windows.Forms.Padding(4);
             this.txtDanToc.Name = "txtDanToc";
             this.txtDanToc.Size = new System.Drawing.Size(132, 22);
             this.txtDanToc.TabIndex = 7;
@@ -109,7 +109,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(180, 158);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(132, 22);
             this.txtSDT.TabIndex = 9;
@@ -159,9 +159,9 @@
             this.groupBox1.Controls.Add(this.rdoFemale);
             this.groupBox1.Controls.Add(this.rdoMale);
             this.groupBox1.Location = new System.Drawing.Point(401, 64);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(267, 86);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -171,7 +171,7 @@
             // 
             this.rdoFemale.AutoSize = true;
             this.rdoFemale.Location = new System.Drawing.Point(155, 39);
-            this.rdoFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoFemale.Margin = new System.Windows.Forms.Padding(4);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(75, 21);
             this.rdoFemale.TabIndex = 3;
@@ -183,7 +183,7 @@
             // 
             this.rdoMale.AutoSize = true;
             this.rdoMale.Location = new System.Drawing.Point(24, 39);
-            this.rdoMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoMale.Margin = new System.Windows.Forms.Padding(4);
             this.rdoMale.Name = "rdoMale";
             this.rdoMale.Size = new System.Drawing.Size(59, 21);
             this.rdoMale.TabIndex = 2;
@@ -194,7 +194,7 @@
             // txtHocVan
             // 
             this.txtHocVan.Location = new System.Drawing.Point(180, 110);
-            this.txtHocVan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHocVan.Margin = new System.Windows.Forms.Padding(4);
             this.txtHocVan.Name = "txtHocVan";
             this.txtHocVan.Size = new System.Drawing.Size(132, 22);
             this.txtHocVan.TabIndex = 8;
@@ -210,17 +210,17 @@
             // txtQueQuan
             // 
             this.txtQueQuan.Location = new System.Drawing.Point(180, 208);
-            this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(132, 22);
             this.txtQueQuan.TabIndex = 17;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(223, 265);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Location = new System.Drawing.Point(223, 257);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(100, 28);
+            this.btnOK.Size = new System.Drawing.Size(100, 36);
             this.btnOK.TabIndex = 18;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -228,10 +228,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(425, 265);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(425, 257);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 28);
+            this.btnCancel.Size = new System.Drawing.Size(100, 36);
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -260,7 +260,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboChucVu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_EditNV";
             this.Text = "Add_EditNV";
             this.groupBox1.ResumeLayout(false);
