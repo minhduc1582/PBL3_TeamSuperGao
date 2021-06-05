@@ -80,21 +80,26 @@ namespace PBL3_TeamSuperGao.BLL
             dal.DelNVByID(ID_NhanVien);
         }
 
+        public bool Check(int ID_NhanVien)
+        {
+            List<HoaDon> ListHoaDon = DAL_QLHoaDon.Instance.GetAllHoaDon();
+            foreach(HoaDon i in ListHoaDon)
+            {
+                if (i.IDNhanVien == ID_NhanVien) return true;
+            }
+            return false;
+        }
+
         public NhanVien GetNVByID_BLL(int ID_NhanVien)
         {
             DAL_QLNV dal = new DAL_QLNV();
             return dal.GetNVByID_DAL(ID_NhanVien);
         }
         
-        public bool AddNV_BLL(NhanVien nv)
+        public void AddNV_BLL(NhanVien nv)
         {
-            if (nv.HoTen == "" || nv.DanToc == "" || nv.TrinhDoHocVan == "" || nv.SoDienThoai == "" || nv.QueQuan == "") return false;
-            else
-            {
-                DAL_QLNV dal = new DAL_QLNV();
-                dal.AddNV_DAL(nv);
-                return true;
-            }
+            DAL_QLNV dal = new DAL_QLNV();
+            dal.AddNV_DAL(nv);
         }
 
         public void EditNV_BLL(NhanVien nv, int ID_NhanVien)
@@ -115,9 +120,9 @@ namespace PBL3_TeamSuperGao.BLL
             return nv;
         }
 
-        public List<NhanVienView> SortNV_BLL(int choice)
+        public List<NhanVienView> SortNV_BLL(int ID_ChucVu, int choice)
         {
-            List<NhanVienView> nv = GetListNV_BLL(0);
+            List<NhanVienView> nv = GetListNV_BLL(ID_ChucVu);
             List<NhanVienView> temp = new List<NhanVienView>();
             if (choice == 0)
             {

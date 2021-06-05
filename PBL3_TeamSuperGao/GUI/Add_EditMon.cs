@@ -62,8 +62,13 @@ namespace PBL3_TeamSuperGao.GUI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            function(GetData());
-            this.Dispose();
+            if (txtTenMon.Text == "" || txtDonGia.Text == "")
+                MessageBox.Show("Vui long dien du thong tin");
+            else
+            {
+                function(GetData());
+                this.Dispose();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
