@@ -273,7 +273,8 @@ namespace PBL3_TeamSuperGao.GUI
         {
             int ID_NhanVien = Convert.ToInt32(dvwNV.CurrentRow.Cells["IDNhanVien"].Value);
             BLL_QLNV bll = new BLL_QLNV();
-            bll.DelNVByID_BLL(ID_NhanVien);
+            if (bll.Check(ID_NhanVien) == true) MessageBox.Show("Khong the xoa nhan vien nay");
+            else bll.DelNVByID_BLL(ID_NhanVien);
             ShowNV();
         }
 
@@ -300,8 +301,7 @@ namespace PBL3_TeamSuperGao.GUI
             NhanVien nv = new NhanVien();
             nv = (NhanVien)s;
             bool status;
-            status = BLL_QLNV.Instance.AddNV_BLL(nv);
-            if (status == false) MessageBox.Show("Vui long dien du thong tin");
+            BLL_QLNV.Instance.AddNV_BLL(nv);
             ShowNV();
         }
 
@@ -322,7 +322,8 @@ namespace PBL3_TeamSuperGao.GUI
         private void btnSortNV_Click(object sender, EventArgs e)
         {
             int choice = ((CBBItem)cboSortNV.Items[cboSortNV.SelectedIndex]).Value;
-            dvwNV.DataSource = BLL_QLNV.Instance.SortNV_BLL(choice);
+            int ID_ChucVu = ((CBBItem)cboChucVu.Items[cboChucVu.SelectedIndex]).Value;
+            dvwNV.DataSource = BLL_QLNV.Instance.SortNV_BLL(ID_ChucVu, choice);
         }
 
         /*-------------------------------------------------------------------*/
@@ -370,7 +371,8 @@ namespace PBL3_TeamSuperGao.GUI
         {
             int ID_Mon = Convert.ToInt32(dvwMon.CurrentRow.Cells["IDMon"].Value);
             BLL_QLM bll = new BLL_QLM();
-            bll.DelMonByID_BLL(ID_Mon);
+            if (bll.Check(ID_Mon) == true) MessageBox.Show("Khong the xoa nhan vien nay");
+            else bll.DelMonByID_BLL(ID_Mon);
             ShowMon();
         }
 
@@ -397,8 +399,7 @@ namespace PBL3_TeamSuperGao.GUI
             Mon m = new Mon();
             m = (Mon)s;
             bool status;
-            status = BLL_QLM.Instance.AddMon_BLL(m);
-            if (status == false) MessageBox.Show("Vui long dien du thong tin");
+            BLL_QLM.Instance.AddMon_BLL(m);
             ShowMon();
         }
 
@@ -419,13 +420,24 @@ namespace PBL3_TeamSuperGao.GUI
         private void btnSortMon_Click(object sender, EventArgs e)
         {
             int choice = ((CBBItem)cboSortMon.Items[cboSortMon.SelectedIndex]).Value;
-            dvwMon.DataSource = BLL_QLM.Instance.SortMon_BLL(choice);
+            int ID_DanhMuc = ((CBBItem)cboDanhMuc.Items[cboDanhMuc.SelectedIndex]).Value;
+            dvwMon.DataSource = BLL_QLM.Instance.SortMon_BLL(ID_DanhMuc, choice);
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Sent_form_();
             this.Close();
+        }
+
+        private void tabThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabTaiKhoan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

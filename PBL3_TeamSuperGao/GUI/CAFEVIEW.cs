@@ -328,5 +328,6 @@ namespace PBL3_TeamSuperGao.GUI
             SendForm_();
             this.Close();
         }
+
     }
 }

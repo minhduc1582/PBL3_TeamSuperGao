@@ -29,6 +29,15 @@ namespace PBL3_TeamSuperGao.DAL
 
         }
 
+        public List<ChiTietHoaDon> GetAllChiTiet()
+        {
+            DTDoAn st = new DTDoAn();
+            List<ChiTietHoaDon> list = new List<ChiTietHoaDon>();
+            var l = st.ChiTietHoaDons;
+            list = l.ToList();
+            return list;
+        }
+
         //get bill theo id ban 
         public List<MonSL> GetBill(int ID)
         {
