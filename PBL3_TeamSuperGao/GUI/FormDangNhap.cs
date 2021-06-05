@@ -29,6 +29,10 @@ namespace PBL3_TeamSuperGao.GUI
 
         private void Handle_btnDangNhap(object sender, EventArgs e)
         {
+            DangNhap();
+        }
+        void DangNhap()
+        {
             if (BLL_QLTaiKhoan.Instance.BLL_isTrueLogin(txtUserName.Text, txtPassword.Text) == false)
                 MessageBox.Show("Sai Tài khoản hoặc mật khẩu, vui lòng nhập lại");
             else
@@ -40,12 +44,20 @@ namespace PBL3_TeamSuperGao.GUI
                 st.t = BLL_QLNhanVien.Instance.GetIDNVForIDTK(BLL_QLTaiKhoan.Instance.GetIDTK(txtUserName.Text, txtPassword.Text));
                 st.ShowDialog();
             }
-
+            txtPassword.Text = "";
+        }
+        private void Keypress_enter(object sender,KeyEventArgs kp)
+        {
+            if(kp.KeyCode == Keys.Enter)
+            {
+                DangNhap();
+            }
         }
         void ShowForm()
         {
             this.Show();
             txtPassword.Text = "";
         }
+
     }
 }

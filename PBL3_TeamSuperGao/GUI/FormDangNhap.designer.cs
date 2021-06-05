@@ -65,7 +65,8 @@ namespace PBL3_TeamSuperGao.GUI
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(177, 26);
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Keypress_enter);
             // 
             // label2
             // 
@@ -106,10 +107,11 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(135, 28);
-            this.btnDangNhap.TabIndex = 1;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.Handle_btnDangNhap);
+            this.btnDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Keypress_enter);
             // 
             // button4
             // 
