@@ -142,8 +142,7 @@ namespace PBL3_TeamSuperGao.GUI
         private void btnHeThong_Handle(object sender, EventArgs e)
         {
             if (BLL_QLNhanVien.Instance.KiemTraChucVu(t))
-            {
-                //MessageBox.Show(t.ToString());
+            { 
                 Form1 st = new Form1();
                 st.Sent_form_ += new Form1.mydel(Show_FormCFV);
                 this.Hide();
