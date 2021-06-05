@@ -79,6 +79,10 @@ namespace PBL3_TeamSuperGao.BLL
         {
             DAL.DAL_QLNhanVien.Instance.DeleteHoten(stt);
         }
-
+        //kiem tra chuc vu theo ma, neu chuc vu quan ly thi tra ve true
+        public bool KiemTraChucVu(int IDNhanVien)
+        {
+            return DAL.DAL_QLNhanVien.Instance.KiemTraChucVu(IDNhanVien);
+        }
     }
 }

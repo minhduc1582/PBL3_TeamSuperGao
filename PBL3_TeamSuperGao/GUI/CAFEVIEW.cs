@@ -76,12 +76,13 @@ namespace PBL3_TeamSuperGao.GUI
         /// neu hoa don chua co se them chi tiet hoa don
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)//them mon 
+        private void buttonThemMon_Click(object sender, EventArgs e)//them mon 
         {
             try
             {
                 if (BLL_QLBan.Instance.GetBanID(IDBan).TinhTrangBan == "Co Nguoi")
                 {
+                    //them vao ban da co hoa don san
                     Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBItem)comboBoxM.SelectedItem).Value);
                     BLL_QLChiTietHoaDon.Instance.AddMon(i, Convert.ToInt32(comboBoxSL.SelectedItem), IDBan);
                     ShowBill(IDBan);
@@ -101,6 +102,7 @@ namespace PBL3_TeamSuperGao.GUI
                     BLL_QLBan.Instance.UpdateTTBIDT_B(IDBan);
                     ShowBill(IDBan);
                     LoadTable();
+                    TongTien(IDBan);
                     GetAllBan();
                 }
             }
@@ -118,6 +120,11 @@ namespace PBL3_TeamSuperGao.GUI
                 BLL_QLChiTietHoaDon.Instance.RemoveMon(index, IDBan);
                 ShowBill(IDBan);
                 TongTien(IDBan);
+                if(index == 1)
+                {
+                    BLL_QLHoaDon.Instance.DeleteHoaDon(IDBan);
+                    BLL_QLBan.Instance.UpdateTTBIDB_T(IDBan);
+                }
                 GetAllBan();
             }
             catch
@@ -133,10 +140,18 @@ namespace PBL3_TeamSuperGao.GUI
         //ql nhan vien
         private void btnHeThong_Handle(object sender, EventArgs e)
         {
-            Form1 t = new Form1();
-            t.Sent_form_ += new Form1.mydel(Show_FormCFV);
-            this.Hide();
-            t.ShowDialog();
+            if (BLL_QLNhanVien.Instance.KiemTraChucVu(t))
+            {
+                //MessageBox.Show(t.ToString());
+                Form1 st = new Form1();
+                st.Sent_form_ += new Form1.mydel(Show_FormCFV);
+                this.Hide();
+                st.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyên truy cập vào mục này");
+            }
         }
         /// <summary>
         /// Hiem thi danh sach ban thanh cac ban 
@@ -197,23 +212,26 @@ namespace PBL3_TeamSuperGao.GUI
         /// hien thi tong tien theo ID ban
         /// </summary>
 
-        public void TongTien(int ID)
+        public void TongTien(int IDBan)
         {
             //dung de chuyen dinh dang tien sang VND
             CultureInfo culture = new CultureInfo("vi-VN");
-            double tt = BLL_QLHoaDon.Instance.TongTien(ID); 
+            double tt = BLL_QLHoaDon.Instance.TongTien(IDBan); 
             txtTongTien.Text = tt.ToString("c", culture);
-            if (1000000 >= tt && tt > 500000) txtGiamGia.Text = "10%";
-            else if (1000000 < tt) txtGiamGia.Text = "20%";
-            else txtGiamGia.Text = "0%";
-            //cap nhat tong tien lai vao sql
+            double i = 0;
+            if (1000000 >= tt && tt > 500000) i = 10;
+            else if (1000000 < tt) i = 20;
+            else i = 0;
+            txtGiamGia.Text = i.ToString() + "%";
+            //cap nhat tong tien va giam gia theo IDBan lai vao sql
+            BLL.BLL_QLHoaDon.Instance.UpdateTongTien_GiamGia(IDBan, tt, i);
         }
         /// <summary>
         /// Thanh toan hoa don
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonThanhToan_Click(object sender, EventArgs e)
         {
             int IDHoaDon = BLL_QLHoaDon.Instance.GetIDHoaDonForIDBan(IDBan);
             if(IDHoaDon != -1)
@@ -237,7 +255,7 @@ namespace PBL3_TeamSuperGao.GUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonChuyenBan_Click(object sender, EventArgs e)
         {
             try
             {
@@ -271,7 +289,7 @@ namespace PBL3_TeamSuperGao.GUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>        
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonGopBan_Click(object sender, EventArgs e)
         {
             try
             {

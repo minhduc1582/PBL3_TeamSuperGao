@@ -41,3 +41,24 @@ C:\Users\HP\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuper
 C:\Users\HP\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CopyComplete
 C:\Users\HP\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.exe
 C:\Users\HP\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.pdb
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\PBL3_TeamSuperGao.exe.config
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\PBL3_TeamSuperGao.exe
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\PBL3_TeamSuperGao.pdb
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.dll
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.xml
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\LG4.pdb
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csprojAssemblyReference.cache
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Add_EditMon.resources
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Add_EditNV.resources
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.CAFEVIEW.resources
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Form1.resources
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDangNhap.resources
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDoiMK.resources
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.Properties.Resources.resources
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.GenerateResource.cache
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CoreCompileInputs.cache
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CopyComplete
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.exe
+C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.pdb

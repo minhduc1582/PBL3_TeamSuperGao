@@ -150,7 +150,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnThemMon.TabIndex = 9;
             this.btnThemMon.Text = "Thêm món";
             this.btnThemMon.UseVisualStyleBackColor = false;
-            this.btnThemMon.Click += new System.EventHandler(this.button1_Click);
+            this.btnThemMon.Click += new System.EventHandler(this.buttonThemMon_Click);
             // 
             // btnThanhToan
             // 
@@ -162,7 +162,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnThanhToan.TabIndex = 10;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.button2_Click);
+            this.btnThanhToan.Click += new System.EventHandler(this.buttonThanhToan_Click);
             // 
             // btnChuyenBan
             // 
@@ -175,7 +175,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnChuyenBan.TabIndex = 11;
             this.btnChuyenBan.Text = "Chuyển bàn";
             this.btnChuyenBan.UseVisualStyleBackColor = false;
-            this.btnChuyenBan.Click += new System.EventHandler(this.button3_Click);
+            this.btnChuyenBan.Click += new System.EventHandler(this.buttonChuyenBan_Click);
             // 
             // cbbChuyenBan
             // 
@@ -253,7 +253,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnGopBan.TabIndex = 41;
             this.btnGopBan.Text = "Gộp bàn";
             this.btnGopBan.UseVisualStyleBackColor = false;
-            this.btnGopBan.Click += new System.EventHandler(this.button4_Click);
+            this.btnGopBan.Click += new System.EventHandler(this.buttonGopBan_Click);
             // 
             // txtGiamGia
             // 

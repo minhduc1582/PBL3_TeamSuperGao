@@ -69,7 +69,7 @@ namespace PBL3_TeamSuperGao.DAL
             DTDoAn st = new DTDoAn();
             foreach (Ban i in st.Bans)
             {
-                if (u == i.IDBan && i.TinhTrangBan == "Co Nguoi") i.TinhTrangBan = "Trong";
+                if (u == i.IDBan) i.TinhTrangBan = "Trong";
             }
             st.SaveChanges();
         }

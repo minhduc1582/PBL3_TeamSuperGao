@@ -136,5 +136,14 @@ namespace PBL3_TeamSuperGao.DAL
             }
             st.SaveChanges();
         }
+        //kiem tra chuc vu theo ma nhan vien, neu chuc vu la quan li thi tra ve true
+        public bool KiemTraChucVu(int IDNhanVien)
+        {
+            DTDoAn st = new DTDoAn();
+            NhanVien i = st.NhanViens.Find(IDNhanVien);
+            if (i.IDChucVu == 1) return true;
+            else return false;
+        }
+
     }
 }

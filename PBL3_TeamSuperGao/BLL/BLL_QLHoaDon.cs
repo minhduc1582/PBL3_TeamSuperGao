@@ -65,5 +65,15 @@ namespace PBL3_TeamSuperGao.BLL
         {
             return DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(ID);
         }
+        //cap nhat tong tien va giam gia 
+        public void UpdateTongTien_GiamGia(int IDBan,double TT, double GG)
+        {
+            DAL_QLHoaDon.Instance.UpdateTongTien_GiamGia(IDBan,TT, GG);
+        }
+        //xoa hoa don theo IDBan
+        public void DeleteHoaDon(int IDBan)
+        {
+            DAL_QLHoaDon.Instance.DeleteHoaDon(IDBan);
+        }
     }
 }

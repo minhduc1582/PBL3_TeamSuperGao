@@ -118,5 +118,29 @@ namespace PBL3_TeamSuperGao.DAL
             }
             return -1;
         }
+        //cap nhat tong tien va giam gia theo IDBan
+        public void UpdateTongTien_GiamGia(int IDBan,double TT, double GG)
+        {
+            
+            DTDoAn st = new DTDoAn();
+            int IDHoaDon = GetIDHoaDonForIDBan(IDBan);
+            if (IDHoaDon != -1)
+            {
+                HoaDon i = st.HoaDons.Find(IDHoaDon);
+                i.TongTien = TT;
+                i.GiamGia = GG;
+            }
+        }
+        //xoa hoa don theo idban
+        public void DeleteHoaDon(int IDBan)
+        {
+            DTDoAn st = new DTDoAn();
+            int IDHoaDon = GetIDHoaDonForIDBan(IDBan);
+            if (IDHoaDon != -1)
+            {
+                HoaDon i = st.HoaDons.Find(IDHoaDon);
+                st.HoaDons.Remove(i);
+            }
+        }
     }
 }
