@@ -304,6 +304,7 @@ namespace PBL3_TeamSuperGao.GUI
                     MessageBox.Show("Vui lòng không chọn trùng bàn" + MessageBoxButtons.OKCancel);
                 }
                 else
+                //
                 {
                     BLL_QLBan.Instance.GopBan(IDBan, IDBanMoi);
                     ShowBill(IDBan);
