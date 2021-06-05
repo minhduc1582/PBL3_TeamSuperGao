@@ -67,10 +67,8 @@ namespace PBL3_TeamSuperGao.DAL
         public void UpdateTTBIDB_T(int u)
         {
             DTDoAn st = new DTDoAn();
-            foreach (Ban i in st.Bans)
-            {
-                if (u == i.IDBan) i.TinhTrangBan = "Trong";
-            }
+            Ban i = st.Bans.Find(u);
+            i.TinhTrangBan = "Trong";
             st.SaveChanges();
         }
         //cap nhat trang thai ban theo ID trong thanh Co Nguoi
