@@ -120,12 +120,13 @@ namespace PBL3_TeamSuperGao.GUI
                 BLL_QLChiTietHoaDon.Instance.RemoveMon(index, IDBan);
                 ShowBill(IDBan);
                 TongTien(IDBan);
-                if(index == 1)
+                MessageBox.Show(index.ToString());
+                if(index == 0)
                 {
                     BLL_QLHoaDon.Instance.DeleteHoaDon(IDBan);
                     BLL_QLBan.Instance.UpdateTTBIDB_T(IDBan);
                 }
-                GetAllBan();
+                LoadTable();
             }
             catch
             {

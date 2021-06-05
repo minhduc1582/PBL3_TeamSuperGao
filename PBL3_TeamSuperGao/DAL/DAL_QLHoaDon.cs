@@ -141,6 +141,7 @@ namespace PBL3_TeamSuperGao.DAL
                 HoaDon i = st.HoaDons.Find(IDHoaDon);
                 st.HoaDons.Remove(i);
             }
+            st.SaveChanges();
         }
     }
 }
