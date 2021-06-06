@@ -51,6 +51,7 @@ namespace PBL3_TeamSuperGao.GUI
             switch (((CBBItem)cbbThongKe.Items[cbbThongKe.SelectedIndex]).Value)
             {
                 case 0:
+                    dtvThongKe.DataSource = null;
                     HandleThongKeHoaDon();
                     txtTongDoanhThu.Text = TongDoanhThu().ToString();
                     break;
@@ -93,6 +94,8 @@ namespace PBL3_TeamSuperGao.GUI
         {
             dtvThongKe.DataSource = BLL_ThongKe.Instance.BLL_ThongKeDoanhThu(dtmOrg.Value, dtmDes.Value);
         }
+
+        /*----------------------------------------------------------------*/
         ////////////////////////////////////////////////////////////////
         // MODULE
         // QUAN LY TAI KHOAN 
@@ -228,6 +231,8 @@ namespace PBL3_TeamSuperGao.GUI
         {
             reset();
         }
+
+        /*--------------------------------------------------------------------*/
         // QUAN LY NHAN VIEN, MON
         //////////////////////////////////////////////////////////////////
         public void setcbbCV()
@@ -300,7 +305,6 @@ namespace PBL3_TeamSuperGao.GUI
         {
             NhanVien nv = new NhanVien();
             nv = (NhanVien)s;
-            bool status;
             BLL_QLNV.Instance.AddNV_BLL(nv);
             ShowNV();
         }
@@ -327,7 +331,8 @@ namespace PBL3_TeamSuperGao.GUI
         }
 
         /*-------------------------------------------------------------------*/
-
+        // QUAN LY MON
+        //
         public void setcbbDM()
         {
             cboDanhMuc.Items.Add(new CBBItem
@@ -365,6 +370,7 @@ namespace PBL3_TeamSuperGao.GUI
             BLL_QLM bll = new BLL_QLM();
             dvwMon.DataSource = bll.GetListMon_BLL(ID_DanhMuc);
             dvwMon.Columns[0].Visible = false;
+            dvwMon.Columns[3].Visible = false;
         }
 
         private void btnDelMon_Click(object sender, EventArgs e)
@@ -398,7 +404,6 @@ namespace PBL3_TeamSuperGao.GUI
         {
             Mon m = new Mon();
             m = (Mon)s;
-            bool status;
             BLL_QLM.Instance.AddMon_BLL(m);
             ShowMon();
         }

@@ -21,7 +21,7 @@ namespace PBL3_TeamSuperGao.GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormDoiMK st = new FormDoiMK();
+            FormDoiMK st = new FormDoiMK(txtUserName.Text);
             st.Sent_form_ += new FormDoiMK.mydel(ShowForm);
             this.Hide();
             st.ShowDialog();

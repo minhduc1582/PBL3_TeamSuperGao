@@ -16,9 +16,10 @@ namespace PBL3_TeamSuperGao.GUI
     {
         public delegate void mydel();
         public mydel Sent_form_ { get; set; }
-        public FormDoiMK()
+        public FormDoiMK(string user)
         {
             InitializeComponent();
+            txtUser.Text = user;
         }
 
 
@@ -30,10 +31,12 @@ namespace PBL3_TeamSuperGao.GUI
         private void button4_Click(object sender, EventArgs e)
         {
             if (BLL_QLTaiKhoan.Instance.BLL_isTrueLogin(txtUser.Text, txtOldPass.Text))
+            {
                 BLL_QLTaiKhoan.Instance.BLL_EditTK(txtUser.Text, txtNewPass.Text);
+                ThisClose();
+            }
             else
                 MessageBox.Show("Bạn đã nhập sai mật khẩu");
-            ThisClose();
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
