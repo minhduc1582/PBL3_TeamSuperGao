@@ -62,3 +62,24 @@ C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperG
 C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CopyComplete
 C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.exe
 C:\Users\WIN-PRO\OneDrive - The University of Technology\Desktop\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.pdb
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\PBL3_TeamSuperGao.exe.config
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\PBL3_TeamSuperGao.exe
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\PBL3_TeamSuperGao.pdb
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.dll
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.SqlServer.dll
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.xml
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\EntityFramework.SqlServer.xml
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\bin\Debug\LG4.pdb
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csprojAssemblyReference.cache
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Add_EditMon.resources
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Add_EditNV.resources
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.CAFEVIEW.resources
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.Form1.resources
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDangNhap.resources
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.GUI.FormDoiMK.resources
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.Properties.Resources.resources
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.GenerateResource.cache
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CoreCompileInputs.cache
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.csproj.CopyComplete
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.exe
+E:\New folder\PBL3_TeamSuperGao\PBL3_TeamSuperGao\obj\Debug\PBL3_TeamSuperGao.pdb
