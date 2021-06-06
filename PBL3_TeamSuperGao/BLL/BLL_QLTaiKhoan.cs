@@ -34,7 +34,7 @@ namespace PBL3_TeamSuperGao.BLL
         {
             foreach (TaiKhoan i in BLL_ShowTK())
             {
-                if (BLL_isTrueLogin(tendn,pw)) return i.IDTaiKhoan;
+                if (String.Compare(tendn, i.UserName.Trim(), true) == 0 && pw == i.PassWord.Trim()) return i.IDTaiKhoan;
             }
             return -1;
         }

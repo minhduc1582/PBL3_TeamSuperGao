@@ -130,6 +130,7 @@ namespace PBL3_TeamSuperGao.DAL
                 i.TongTien = TT;
                 i.GiamGia = GG;
             }
+            st.SaveChanges();
         }
         //xoa hoa don theo idban
         public void DeleteHoaDon(int IDBan)
