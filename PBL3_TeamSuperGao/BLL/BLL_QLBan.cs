@@ -31,7 +31,7 @@ namespace PBL3_TeamSuperGao.BLL
 
         }
         //get all ban 
-        public List<Ban> GetAllBan() 
+        public List<Ban> GetAllBan()
         {
             return DAL_QLBan.Instance.GetAllBan();
         }
@@ -65,19 +65,34 @@ namespace PBL3_TeamSuperGao.BLL
         {
             DAL_QLBan.Instance.AddBan(u);
         }
-        //Chuyen Ban 
-        public void ChuyenBan(int IDCu,int IDMoi)
+
+        //chuyen ban co nguoi sang co nguoi
+        public void ChuyenBan1(int IDCu, int IDMoi)
         {
-            DAL_QLBan.Instance.ChuyenBan(IDCu, IDMoi);
+            DAL_QLBan.Instance.ChuyenBan1(IDCu, IDMoi);
+        }
+        public void GopBan(int IDB1, int IDB2)
+        {
+            DAL_QLBan.Instance.GopBan(IDB1, IDB2);
         }
         /// <summary>
         ///gop ban 1 voi ban 2
         /// </summary>
         /// <param name="IDB1"></param>
         /// <param name="IDB2"></param>
-        public void GopBan(int IDB1,int IDB2)
+        public void GopBan1(int IDB1, int IDB2)
         {
-            DAL_QLBan.Instance.GopBan(IDB1, IDB2);
+            DAL_QLBan.Instance.GopBan1(IDB1, IDB2);
+        }
+        public bool TestBan(int IDBan1, int IDBan2)
+        {
+            return DAL_QLBan.Instance.TestBan(IDBan1, IDBan2);
+        }
+        public bool TestBan1(int IDB1, int IDB2)
+        {
+            return DAL_QLBan.Instance.TestBan1(IDB1, IDB2);
         }
     }
 }
+//Gop ban: okkk
+//
