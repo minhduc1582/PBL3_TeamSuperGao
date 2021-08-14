@@ -22,6 +22,11 @@ namespace PBL3_TeamSuperGao.DAL
             }
             private set { }
         }
+        public TaiKhoan GetTKByID_DAL(int ID)
+        {
+            DTDoAn db = new DTDoAn();
+            return db.TaiKhoans.Find(ID);
+        }
         public List<TaiKhoan> Show()
         {
             DTDoAn db = new DTDoAn();

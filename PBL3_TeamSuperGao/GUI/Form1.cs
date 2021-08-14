@@ -227,7 +227,7 @@ namespace PBL3_TeamSuperGao.GUI
             {
                 MessageBox.Show(e.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            Show_dtgvTK();
         }
         // handle Show TK on Dtgv TaiKhoan
         private void btnShowTK_Click(object sender, EventArgs e)
@@ -250,6 +250,7 @@ namespace PBL3_TeamSuperGao.GUI
             {
                 MessageBox.Show(et.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Show_dtgvTK();
         }
         // handle event button reset
         private void btnResetTK_Click(object sender, EventArgs e)
@@ -306,6 +307,8 @@ namespace PBL3_TeamSuperGao.GUI
             if (bll.Check(ID_NhanVien) == true) MessageBox.Show("Khong the xoa nhan vien nay");
             else bll.DelNVByID_BLL(ID_NhanVien);
             ShowNV();
+            comboBox1.Items.Clear();
+            SetCBB1();
         }
 
         private void AddandEditNV(object sender, EventArgs e)
@@ -324,21 +327,33 @@ namespace PBL3_TeamSuperGao.GUI
                 f.function += new Add_EditNV.Mydel(EditNV);
                 f.Show();
             }
-        }
 
-        private void AddNV(object s)
+        }
+        private void AddNV(object s,object obj)
         {
             NhanVien nv = new NhanVien();
             nv = (NhanVien)s;
-            BLL_QLNV.Instance.AddNV_BLL(nv);
+            int IDNV = BLL_QLNV.Instance.AddNV_BLL(nv);
+            TaiKhoan tk = new TaiKhoan();
+            tk = (TaiKhoan)obj;
+            int IDTK = BLL_QLTaiKhoan.Instance.BLL_AddTK(tk.UserName, tk.PassWord);
+            BLL_QLNhanVien.Instance.UpdateIDTK(IDTK, IDNV);
             ShowNV();
+            Show_dtgvTK();
+            comboBox1.Items.Clear();
+            SetCBB1();
         }
 
-        private void EditNV(object s)
+        private void EditNV(object s,object obj)
         {
             int ID_NhanVien = Convert.ToInt32(dvwNV.CurrentRow.Cells["IDNhanVien"].Value);
             BLL_QLNV.Instance.EditNV_BLL((NhanVien)s, ID_NhanVien);
+            TaiKhoan tk = new TaiKhoan();
+            tk = (TaiKhoan)obj;
+            BLL_QLTaiKhoan.Instance.BLL_EditTK(tk.UserName.Trim(), tk.PassWord.Trim());
             ShowNV();
+            comboBox1.Items.Clear();
+            SetCBB1();
         }
 
         private void btnSearchNV_Click(object sender, EventArgs e)
@@ -458,6 +473,12 @@ namespace PBL3_TeamSuperGao.GUI
         {
             Sent_form_();
             this.Close();
+        }
+
+        private void tabTaiKhoan_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            SetCBB1();
         }
     }
 }

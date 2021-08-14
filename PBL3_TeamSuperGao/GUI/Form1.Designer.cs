@@ -42,6 +42,8 @@ namespace PBL3_TeamSuperGao.GUI
             this.dtmDes = new System.Windows.Forms.DateTimePicker();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblTenNV = new System.Windows.Forms.Label();
             this.btnResetTK = new System.Windows.Forms.Button();
             this.lblCheck = new System.Windows.Forms.Label();
             this.txtReFill = new System.Windows.Forms.TextBox();
@@ -81,8 +83,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.cboDanhMuc = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSearchMon = new System.Windows.Forms.Button();
-            this.lblTenNV = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabMon.SuspendLayout();
             this.tabThongKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvThongKe)).BeginInit();
@@ -230,6 +230,24 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabTaiKhoan.Size = new System.Drawing.Size(982, 509);
             this.tabTaiKhoan.TabIndex = 1;
             this.tabTaiKhoan.Text = "Tài Khoản";
+            this.tabTaiKhoan.Click += new System.EventHandler(this.tabTaiKhoan_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(766, 224);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Location = new System.Drawing.Point(598, 224);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(103, 17);
+            this.lblTenNV.TabIndex = 7;
+            this.lblTenNV.Text = "Tên Nhân Viên";
             // 
             // btnResetTK
             // 
@@ -690,23 +708,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnSearchMon.TabIndex = 41;
             this.btnSearchMon.UseVisualStyleBackColor = true;
             this.btnSearchMon.Click += new System.EventHandler(this.btnSearchMon_Click);
-            // 
-            // lblTenNV
-            // 
-            this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Location = new System.Drawing.Point(598, 224);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(103, 17);
-            this.lblTenNV.TabIndex = 7;
-            this.lblTenNV.Text = "Tên Nhân Viên";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(766, 224);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 24);
-            this.comboBox1.TabIndex = 8;
             // 
             // Form1
             // 

@@ -104,6 +104,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // dtgvDanhSach
             // 
+            this.dtgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDanhSach.Location = new System.Drawing.Point(14, 22);
             this.dtgvDanhSach.Name = "dtgvDanhSach";
@@ -329,6 +330,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CAFEVIEW";
             this.Text = "Cafe Anh Em";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CAFEVIEW_FormClosed);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSach)).EndInit();
             this.ResumeLayout(false);

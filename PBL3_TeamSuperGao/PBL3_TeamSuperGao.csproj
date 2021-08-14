@@ -226,15 +226,22 @@
     <Content Include="DTO\readme.txt" />
     <Content Include="Image\add_icon_32px.ico" />
     <Content Include="Image\Back_.png" />
+    <Content Include="Image\bgr.png" />
     <Content Include="Image\Cafe_icon.ico" />
     <Content Include="Image\Cancel_32px.ico" />
+    <None Include="Image\Columbia-Blue-Gradient-Wallpaper.jpg" />
     <Content Include="Image\edit_32px.ico" />
     <Content Include="Image\Go-back_32px.ico" />
+    <Content Include="Image\key.ico" />
+    <None Include="Image\lock.jpg" />
+    <None Include="Image\key_1.png" />
     <Content Include="Image\ok_32px.ico" />
     <Content Include="Image\pay_per_32px.ico" />
+    <Content Include="Image\personal.ico" />
     <Content Include="Image\reset_32px.ico" />
     <Content Include="Image\search.png" />
     <Content Include="Image\show_32px.ico" />
+    <Content Include="Image\user.ico" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

@@ -71,6 +71,11 @@ namespace PBL3_TeamSuperGao.BLL
         {
             DAL_QLBan.Instance.ChuyenBan1(IDCu, IDMoi);
         }
+        //chuyen ban co nguoi dang gop sang ban khac
+        public void ChuyenBan2(int IDCu, int IDMoi)
+        {
+            DAL_QLBan.Instance.ChuyenBan2(IDCu, IDMoi);
+        }
         public void GopBan(int IDB1, int IDB2)
         {
             DAL_QLBan.Instance.GopBan(IDB1, IDB2);

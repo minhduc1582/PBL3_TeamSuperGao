@@ -99,40 +99,40 @@ namespace PBL3_TeamSuperGao.GUI
                 MessageBox.Show("Vui lòng chọn bàn có người");
             }
             else
-                try
+            //try
+            {
+                if (BLL_QLBan.Instance.GetBanID(IDBan).TinhTrangBan == "Co Nguoi")
                 {
-                    if (BLL_QLBan.Instance.GetBanID(IDBan).TinhTrangBan == "Co Nguoi")
+                    //them vao ban da co hoa don san
+                    Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBItem)comboBoxM.SelectedItem).Value);
+                    BLL_QLChiTietHoaDon.Instance.AddMon(i, Convert.ToInt32(comboBoxSL.SelectedItem), IDBan);
+                    ShowBill(IDBan);
+                    TongTien(IDBan);
+                    GetAllBan();
+                }
+                else
+                {
+                    string u = "";
+                    foreach (char j in txtGiamGia.Text)
                     {
-                        //them vao ban da co hoa don san
-                        Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBItem)comboBoxM.SelectedItem).Value);
-                        BLL_QLChiTietHoaDon.Instance.AddMon(i, Convert.ToInt32(comboBoxSL.SelectedItem), IDBan);
-                        ShowBill(IDBan);
-                        TongTien(IDBan);
-                        GetAllBan();
+                        if (j >= '0' && j <= '9') u = u + j;
                     }
-                    else
-                    {
-                        string u = "";
-                        foreach (char j in txtGiamGia.Text)
-                        {
-                            if (j >= '0' && j <= '9') u = u + j;
-                        }
-                        BLL_QLHoaDon.Instance.AddHD_CTHD(IDBan, Convert.ToInt32(u), t);
-                        Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBItem)comboBoxM.SelectedItem).Value);
-                        BLL_QLChiTietHoaDon.Instance.AddMon(i, Convert.ToInt32(comboBoxSL.SelectedItem), IDBan);
-                        BLL_QLBan.Instance.UpdateTTBIDT_B(IDBan);
-                        ShowBill(IDBan);
-                        LoadTable();
-                        TongTien(IDBan);
-                        GetAllBan();
-                    }
+                    BLL_QLHoaDon.Instance.AddHD_CTHD(IDBan, Convert.ToInt32(u), t);
+                    Mon i = BLL_QLMon.Instance.SerchForMaMon(((CBBItem)comboBoxM.SelectedItem).Value);
+                    BLL_QLChiTietHoaDon.Instance.AddMon(i, Convert.ToInt32(comboBoxSL.SelectedItem), IDBan);
+                    BLL_QLBan.Instance.UpdateTTBIDT_B(IDBan);
+                    ShowBill(IDBan);
+                    LoadTable();
+                    TongTien(IDBan);
+                    GetAllBan();
+                }
 
 
-                }
-                catch
-                {
-                    MessageBox.Show("Vui lòng chọn bàn và chọn món cần thêm");
-                }
+            }
+            /*catch
+            {
+                MessageBox.Show("Vui lòng chọn bàn và chọn món cần thêm");
+            }*/
             Delete_CBB();
 
 
@@ -172,10 +172,9 @@ namespace PBL3_TeamSuperGao.GUI
                 //MessageBox.Show(t.ToString());
                 Form1 st = new Form1();
                 st.Sent_form_ += new Form1.mydel(Show_FormCFV);
-                //this.Hide();
-                this.Visible = false;
+                this.Hide();
                 st.ShowDialog();
-                this.Close();
+                //this.Close();
             }
             else
             {
@@ -325,9 +324,20 @@ namespace PBL3_TeamSuperGao.GUI
                 {
                     MessageBox.Show("Vui lòng không chọn trùng bàn " + "Thong Bao" + System.Windows.Forms.DialogResult.OK);
                 }
+
                 else if (BLL_QLBan.Instance.TestBan1(IDBan, IDBanMoi))
                 {
                     MessageBox.Show("Hai bàn đang gộp với nhau, vui lòng chọn bàn khác");
+                }
+                else if (BLL_QLBan.Instance.TestBan(IDBan, IDBanMoi))
+                {
+                    //MessageBox.Show("Có bàn đang gộp, vui lòng chọn lại", "Thông báo", MessageBoxButtons.OK);
+                    BLL_QLBan.Instance.ChuyenBan2(IDBan, IDBanMoi);
+                    ShowBill(IDBan);
+                    TongTien(IDBan);
+                    GetAllBan();
+                    LoadTable();
+
                 }
                 else
                 {
@@ -341,9 +351,10 @@ namespace PBL3_TeamSuperGao.GUI
             }
             catch
             {
-                MessageBox.Show("Vui lòng chọn bàn cần chuyển" + MessageBoxButtons.OKCancel);
+                MessageBox.Show("Vui lòng chọn bàn cần chuyển" + "Thong Bao" + System.Windows.Forms.DialogResult.OK);
             }
             cbbChuyenBan.SelectedItem = -1;
+            cbbChuyenBan.Text = "";
         }
         /// <summary>
         /// gop ban 
@@ -406,6 +417,7 @@ namespace PBL3_TeamSuperGao.GUI
                 MessageBox.Show("Vui long chon ban can gop");
             }
             cbbChuyenBan.SelectedItem = -1;
+            cbbChuyenBan.Text = "";
         }
 
         private void CAFEVIEW_FormClosed(object sender, FormClosedEventArgs e)
@@ -416,7 +428,7 @@ namespace PBL3_TeamSuperGao.GUI
         private void btnTroVe_Click(object sender, EventArgs e)
         {
             SendForm_();
-            this.Close();
+            this.Hide();
         }
 
     }

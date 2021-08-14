@@ -114,6 +114,72 @@ namespace PBL3_TeamSuperGao.DAL
             if (u2 != null) u2.IDBan = IDCu;
             st.SaveChanges();
         }
+        //chuyen ban co nguoi dang gop
+        public void ChuyenBan2(int IDCu, int IDMoi)
+        {
+            DTDoAn st = new DTDoAn();
+            Ban t1 = st.Bans.Find(IDCu);
+            Ban t2 = st.Bans.Find(IDMoi);
+            int i = 0, j = 0;
+            Ban bt1 = new Ban();
+            Ban bt2 = new Ban();
+            //2 bàn: kiểm tra có bàn nào đang gộp ko
+            //lấy tất cả bàn đag gộp rùi so sánh tới 2 banf conf liaj xem trung id ko
+            foreach (Ban b in st.Bans)
+            {
+                string u = "";
+
+                if (b.TinhTrangBan.Contains("Gop Ban"))
+                {
+                    u = b.TinhTrangBan.Substring(8);
+                    if (t1.IDBan == int.Parse(u))
+                    {
+                        i = 1;
+                        bt1 = b;
+                    }
+                    if (t2.IDBan == int.Parse(u))
+                    {
+                        j = 1;
+                        bt2 = b;
+                    }
+
+                }
+            }
+
+            int IDHD1 = DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(IDCu);
+            int IDHD2 = DAL_QLHoaDon.Instance.GetIDHoaDonForIDBan(IDMoi);
+
+            HoaDon u1 = st.HoaDons.Find(IDHD1);
+            HoaDon u2 = st.HoaDons.Find(IDHD2);
+
+
+            if (i == 1 && j == 1)
+            {
+                string ttb = t1.TinhTrangBan;
+                t1.TinhTrangBan = t2.TinhTrangBan;
+                t2.TinhTrangBan = ttb;
+                bt1.TinhTrangBan = "Gop Ban " + t2.IDBan.ToString();
+                bt2.TinhTrangBan = "Gop Ban " + t1.IDBan.ToString();
+            }
+            else if (i == 1)
+            {
+                string ttb = t1.TinhTrangBan;
+                t1.TinhTrangBan = t2.TinhTrangBan;
+                t2.TinhTrangBan = ttb;
+                bt1.TinhTrangBan = "Gop Ban " + t2.IDBan.ToString();
+            }
+            else if (j == 1)
+            {
+                string ttb = t1.TinhTrangBan;
+                t1.TinhTrangBan = t2.TinhTrangBan;
+                t2.TinhTrangBan = ttb;
+                bt2.TinhTrangBan = "Gop Ban " + t1.IDBan.ToString();
+            }
+
+            if (u1 != null) u1.IDBan = IDMoi;
+            if (u2 != null) u2.IDBan = IDCu;
+            st.SaveChanges();
+        }
         /// <summary>
         ///gop ban 1 voi ban 2
         ///khi gop ban thi tinh trang = ban
@@ -154,6 +220,7 @@ namespace PBL3_TeamSuperGao.DAL
 
             st.SaveChanges();
         }
+
         //gop ban
         //trong - ban
         public void GopBan1(int IDB1, int IDB2)
@@ -178,6 +245,7 @@ namespace PBL3_TeamSuperGao.DAL
             t2.TinhTrangBan = "Gop Ban " + IDB1.ToString();
             st.SaveChanges();
         }
+
         //Kiem tra xem 2 ban co ban nao dang gop ko, neu co tra ve flase, neu ko co tra ve flase
         public bool TestBan(int IDBan1, int IDBan2)
         {
@@ -200,7 +268,7 @@ namespace PBL3_TeamSuperGao.DAL
             else return false;
 
         }
-        //kiem tra 2 ban can chuyen co phai la 2 ban dang gop ko
+        //kiem tra 2 ban can chuyen co phai la 2 ban dang gop cua nhau k
         public bool TestBan1(int IDB1, int IDB2)
         {
             Ban st1 = GetBanID(IDB1);
@@ -244,5 +312,6 @@ namespace PBL3_TeamSuperGao.DAL
             if (i == 1 || j == 1) return true;
             else return false;
         }
+
     }
 }
