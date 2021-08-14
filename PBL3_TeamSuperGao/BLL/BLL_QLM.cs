@@ -47,7 +47,8 @@ namespace PBL3_TeamSuperGao.BLL
                         IDMon = i.IDMon,
                         TenMon = i.TenMon,
                         DonGia = Convert.ToDouble(i.DonGia),
-                        DanhMuc = dal.GetDM_DAL(Convert.ToInt32(i.IDDanhMucMon)).TenDanhMuc
+                        DanhMuc = dal.GetDM_DAL(Convert.ToInt32(i.IDDanhMucMon)).TenDanhMuc,
+                        TinhTrang = i.TinhTrang
                     });
                 }
                 else if (ID_DanhMuc == 0)
@@ -57,7 +58,8 @@ namespace PBL3_TeamSuperGao.BLL
                         IDMon = i.IDMon,
                         TenMon = i.TenMon,
                         DonGia = Convert.ToDouble(i.DonGia),
-                        DanhMuc = dal.GetDM_DAL(Convert.ToInt32(i.IDDanhMucMon)).TenDanhMuc
+                        DanhMuc = dal.GetDM_DAL(Convert.ToInt32(i.IDDanhMucMon)).TenDanhMuc,
+                        TinhTrang = i.TinhTrang
                     });
                 }
             }
@@ -108,6 +110,12 @@ namespace PBL3_TeamSuperGao.BLL
                         m.Add(i);
                 }
             return m;
+        }
+
+        public void EditStatus_BLL(string status, int ID_Mon)
+        {
+            DAL_QLM dal = new DAL_QLM();
+            dal.EditStatus_DAL(status, ID_Mon);
         }
 
         public List<MonView> SortMon_BLL(int ID_DanhMuc, int choice)
