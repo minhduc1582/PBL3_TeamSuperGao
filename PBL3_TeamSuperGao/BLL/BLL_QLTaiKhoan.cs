@@ -22,6 +22,10 @@ namespace PBL3_TeamSuperGao.BLL
             }
             private set { }
         }
+        public TaiKhoan GetTKByID_BLL(int ID)
+        {
+            return DAL.DAL_QLTaiKhoan.Instance.GetTKByID_DAL(ID);
+        }
         public bool BLL_isTrueLogin(string TK,String MK)
         {
             foreach(var i in BLL_ShowTK())

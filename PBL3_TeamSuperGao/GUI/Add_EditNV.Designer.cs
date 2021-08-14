@@ -48,13 +48,17 @@
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboChucVu
             // 
             this.cboChucVu.FormattingEnabled = true;
-            this.cboChucVu.Location = new System.Drawing.Point(499, 178);
+            this.cboChucVu.Location = new System.Drawing.Point(556, 187);
             this.cboChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.cboChucVu.Name = "cboChucVu";
             this.cboChucVu.Size = new System.Drawing.Size(132, 24);
@@ -66,9 +70,9 @@
             this.label2.Location = new System.Drawing.Point(48, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Ho Ten";
+            this.label2.Text = "Họ Và Tên";
             // 
             // label3
             // 
@@ -78,7 +82,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Chuc Vu";
+            this.label3.Text = "Chức Vụ";
             // 
             // txtHoTen
             // 
@@ -209,7 +213,7 @@
             // 
             // txtQueQuan
             // 
-            this.txtQueQuan.Location = new System.Drawing.Point(180, 208);
+            this.txtQueQuan.Location = new System.Drawing.Point(180, 212);
             this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(132, 22);
@@ -217,7 +221,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(223, 257);
+            this.btnOK.Location = new System.Drawing.Point(212, 331);
             this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 36);
@@ -228,7 +232,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(425, 257);
+            this.btnCancel.Location = new System.Drawing.Point(425, 331);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 36);
@@ -237,16 +241,56 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 261);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "UserName";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(178, 258);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(132, 22);
+            this.txtUser.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(400, 261);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 17);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Nhập mật khẩu mới";
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(556, 261);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(132, 22);
+            this.txtPass.TabIndex = 17;
+            // 
             // Add_EditNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 314);
+            this.ClientSize = new System.Drawing.Size(776, 380);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtQueQuan);
             this.Controls.Add(this.dtmNS);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -290,5 +334,9 @@
         private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtPass;
     }
 }

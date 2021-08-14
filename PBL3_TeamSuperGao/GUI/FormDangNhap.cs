@@ -59,5 +59,10 @@ namespace PBL3_TeamSuperGao.GUI
             txtPassword.Text = "";
         }
 
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

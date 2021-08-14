@@ -67,11 +67,12 @@ namespace PBL3_TeamSuperGao.DAL
             return nv;
         }
 
-        public void AddNV_DAL(NhanVien nv)
+        public int AddNV_DAL(NhanVien nv)
         {
             DTDoAn db = new DTDoAn();
             db.NhanViens.Add(nv);
             db.SaveChanges();
+            return nv.IDNhanVien;
         }
 
         public void EditNV_DAL(NhanVien nv, int ID_NhanVien)

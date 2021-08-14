@@ -96,10 +96,10 @@ namespace PBL3_TeamSuperGao.BLL
             return dal.GetNVByID_DAL(ID_NhanVien);
         }
         
-        public void AddNV_BLL(NhanVien nv)
+        public int AddNV_BLL(NhanVien nv)
         {
             DAL_QLNV dal = new DAL_QLNV();
-            dal.AddNV_DAL(nv);
+            return dal.AddNV_DAL(nv);
         }
 
         public void EditNV_BLL(NhanVien nv, int ID_NhanVien)

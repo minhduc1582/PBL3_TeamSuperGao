@@ -14,7 +14,7 @@ namespace PBL3_TeamSuperGao.GUI
 {
     public partial class Add_EditNV : Form
     {
-        public delegate void Mydel(object s);
+        public delegate void Mydel(object nv,object tk);
         public Mydel function;
 
         public Add_EditNV(int ID_NhanVien)
@@ -56,7 +56,15 @@ namespace PBL3_TeamSuperGao.GUI
             };
             return nv;
         }
-
+        private TaiKhoan GetDataTK()
+        {
+            TaiKhoan tk = new TaiKhoan
+            {
+                UserName = txtUser.Text,
+                PassWord = txtPass.Text
+            };
+            return tk;
+        }
         private void LoadData(int ID_NhanVien)
         {
             if (ID_NhanVien != 0)
@@ -72,16 +80,23 @@ namespace PBL3_TeamSuperGao.GUI
                 dtmNS.Value = Convert.ToDateTime(nv.NgaySinh);
                 txtHocVan.Text = nv.TrinhDoHocVan;
                 cboChucVu.SelectedIndex = Convert.ToInt32(nv.IDChucVu) - 1;
+                if (nv.IDTaiKhoan != null)
+                {
+                    BLL_MaHoaMatKhau mh = new BLL_MaHoaMatKhau();
+                    txtUser.Text = BLL_QLTaiKhoan.Instance.GetTKByID_BLL(Convert.ToInt32(nv.IDTaiKhoan)).UserName;
+                    txtPass.Text = mh.Dich(BLL_QLTaiKhoan.Instance.GetTKByID_BLL(Convert.ToInt32(nv.IDTaiKhoan)).PassWord.Trim());
+                }
             }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (txtHoTen.Text == "" || txtDanToc.Text == "" || txtHocVan.Text == "" || txtSDT.Text == "" || txtQueQuan.Text == "")
+            if (txtHoTen.Text == "" || txtDanToc.Text == "" || txtHocVan.Text == "" || 
+                txtSDT.Text == "" || txtQueQuan.Text == "" || txtUser.Text == "" || txtPass.Text == "" )
                 MessageBox.Show("Vui long dien du thong tin");
             else
             {
-                function(GetData());
+                function(GetData(),GetDataTK());
                 this.Dispose();
             }
         }
@@ -90,5 +105,7 @@ namespace PBL3_TeamSuperGao.GUI
         {
             this.Dispose();
         }
+
+
     }
 }
