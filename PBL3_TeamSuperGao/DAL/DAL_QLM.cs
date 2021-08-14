@@ -83,5 +83,13 @@ namespace PBL3_TeamSuperGao.DAL
             temp.IDDanhMucMon = Convert.ToInt32(nv.IDDanhMucMon);
             db.SaveChanges();
         }
+
+        public void EditStatus_DAL(string status, int ID_Mon)
+        {
+            DTDoAn db = new DTDoAn();
+            Mon temp = db.Mons.Find(ID_Mon);
+            temp.TinhTrang = status;
+            db.SaveChanges();
+        }
     }
 }
