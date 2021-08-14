@@ -54,6 +54,7 @@
           <ScalarProperty Name="TenMon" ColumnName="TenMon" />
           <ScalarProperty Name="DonGia" ColumnName="DonGia" />
           <ScalarProperty Name="IDDanhMucMon" ColumnName="IDDanhMucMon" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

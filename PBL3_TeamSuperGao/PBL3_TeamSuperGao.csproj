@@ -235,10 +235,6 @@
     <Content Include="Image\reset_32px.ico" />
     <Content Include="Image\search.png" />
     <Content Include="Image\show_32px.ico" />
-    <None Include="Image\sort_32px.ico" />
-    <Content Include="Image\statistics_32px.ico" />
-    <Content Include="Image\systemusers_32px.ico" />
-    <Content Include="Image\trash_32px.ico" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -249,6 +245,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Image\sort_32px.ico" />
+    <Content Include="Image\statistics_32px.ico" />
+    <Content Include="Image\systemusers_32px.ico" />
+    <Content Include="Image\trash_32px.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
