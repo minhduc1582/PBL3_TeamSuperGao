@@ -43,7 +43,8 @@ namespace PBL3_TeamSuperGao.GUI
             {
                 TenMon = txtTenMon.Text,
                 DonGia = Convert.ToDouble(txtDonGia.Text),
-                IDDanhMucMon = ((CBBItem)cboDanhMuc.SelectedItem).Value
+                IDDanhMucMon = ((CBBItem)cboDanhMuc.SelectedItem).Value,
+                TinhTrang = "Dang Ban"
             };
             return m;
         }
