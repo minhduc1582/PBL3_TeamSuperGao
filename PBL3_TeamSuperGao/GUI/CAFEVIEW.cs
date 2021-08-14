@@ -99,7 +99,7 @@ namespace PBL3_TeamSuperGao.GUI
                 MessageBox.Show("Vui lòng chọn bàn có người");
             }
             else
-            //try
+            try
             {
                 if (BLL_QLBan.Instance.GetBanID(IDBan).TinhTrangBan == "Co Nguoi")
                 {
@@ -129,10 +129,10 @@ namespace PBL3_TeamSuperGao.GUI
 
 
             }
-            /*catch
+            catch
             {
                 MessageBox.Show("Vui lòng chọn bàn và chọn món cần thêm");
-            }*/
+            }
             Delete_CBB();
 
 

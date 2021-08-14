@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -49,16 +50,17 @@ namespace PBL3_TeamSuperGao.GUI
         // Xu Ly su kien thong ke di kem voi CBB
         public void ThongKe(object sender,EventArgs e)
         {
+            CultureInfo culture = new CultureInfo("vi-VN");
             switch (((CBBItem)cbbThongKe.Items[cbbThongKe.SelectedIndex]).Value)
             {
                 case 0:
                     dtvThongKe.DataSource = null;
                     HandleThongKeHoaDon();
-                    txtTongDoanhThu.Text = TongDoanhThu().ToString();
+                    txtTongDoanhThu.Text = TongDoanhThu().ToString("c", culture);
                     break;
                 case 1:
                     HandleThongKeDoanhThu();
-                    txtTongDoanhThu.Text = TongDoanhThu().ToString();
+                    txtTongDoanhThu.Text = TongDoanhThu().ToString("c", culture);
                     break;
                 case 2:
                     HandleThongKeMon();
@@ -147,7 +149,7 @@ namespace PBL3_TeamSuperGao.GUI
         // handle change selection click on dtgv 
         private void dtgvTaiKhoan_MouseClick(object sender, MouseEventArgs e)
         {
-            txtTenTK.Text = dtgvTaiKhoan.CurrentRow.Cells["UserName"].Value.ToString();
+            txtTenTK.Text = dtgvTaiKhoan.CurrentRow.Cells["UserName"].Value.ToString().Trim();
             txtMatKhauTK.Text = dtgvTaiKhoan.CurrentRow.Cells["PassWord"].Value.ToString();
             int IDTK = Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value);
             int index = -1;
@@ -241,12 +243,22 @@ namespace PBL3_TeamSuperGao.GUI
             {
                 if (dtgvTaiKhoan.CurrentRow.Selected == true)
                 {
-                    BLL_QLTaiKhoan.Instance.BLL_DeleteTK(Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value));
-                    Show_dtgvTK();
-                    reset();
+                    int IDTK = Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value);
+                     int IDCV = new int();
+                    if (BLL_QLNhanVien.Instance.GetIDNVForIDTK(IDTK) != -1) 
+                    IDCV = Convert.ToInt32(BLL_QLNhanVien.Instance.SearchNVForID(BLL_QLNhanVien.Instance.GetIDNVForIDTK(IDTK)).IDChucVu);
+                    if (IDCV != 1 || BLL_QLNhanVien.Instance.GetIDNVForIDTK(IDTK) == -1) {
+                    BLL_QLTaiKhoan.Instance.BLL_DeleteTK(IDTK);
+                        Show_dtgvTK();
+                        reset();
+                    }
+                    else
+                    {
+                        MessageBox.Show("khong the xoa tai khoan cua Quan ly");
+                    }
                 }
             }
-            catch(Exception et)
+            catch (Exception et)
             {
                 MessageBox.Show(et.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

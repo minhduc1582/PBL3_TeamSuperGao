@@ -83,7 +83,7 @@ namespace PBL3_TeamSuperGao.GUI
                 if (nv.IDTaiKhoan != null)
                 {
                     BLL_MaHoaMatKhau mh = new BLL_MaHoaMatKhau();
-                    txtUser.Text = BLL_QLTaiKhoan.Instance.GetTKByID_BLL(Convert.ToInt32(nv.IDTaiKhoan)).UserName;
+                    txtUser.Text = BLL_QLTaiKhoan.Instance.GetTKByID_BLL(Convert.ToInt32(nv.IDTaiKhoan)).UserName.Trim();
                     txtPass.Text = mh.Dich(BLL_QLTaiKhoan.Instance.GetTKByID_BLL(Convert.ToInt32(nv.IDTaiKhoan)).PassWord.Trim());
                 }
             }
