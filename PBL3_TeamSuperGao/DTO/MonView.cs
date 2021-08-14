@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace PBL3_TeamSuperGao.DTO
         public double DonGia { get; set; }
         public int LuotGoi { get; set; }
         public string DanhMuc { get; set; }
+        public string TinhTrang { get; set; }
         public int CompareTo(MonView other)
         {
             if (this.LuotGoi > other.LuotGoi) return -1;
